@@ -86,9 +86,11 @@ add_action('init', function () {
     remove_post_type_support('form_submission', 'editor');
 }, 99);
 
-add_action('customize_controls_print_styles', function () {
+add_action('admin_head', function () {
     echo view('svg')->render();
+});
 
+add_action('customize_controls_print_styles', function () {
     echo <<<'HTML'
 <style>
     #happyforms-steps-nav [data-step="style"] {
