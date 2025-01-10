@@ -73,6 +73,8 @@ add_filter('tribe_template_file', function ($file) {
             ? view("events.{$path}")->makeLoader()
             : $file;
     }
+
+    return $file;
 });
 
 
