@@ -14,26 +14,26 @@ return [
     */
 
     'post' => [
-        'happyforms-message' => [
-            'labels' => [
-                'singular' => 'Foo',
-                'plural' => 'Bars',
-            ],
-            'admin_cols' => array(
-                'featured_image' => array(
-                    'title'          => 'Illustration',
-                    'featured_image' => 'thumbnail'
-                ),
-                'published' => array(
-                    'title'       => 'Published',
-                    'meta_key'    => 'published_date',
-                    'date_format' => 'd/m/Y'
-                ),
-                'genre' => array(
-                    'taxonomy' => 'genre'
-                )
-            ),
-        ],
+        // 'happyforms-message' => [
+        //     'labels' => [
+        //         'singular' => 'Foo',
+        //         'plural' => 'Bars',
+        //     ],
+        //     'admin_cols' => array(
+        //         'featured_image' => array(
+        //             'title'          => 'Illustration',
+        //             'featured_image' => 'thumbnail'
+        //         ),
+        //         'published' => array(
+        //             'title'       => 'Published',
+        //             'meta_key'    => 'published_date',
+        //             'date_format' => 'd/m/Y'
+        //         ),
+        //         'genre' => array(
+        //             'taxonomy' => 'genre'
+        //         )
+        //     ),
+        // ],
 
         'opportunity' => [
             'enter_title_here' => 'Enter vacancy title',
