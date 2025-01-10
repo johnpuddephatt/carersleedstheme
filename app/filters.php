@@ -127,3 +127,6 @@ add_filter('simple_page_ordering_is_sortable', function ($sortable, $post_type) 
 
 //     return $block_content;
 // }, 10, 2);
+
+define('TEC_HIDE_UPSELL', true);
+add_filter('tec_common_telemetry_show_optin_modal', '__return_false');
