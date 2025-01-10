@@ -23,7 +23,7 @@ export default async (app) => {
    *
    * @see {@link https://bud.js.org/reference/bud.setPublicPath}
    */
-  app.setPublicPath('/app/themes/carersleeds/public/');
+  app.setPublicPath('/app/themes/carersleedstheme/public/');
 
   /**
    * Development server settings
