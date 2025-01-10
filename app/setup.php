@@ -1,0 +1,228 @@
+<?php
+
+/**
+ * Theme setup.
+ */
+
+namespace App;
+
+use function Roots\bundle;
+
+
+add_action('admin_init', function () {
+    $options_pages = ['page_for_events', 'page_for_applications', 'page_for_opportunities'];
+
+    foreach ($options_pages as $option) {
+        add_settings_field($option, ucfirst(str_replace('_', ' ', $option)), function ($args) use ($option) {
+            wp_dropdown_pages(array(
+                'name'              => $option,
+                'show_option_none'  => '&mdash; Select &mdash;',
+                'option_none_value' => '0',
+                'selected'          => get_option($option),
+            ));
+        }, 'reading', 'default', array(
+            'label_for' => 'field-' . $option,
+            'class'     => 'row-' . $option,
+        ));
+
+        add_filter('allowed_options', function ($options) use ($option) {
+            $options['reading'][] = $option;
+            return $options;
+        });
+    }
+});
+
+
+
+
+
+
+
+
+add_filter('acf/settings/show_admin', '__return_false');
+
+
+// How to use:
+// e.g. http://carersleeds.test/wp/wp-admin/admin.php?export_form=43446&export_meta_key=_happyforms_email_2&export_meta_key=fowoxubyh@yahoo.com
+
+if ($_GET['export_form'] ?? false) {
+    require_once(happyforms_get_include_folder() . '/classes/class-exporter-csv.php');
+    $exporter = new \HappyForms_Exporter_CSV($_GET['export_form'], 'export.csv'); // FORM id
+
+    $message_ids =
+        get_posts(array(
+            'fields'          => 'ids', // Only get post IDs
+            'post_type' => 'happyforms-message',
+            'meta_key' => $_GET['export_meta_key'] ?? null, // META KEY
+            'meta_value' => $_GET['export_meta_value'] ?? null, // META VALUE
+        ));
+
+    $exporter->export($message_ids);
+}
+
+add_filter(
+    'pre_get_posts',
+    function ($query) {
+        if (!is_admin())
+            return;
+
+        if (isset($query->query_vars['post_type']) && $query->query_vars['post_type'] == 'happyforms-message') {
+            // $query->set('orderby', 'meta_value');
+            // $query->set('order', 'DESC');
+            if ($_GET['form_id'] ?? false) {
+                $query->set('meta_query', [
+                    [
+                        'key' => '_happyforms_form_id',
+                        'value' => $_GET['form_id'],
+                        'compare' => '=',
+                    ],
+                ]);
+            }
+        }
+    }
+);
+
+add_action('init', function () {
+    remove_post_type_support('form_submission', 'editor');
+}, 99);
+
+add_action('customize_controls_print_styles', function () {
+    echo view('svg')->render();
+
+    echo <<<'HTML'
+<style>
+    #happyforms-steps-nav [data-step="style"] {
+        display: none;
+    }
+</style>
+HTML;
+});
+
+
+/**
+ * Register the theme assets.
+ *
+ * @return void
+ */
+add_action('wp_enqueue_scripts', function () {
+    bundle('app')->enqueue();
+}, 100);
+
+/**
+ * Register the theme assets with the block editor.
+ *
+ * @return void
+ */
+add_action('enqueue_block_editor_assets', function () {
+    bundle('editor')->enqueue();
+}, 100);
+
+// function theme_blocks_init()
+// {
+//     // Directory containing the blocks, within the 'resources/views' directory.
+//     $directory = resource_path('views') . '/blocks/';
+
+//     // Iterate over the directory provided and look for blocks.
+//     $block_directory = new \DirectoryIterator($directory);
+
+//     foreach ($block_directory as $block) {
+//         if ($block->isDir() && !$block->isDot()) {
+//             register_block_type($block->getRealpath());
+//         }
+//     }
+// }
+
+// add_action('init', __NAMESPACE__ . '\\theme_blocks_init');
+
+
+
+/**
+ * Register the initial theme setup.
+ *
+ * @return void
+ */
+add_action('after_setup_theme', function () {
+
+    define('TRIBE_DISABLE_TOOLBAR_ITEMS', true);
+    /**
+     * Disable full-site editing support.
+     *
+     * @link https://wptavern.com/gutenberg-10-5-embeds-pdfs-adds-verse-block-color-options-and-introduces-new-patterns
+     */
+    remove_theme_support('block-templates');
+
+    /**
+     * Register the navigation menus.
+     *
+     * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
+     */
+    register_nav_menus([
+        'primary_navigation' => __('Primary Navigation', 'sage'),
+        'secondary_navigation' => __('Secondary Navigation', 'sage'),
+    ]);
+
+    /**
+     * Disable the default block patterns.
+     *
+     * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#disabling-the-default-block-patterns
+     */
+    remove_theme_support('core-block-patterns');
+
+    /**
+     * Enable plugins to manage the document title.
+     *
+     * @link https://developer.wordpress.org/reference/functions/add_theme_support/#title-tag
+     */
+    add_theme_support('title-tag');
+
+    /**
+     * Enable post thumbnail support.
+     *
+     * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+     */
+    add_theme_support('post-thumbnails');
+
+    /**
+     * Enable responsive embed support.
+     *
+     * @link https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/#responsive-embedded-content
+     */
+    add_theme_support('responsive-embeds');
+
+    /**
+     * Enable HTML5 markup support.
+     *
+     * @link https://developer.wordpress.org/reference/functions/add_theme_support/#html5
+     */
+    add_theme_support('html5', [
+        'caption',
+        'comment-form',
+        'comment-list',
+        'gallery',
+        'search-form',
+        'script',
+        'style',
+    ]);
+
+    /**
+     * Enable selective refresh for widgets in customizer.
+     *
+     * @link https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets
+     */
+    add_theme_support('customize-selective-refresh-widgets');
+}, 20);
+
+/**
+ * Register image sizes
+ */
+
+add_image_size('landscape', 300, 200, true);
+add_image_size('landscape-lg', 600, 400, true);
+add_image_size('landscape-xl', 900, 600, true);
+add_image_size('landscape-2xl', 1200, 800, true);
+add_image_size('landscape-3xl', 1500, 1000, true);
+
+add_image_size('square', 300, 300, true);
+add_image_size('square-lg', 600, 600, true);
+add_image_size('square-xl', 900, 900, true);
+add_image_size('square-2xl', 1200, 1200, true);

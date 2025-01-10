@@ -1,0 +1,19 @@
+  <a href="{{ $url }}" class="group block border-b-2 border-blue-bright">
+    <div class="mb-6 overflow-hidden">
+      @if ($image)
+        {!! wp_get_attachment_image($image, 'landscape', false, [
+            'sizes' => '25vw',
+            'class' => ' w-full block h-auto group-hover:scale-105 transition-transform duration-1000',
+        ]) !!}
+      @else
+        <div
+          class="block aspect-[3/2] h-auto w-full bg-blue-light transition-transform duration-1000 group-hover:scale-105">
+        </div>
+      @endif
+    </div>
+    <div class="flex justify-between border-blue-bright pb-2">
+      <h3 class="type-md">{{ $title }}</h3>
+      <x-icon.card-arrow
+        class="mt-1 flex-none -translate-x-1/2 text-blue opacity-0 transition group-hover:translate-x-0 group-hover:opacity-100" />
+    </div>
+  </a>

@@ -1,0 +1,15 @@
+.type-xl {
+  @apply text-4xl 2xl:text-5xl font-semibold;
+}
+
+.type-lg {
+  @apply text-3xl font-semibold;
+}
+
+.type-md {
+  @apply text-xl font-semibold;
+}
+
+.type-sm {
+  @apply text-lg font-semibold leading-tight;
+}

@@ -1,0 +1,8 @@
+  <a href="{{ $url }}" class="group flex items-center justify-between rounded-r-full bg-beige px-3 py-3">
+
+    <h3 class="text-xl font-semibold">{{ $title }}</h3>
+
+    <x-icon.card-arrow
+      class="-translate-x-1/2 text-pink opacity-0 transition group-hover:translate-x-0 group-hover:opacity-100" />
+
+  </a>

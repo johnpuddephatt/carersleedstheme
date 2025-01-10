@@ -1,0 +1,19 @@
+@layer utilities {
+  .clip-landscape {
+    clip-path: url(#clip-landscape);
+    aspect-ratio: 1.5;
+    object-fit: cover;
+  }
+
+  .clip-oval {
+    clip-path: url(#clip-oval);
+    aspect-ratio: 1.3;
+    object-fit: cover;
+  }
+
+  .clip-oval-part {
+    clip-path: url(#clip-oval-part);
+    aspect-ratio: 1.15;
+    object-fit: cover;
+  }
+}

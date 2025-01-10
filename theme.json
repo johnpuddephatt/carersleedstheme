@@ -1,0 +1,228 @@
+{
+  "__generated__": "⚠️ This file is generated. Do not edit.",
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "border": {
+      "radius": false,
+      "customRadius": false,
+      "shadow": false,
+      "color": false,
+      "style": false,
+      "width": false
+    },
+    "background": {
+      "backgroundImage": true
+    },
+    "color": {
+      "custom": false,
+      "customDuotone": false,
+      "customGradient": false,
+      "defaultDuotone": false,
+      "defaultGradients": false,
+      "defaultPalette": false,
+      "duotone": [],
+      "palette": [
+        {
+          "color": "transparent",
+          "name": "Transparent",
+          "slug": "transparent"
+        },
+        {
+          "color": "#ffffff",
+          "name": "White",
+          "slug": "white"
+        },
+        {
+          "color": "#0c0c0c",
+          "name": "Black",
+          "slug": "black"
+        },
+        {
+          "color": "#074d56",
+          "name": "Blue Dark",
+          "slug": "blue-dark"
+        },
+        {
+          "color": "#01697d",
+          "name": "Blue DEFAULT",
+          "slug": "blue-default"
+        },
+        {
+          "color": "#00a0ad",
+          "name": "Blue Bright",
+          "slug": "blue-bright"
+        },
+        {
+          "color": "#d7eaed",
+          "name": "Blue Light",
+          "slug": "blue-light"
+        },
+        {
+          "color": "#00a2af",
+          "name": "Green Dark",
+          "slug": "green-dark"
+        },
+        {
+          "color": "#65bec5",
+          "name": "Green DEFAULT",
+          "slug": "green-default"
+        },
+        {
+          "color": "#f1f8f9",
+          "name": "Green Light",
+          "slug": "green-light"
+        },
+        {
+          "color": "#c68f36",
+          "name": "Gold Dark",
+          "slug": "gold-dark"
+        },
+        {
+          "color": "#ffd19e",
+          "name": "Gold DEFAULT",
+          "slug": "gold-default"
+        },
+        {
+          "color": "#fefaf6",
+          "name": "Gold Light",
+          "slug": "gold-light"
+        },
+        {
+          "color": "#d18080",
+          "name": "Pink Dark",
+          "slug": "pink-dark"
+        },
+        {
+          "color": "#eebdbc",
+          "name": "Pink DEFAULT",
+          "slug": "pink-default"
+        },
+        {
+          "color": "#f7ecea",
+          "name": "Pink Light",
+          "slug": "pink-light"
+        },
+        {
+          "color": "#e4d3c4",
+          "name": "Beige Dark",
+          "slug": "beige-dark"
+        },
+        {
+          "color": "#f5f1ed",
+          "name": "Beige DEFAULT",
+          "slug": "beige-default"
+        },
+        {
+          "color": "#fcfaf9",
+          "name": "Beige Light",
+          "slug": "beige-light"
+        }
+      ]
+    },
+    "button": {
+      "custom": false,
+      "spacing": {},
+      "typography": {}
+    },
+    "layout": {
+      "contentSize": "720px",
+      "wideSize": "1100px"
+    },
+    "custom": {
+      "spacing": {},
+      "typography": {
+        "font-size": {},
+        "line-height": {}
+      }
+    },
+    "spacing": {
+      "padding": false,
+      "units": [
+        "px",
+        "%",
+        "em",
+        "rem",
+        "vw",
+        "vh"
+      ]
+    },
+    "typography": {
+      "customFontSize": false,
+      "fontFamilies": [
+        {
+          "fontFamily": "Raleway,Avenir,Helvetica Neue,Helvetica,Arial,sans-serif",
+          "name": "Raleway",
+          "slug": "sans"
+        }
+      ],
+      "fontSizes": [
+        {
+          "name": "xs",
+          "size": "0.75rem",
+          "slug": "xs"
+        },
+        {
+          "name": "sm",
+          "size": "0.875rem",
+          "slug": "sm"
+        },
+        {
+          "name": "base",
+          "size": "1rem",
+          "slug": "base"
+        },
+        {
+          "name": "lg",
+          "size": "1.125rem",
+          "slug": "lg"
+        },
+        {
+          "name": "xl",
+          "size": "1.25rem",
+          "slug": "xl"
+        },
+        {
+          "name": "2xl",
+          "size": "1.5rem",
+          "slug": "2xl"
+        },
+        {
+          "name": "3xl",
+          "size": "1.875rem",
+          "slug": "3xl"
+        },
+        {
+          "name": "4xl",
+          "size": "2.25rem",
+          "slug": "4xl"
+        },
+        {
+          "name": "5xl",
+          "size": "3rem",
+          "slug": "5xl"
+        },
+        {
+          "name": "6xl",
+          "size": "3.75rem",
+          "slug": "6xl"
+        },
+        {
+          "name": "7xl",
+          "size": "4.5rem",
+          "slug": "7xl"
+        },
+        {
+          "name": "8xl",
+          "size": "6rem",
+          "slug": "8xl"
+        },
+        {
+          "name": "9xl",
+          "size": "8rem",
+          "slug": "9xl"
+        }
+      ]
+    }
+  }
+}

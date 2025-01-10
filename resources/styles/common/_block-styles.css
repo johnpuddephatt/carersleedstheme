@@ -1,0 +1,134 @@
+.wp-block {
+  max-width: var(--wp--style--global--content-size);
+}
+
+.prose > h1,
+h1.wp-block-heading {
+  @apply type-xl;
+}
+
+.prose > h2,
+h2.wp-block-heading {
+  @apply type-lg text-blue-dark;
+}
+
+.prose > h3,
+h3.wp-block-heading {
+  @apply type-md text-green-dark;
+}
+
+.wp-block-button .wp-block-button__link {
+  @apply border-green border-2 rounded-2xl px-4 py-2 bg-transparent text-black font-semibold;
+}
+
+.wp-block-hero .wp-block-buttons {
+  @apply mt-8;
+}
+/* 
+.post-content .wp-block-button__link,
+.page-content .wp-block-button__link,
+.page-content .wp-block-file__button,
+.post-content .wp-block-file__button {
+  @apply !no-underline text-white;
+}
+
+
+
+
+
+.wp-block-group.has-background > *:first-child {
+  @apply mt-0;
+}
+
+
+.wp-block-media-text .wp-block-media-text__content {
+  @apply pt-4 pb-4;
+} */
+
+.wp-block-quote {
+  @apply text-xl lg:text-2xl;
+}
+
+.wp-block-quote p {
+  @apply font-bold text-blue !leading-snug !not-italic mb-3;
+  font-size: 1em !important;
+}
+
+.wp-block-quote {
+  @apply !my-12  !leading-tight !border-l-0;
+  padding-left: 1.5em !important;
+}
+
+.wp-block-quote::before {
+  content: '';
+  display: block;
+  margin-left: -1.5em;
+  width: 1.25em;
+  height: 1.25em;
+  float: left;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.58 13.85"><ellipse fill="rgb(255,206,155)" cx="7.29" cy="6.48"  rx="7.29" ry="6.48"/><path fill="rgb(255,206,155)" d="M12.8 10.69s-.63 1.64.2 2.25-1.09 1.18-1.83.77c-.57-.31-2.1-.97-2.1-.97l3.73-2.05Z"/></svg>');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.wp-block-quote cite {
+  @apply !not-italic text-right text-lg text-blue font-semibold;
+}
+
+.wp-block-quote.has-background {
+  @apply pt-0.5 p-6 border-l-blue;
+}
+
+.wp-block-quote.is-style-large {
+  @apply !my-20 text-3xl lg:text-4xl;
+}
+
+.wp-block-quote.is-style-large p {
+  @apply !leading-snug;
+}
+
+.wp-block-quote.is-style-large cite {
+  @apply text-xl;
+}
+
+.wp-block-group.has-background {
+  @apply p-6 rounded-2xl;
+}
+
+details {
+  @apply p-4 pb-0 bg-blue-light overflow-hidden border border-blue-light hover:border-blue rounded-2xl  mb-4;
+}
+
+details[open] {
+  @apply !border border-blue pb-4;
+}
+
+details[open] .open\:rotate-90 {
+  @apply transform rotate-90;
+}
+
+summary {
+  @apply text-blue-dark  type-md -mx-4 -mt-4 transition  py-4 px-6 cursor-pointer;
+}
+
+summary:hover {
+  /* @apply border-blue; */
+}
+
+.wp-block-table table {
+  @apply border-collapse border-white bg-beige;
+}
+
+.wp-block-table table.has-blue-background-color th {
+  @apply text-white;
+}
+
+.wp-block-table td,
+.wp-block-table th {
+  @apply border-white border-8  px-4 py-2 bg-white bg-opacity-70;
+}
+
+.wp-block-table th {
+  @apply bg-opacity-0;
+}

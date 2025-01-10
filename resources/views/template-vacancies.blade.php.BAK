@@ -1,0 +1,42 @@
+{{--
+  Template Name: Vacancies Template
+--}}
+
+@extends('layouts.app') @section('content')
+
+  @include('partials.section-header', [
+      'background_colour' => 'bg-gold',
+      'subtitle' => get_the_title($_GET['job_id'] ?? ''),
+  ])
+  <div class="container mb-24 space-y-8 lg:max-w-5xl">
+
+    <div class="page-content prose xl:prose-lg">
+      {!! the_content() !!}
+    </div>
+
+    @if (!$vacancies->have_posts())
+      <div class="my-16">
+        <x-alert type="warning">
+          Sorry, no vacancies were found.
+        </x-alert>
+      </div>
+    @else
+      <div class="mb-16 mt-12 flex flex-col gap-4">
+        @while ($vacancies->have_posts())
+          @php($vacancies->the_post())
+          <x-vacancy-card :vacancy="get_post()" />
+        @endwhile
+      </div>
+    @endif
+
+    <div class="container mb-16 text-right text-xl">
+      {!! paginate_links([
+          'total' => $vacancies->max_num_pages,
+          'prev_text' => '<',
+          'next_text' => '>',
+          'add_fragment' => '#vacancies',
+      ]) !!}
+    </div>
+
+  </div>
+@endsection
