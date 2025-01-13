@@ -230,6 +230,7 @@ class Announcement extends Block
                 ],
             ])
             ->addTextarea('content', [
+                'maxlength' => '150',
                 'conditional_logic' =>
                 [
                     [
