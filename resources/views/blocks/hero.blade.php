@@ -5,7 +5,7 @@
   <div class="container">
     <div class="relative grid grid-cols-2 items-center gap-6">
       <div class="{{ $block->block->align == 'full' ? 'max-w-xl text-xl' : 'max-w-lg' }} py-16">
-        <h1 class="type-xl mb-4 text-blue">{{ $heading }}</h1>
+        <h1 class="type-xl mb-6 text-blue-dark">{{ $heading }}</h1>
         <div>{!! $content !!}</div>
         @if ($buttons)
           <div class="mt-10 flex flex-wrap gap-2">
@@ -39,3 +39,10 @@
     </div>
   </div>
 </div>
+
+@if ($block->style == 'home')
+  <svg xmlns="http://www.w3.org/2000/svg" class="absolute right-0 h-auto w-48 -translate-y-8" viewBox="0 0 51.1 150.17">
+    <path fill="#ffd19e"
+      d="M51.1 0C40.5 1.97 31.13 10.1 28.03 20.48c-3.27 10.94.04 22.86-2.14 34.07-3.51 18.04-20.38 31-24.84 48.84-3.79 15.12 2.94 32.29 15.98 40.83 9.93 6.5 22.96 7.62 34.07 3.61V0Z" />
+  </svg>
+@endif

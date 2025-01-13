@@ -1,4 +1,5 @@
 @if ($links)
+
   <div class="wp-block {{ $block->classes }} {{ $block->block->align ? 'container' : null }} not-prose mx-auto my-16"
     style="{{ $block->inlineStyle }}">
 

@@ -9,7 +9,7 @@
           <ul class="flex flex-row items-center gap-8">
             @foreach ($secondaryNavigation as $item)
               <li>
-                <a class="text-blue-dark inline-block" href="{{ $item->url }}">{!! $item->label !!}</a>
+                <a class="inline-block text-blue-dark" href="{{ $item->url }}">{!! $item->label !!}</a>
               </li>
             @endforeach
           </ul>
@@ -51,7 +51,7 @@
           <ul class="flex flex-col gap-4 max-lg:container lg:flex-row lg:gap-12">
             @foreach ($primaryNavigation as $item)
               <li>
-                <a class="max-w-lg:text-white inline-block text-lg font-semibold text-blue max-lg:text-2xl lg:py-2"
+                <a class="max-w-lg:text-white inline-block text-lg font-semibold text-blue-dark max-lg:text-2xl lg:py-2"
                   href="{{ $item->url }}">{!! $item->label !!}</a>
               </li>
             @endforeach

@@ -7,7 +7,7 @@
 }
 
 .type-md {
-  @apply text-xl font-semibold;
+  @apply text-xl font-bold;
 }
 
 .type-sm {

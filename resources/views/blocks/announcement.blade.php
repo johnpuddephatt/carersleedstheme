@@ -1,6 +1,11 @@
-<div class="not-prose wp-block {{ $block->classes }} mx-auto" style="{{ $block->inlineStyle }}">
+<div class="not-prose wp-block {{ $block->classes }} relative mx-auto" style="{{ $block->inlineStyle }}">
+
+  <div
+    class="bg-{{ $behind_color ?? 'transparent' }} absolute -top-16 left-1/2 -z-10 h-[calc(50%+4rem)] w-screen !max-w-none -translate-x-1/2">
+  </div>
+
   {!! $block->preview || ($type == 'link' && !$link) ? '<div' : '<a' !!} href="{{ $type == 'page' ? get_the_permalink($page) : $link }}"
-  class="bg-{{ $background_colour }} {{ $block->block->align == 'full' ? '' : 'mx-4 rounded-3xl my-16' }} block cursor-pointer overflow-hidden">
+  class="bg-{{ $background_colour }} {{ $block->block->align == 'full' ? '' : 'mx-4  rounded-3xl my-16' }} block cursor-pointer overflow-hidden !font-normal">
   <div class="group relative flex items-center gap-6">
     <div class="max-w-[50%] overflow-hidden">
       @if ($type == 'page')
@@ -20,7 +25,7 @@
       @endif
     </div>
     <div class="{{ $block->block->align == 'full' ? 'max-w-xl text-xl' : 'max-w-lg' }} py-4">
-      <h2 class="{{ $block->block->align ? 'type-lg' : 'type-md' }} mb-4">
+      <h2 class="{{ $block->block->align == 'full' ? 'type-lg' : 'type-md' }} mb-4">
         {{ $type == 'page' ? get_the_title($page) : $heading }}
       </h2>
       <div>{!! $type == 'page' ? get_the_excerpt($page) : $content !!}</div>

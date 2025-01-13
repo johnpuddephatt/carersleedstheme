@@ -169,6 +169,7 @@ class Announcement extends Block
             'content' => get_field('content'),
             'link' => get_field('link'),
             'background_colour' => get_field('background_colour'),
+            'behind_color' => get_field('behind_color'),
             'image' => get_field('image'),
             'type' => get_field('Announcement type'),
             'page' => get_field('page'),
@@ -186,6 +187,10 @@ class Announcement extends Block
         $fields
             ->addPartial(\App\Fields\Partials\BackgroundColor::class)
 
+            ->addField('behind_color', 'editor_palette')
+            ->setConfig('default_value', 'transparent')
+            ->setConfig('allowed_colors', ['transparent', 'green-light', 'pink-light', 'beige-light'])
+            ->setConfig('return_format', 'slug')
 
             ->addSelect('Announcement type')
             ->addChoices([
