@@ -6,11 +6,12 @@
     fill="#65bec5" />
 </svg>
 
-<div class="wp-block {{ $block->classes }} not-prose relative mx-auto overflow-hidden pb-24"
+<div
+  class="wp-block {{ $block->classes }} {{ $block->block->align == 'full' ? '' : 'my-16 2xl:my-24' }} not-prose relative mx-auto overflow-hidden pb-24"
   style="{{ $block->inlineStyle }}">
 
   <div
-    class="{{ $block->block->align == 'full' ? '' : 'rounded-big my-16 2xl:my-24' }} relative mx-4 flex flex-row justify-between gap-6 bg-beige p-12 xl:p-16">
+    class="{{ $block->block->align == 'full' ? '' : 'rounded-big' }} relative mx-4 flex flex-row justify-between gap-6 bg-beige p-12 xl:p-16">
     <div
       class="{{ $block->block->align == 'full' ? 'max-w-xl text-xl' : 'max-w-lg' }} flex flex-col justify-around py-8">
       <div>
