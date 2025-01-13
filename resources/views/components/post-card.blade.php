@@ -16,7 +16,7 @@
       @if (has_post_thumbnail($post->ID))
         <img src="{{ get_the_post_thumbnail_url($post->ID, 'square') }}"
           alt="{{ get_the_post_thumbnail_caption($post->ID) }}"
-          class="h-auto w-full object-cover transition duration-1000 group-hover:scale-105">
+          class="h-full w-full object-cover transition duration-1000 group-hover:scale-105">
       @endif
     </div>
   @endif
