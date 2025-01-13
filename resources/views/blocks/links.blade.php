@@ -8,7 +8,7 @@
       <h2 class="type-xl mb-12 text-blue-dark">{{ $title }}</h2>
     @endif
 
-    <div class="grid grid-cols-3 gap-x-8 gap-y-6 pb-12">
+    <div class="grid grid-cols-3 gap-x-8 gap-y-6">
 
       @foreach ($links as $link)
         @if ($link['acf_fc_layout'] == 'manual_link')
@@ -28,12 +28,11 @@
         @endif
       @endforeach
     </div>
-
-    <div class="text-center">
-      @if ($more_link)
+    @if ($more_link)
+      <div class="pt-12 text-center">
         <x-button :label="$more_link['title']" :url="$more_link['url']" :target="$more_link['target']" />
-      @endif
-    </div>
+      </div>
+    @endif
 
   </div>
 @elseif($block->preview)
