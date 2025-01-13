@@ -167,7 +167,7 @@ class Blocks extends Block
         return [
             'title' => get_field('title'),
             'subtitle' => get_field('subtitle'),
-            'background_colour' => get_field('background_colour'),
+            // 'background_colour' => get_field('background_colour'),
             'blocks' => get_field('blocks'),
             'more_link' => get_field('read_more_link'),
         ];
@@ -184,7 +184,7 @@ class Blocks extends Block
 
             ->addText('title')
             ->addText('subtitle')
-            ->addPartial(\App\Fields\Partials\BackgroundColor::class)
+            // ->addPartial(\App\Fields\Partials\BackgroundColor::class)
 
             ->addLink('read_more_link')
 

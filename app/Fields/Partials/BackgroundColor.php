@@ -7,6 +7,8 @@ use Log1x\AcfComposer\Partial;
 
 class BackgroundColor extends Partial
 {
+
+
     /**
      * The partial field group.
      */
@@ -17,7 +19,11 @@ class BackgroundColor extends Partial
         $fields
             ->addField('background_colour', 'editor_palette')
             ->setConfig('default_value', 'green-light')
-            ->setConfig('allowed_colors', ['green-light', 'pink-light', 'beige-light'])
+            ->setConfig('allowed_colors', [
+                'green-light',
+                'pink-light',
+                'beige-light'
+            ])
             ->setConfig('return_format', 'slug');
 
         return $fields;
