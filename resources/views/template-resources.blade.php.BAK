@@ -105,7 +105,7 @@
   </form>
 
   @if (!$resources->have_posts())
-    <div class="container my-16 lg:max-w-5xl">
+    <div class="container my-16 2xl:my-24 lg:max-w-5xl">
       <x-alert type="warning">
         Sorry, no resources matching your criteria were found.
       </x-alert>

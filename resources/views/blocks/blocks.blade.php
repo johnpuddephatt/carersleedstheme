@@ -1,13 +1,13 @@
 @if ($blocks)
   <div
-    class="wp-block {{ $block->classes }} bg-{{ $background_colour }} {{ $block->block->align ? 'container' : null }} not-prose mx-auto my-16 px-8 py-16"
+    class="wp-block {{ $block->classes }} bg-{{ $background_colour }} {{ $block->block->align ? 'container' : null }} not-prose mx-auto my-16 px-8 py-16 2xl:my-24"
     style="{{ $block->inlineStyle }}">
 
     @if ($title)
       <h2 class="type-xl mb-12 text-center font-semibold">{{ $title }}</h2>
     @endif
     @if ($subtitle)
-      <div class="type-md -mt-4 mb-12 text-center">{{ $subtitle }}</div>
+      <div class="type-md -mt-6 mb-16 text-center !font-semibold">{{ $subtitle }}</div>
     @endif
 
     <div class="flex flex-row flex-wrap justify-center gap-8 lg:gap-12">
@@ -15,7 +15,7 @@
       @foreach ($blocks as $block_item)
         <div
           class="{{ $block->block->align ? 'flex-row items-start' : 'flex-col' }} flex h-56 w-full min-w-96 max-w-xl gap-4 rounded-3xl bg-white p-8">
-          <div class="h-12 w-12 rounded-full bg-blue-bright p-2">
+          <div class="h-12 w-12 rounded-full bg-blue-bright p-2.5">
             @if ($block_item['icon'])
               @svg($block_item['icon'], 'h-8 w-8 text-white ')
             @endif

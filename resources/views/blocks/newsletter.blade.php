@@ -1,5 +1,5 @@
 <div
-  class="wp-block {{ $block->classes }} {{ $block->block->align == 'full' ? '' : 'rounded-3xl my-16' }} not-prose mx-auto overflow-hidden bg-beige""
+  class="wp-block {{ $block->classes }} {{ $block->block->align == 'full' ? '' : 'rounded-3xl my-16 2xl:my-24' }} not-prose mx-auto overflow-hidden bg-beige""
   style="{{ $block->inlineStyle }}">
 
   <div class="container">

@@ -5,7 +5,7 @@
   </div>
 
   {!! $block->preview || ($type == 'link' && !$link) ? '<div' : '<a' !!} href="{{ $type == 'page' ? get_the_permalink($page) : $link }}"
-  class="bg-{{ $background_colour }} {{ $block->block->align == 'full' ? '' : 'mx-4  rounded-3xl my-16' }} block cursor-pointer overflow-hidden !font-normal">
+  class="bg-{{ $background_colour }} {{ $block->block->align == 'full' ? '' : 'mx-4  rounded-3xl my-16 2xl:my-24' }} block cursor-pointer overflow-hidden !font-normal">
   <div class="group relative flex items-center">
     <div class="max-w-[50%] overflow-hidden">
       @if ($type == 'page')
