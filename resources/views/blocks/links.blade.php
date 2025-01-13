@@ -7,7 +7,7 @@
       <h2 class="type-xl mb-12 text-blue-dark">{{ $title }}</h2>
     @endif
 
-    <div class="grid grid-cols-3 gap-x-10 gap-y-6 pb-12">
+    <div class="grid grid-cols-3 gap-x-8 gap-y-6 pb-12">
 
       @foreach ($links as $link)
         @if ($link['acf_fc_layout'] == 'manual_link')
