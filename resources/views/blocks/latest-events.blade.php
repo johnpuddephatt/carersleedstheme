@@ -1,6 +1,6 @@
 @if ($events)
   <div
-    class="wp-block not-prose {{ $block->classes }} bg-{{ $background_colour ?? 'transparent' }} {{ $block->block->align ? 'container' : null }} mx-auto my-16 px-8 py-16 2xl:my-24"
+    class="wp-block not-prose {{ $block->classes }} bg-{{ $background_colour ?? 'transparent' }} {{ $block->block->align ? 'container' : null }} mx-auto my-16 px-8 2xl:my-24"
     style="{{ $block->inlineStyle }}">
 
     @if ($title)

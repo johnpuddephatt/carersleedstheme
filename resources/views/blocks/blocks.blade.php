@@ -17,7 +17,7 @@
           class="{{ $block->block->align ? 'flex-row items-start' : 'flex-col' }} flex h-56 w-full min-w-96 max-w-xl gap-4 rounded-3xl bg-white p-8">
           <div class="h-12 w-12 rounded-full bg-blue-bright p-2.5">
             @if ($block_item['icon'])
-              @svg($block_item['icon'], 'h-8 w-8 text-white ')
+              @svg($block_item['icon'], 'h-7 w-7 text-white ')
             @endif
           </div>
 
