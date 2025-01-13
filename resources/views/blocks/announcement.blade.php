@@ -23,12 +23,12 @@
       @endif
     </div>
     <div class="{{ $block->block->align == 'full' ? 'max-w-xl text-xl' : 'max-w-lg' }} px-6 py-4">
-      <h2 class="{{ $block->block->align == 'full' ? 'type-lg mb-4' : 'type-md mb-3' }}">
+      <h2 class="{{ $block->block->align == 'full' ? 'type-lg mb-4' : 'type-md mb-2' }}">
         {{ $type == 'page' ? get_the_title($page) : $heading }}
       </h2>
       <div>{!! $type == 'page' ? get_the_excerpt($page) : $content !!}</div>
       @if ($type == 'page' || $link)
-        <div class="{{ $block->block->align == 'full' ? 'mt-4' : 'mt-3' }} font-semibold">Read more</div>
+        <div class="{{ $block->block->align == 'full' ? 'mt-4' : 'mt-2' }} font-semibold">Read more</div>
       @endif
 
     </div>
