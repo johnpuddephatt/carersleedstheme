@@ -2,11 +2,13 @@
     style="{{ $block->inlineStyle }}">
 
     <div
-      class="{{ $block->block->align == 'full' ? '' : 'rounded-3xl my-16 2xl:my-24' }} relative flex flex-row items-center justify-between gap-6 bg-beige">
-      <div class="{{ $block->block->align == 'full' ? 'max-w-xl text-xl' : 'max-w-lg' }} flex flex-col py-8">
-        <h1 class="type-xl mb-4">{{ $heading }}</h1>
-        <div>{!! $content !!}</div>
-
+      class="{{ $block->block->align == 'full' ? '' : 'rounded-3xl my-16 2xl:my-24' }} relative flex flex-row items-center justify-between gap-6 bg-beige p-8 xl:p-16">
+      <div
+        class="{{ $block->block->align == 'full' ? 'max-w-xl text-xl' : 'max-w-lg' }} flex h-full flex-col justify-between py-8">
+        <div>
+          <h1 class="type-xl mb-4">{{ $heading }}</h1>
+          <div>{!! $content !!}</div>
+        </div>
         <form id="mc-embedded-subscribe-form" class="validate mt-auto pt-4" action="{{ $mailchimp_form_url }}"
           method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
           <div style="position: absolute; left: -5000px;" aria-hidden="true"><input tabindex="-1"
