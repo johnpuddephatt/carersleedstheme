@@ -16,4 +16,10 @@
     aspect-ratio: 1.15;
     object-fit: cover;
   }
+
+  .clip-oval-2 {
+    clip-path: url(#clip-oval-2);
+    aspect-ratio: 0.96;
+    object-fit: cover;
+  }
 }

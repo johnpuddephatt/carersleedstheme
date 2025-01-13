@@ -29,25 +29,26 @@
       @endif
     </div>
 
-    <div class="container flex flex-col gap-8 lg:flex-row-reverse lg:gap-16">
-      <div class="border-t border-green pt-8 lg:w-1/2">
-        <h3 class="type-md mb-4 text-blue-dark">Location</h3>
-        @if (tribe_get_venue($event->ID))
-          <p class="type-sm text-blue-dark">{{ tribe_get_venue($event->ID) }}</p>
-        @endif
-        @if (tribe_get_address($event->ID))
-          <p class="type-sm text-blue-dark">{{ tribe_get_address($event->ID) }}</p>
-        @endif
+    <div class="container flex flex-col gap-8 lg:flex-row-reverse lg:justify-end lg:gap-16">
+      @if (tribe_get_venue($event->ID) || tribe_get_address($event->ID) || tribe_get_embedded_map($event->ID))
+        <div class="border-t border-green pt-8 lg:w-1/2">
+          <h3 class="type-md mb-4 text-blue-dark">Location</h3>
+          @if (tribe_get_venue($event->ID))
+            <p class="type-sm text-blue-dark">{{ tribe_get_venue($event->ID) }}</p>
+          @endif
+          @if (tribe_get_address($event->ID))
+            <p class="type-sm text-blue-dark">{{ tribe_get_address($event->ID) }}</p>
+          @endif
 
-        @if (tribe_get_embedded_map($event->ID))
-          <div class="mt-8 overflow-hidden rounded-3xl">
-            {!! tribe_get_embedded_map($event->ID) !!}
-          </div>
-        @endif
+          @if (tribe_get_embedded_map($event->ID))
+            <div class="mt-8 overflow-hidden rounded-3xl">
+              {!! tribe_get_embedded_map($event->ID) !!}
+            </div>
+          @endif
 
-      </div>
-
-      <div class="prose max-w-none lg:w-1/2">
+        </div>
+      @endif
+      <div class="post-content prose max-w-none xl:prose-lg lg:w-1/2">
 
         {{ the_content($event->ID) }}
 
