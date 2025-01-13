@@ -74,7 +74,7 @@ export default async (app) => {
         typography: {},
       },
       layout: {
-        contentSize: '720px',
+        contentSize: '800px',
         wideSize: '1100px',
       },
       custom: {
