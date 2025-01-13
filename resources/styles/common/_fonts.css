@@ -1,24 +1,24 @@
 @layer base {
   @font-face {
-    font-family: 'Raleway';
+    font-family: 'RalewayCL';
     font-weight: 400;
     src: url(@fonts/Raleway-Medium.woff2) format('woff2');
   }
 
   @font-face {
-    font-family: 'Raleway';
+    font-family: 'RalewayCL';
     font-weight: 500;
     src: url(@fonts/Raleway-SemiBold.woff2) format('woff2');
   }
 
   @font-face {
-    font-family: 'Raleway';
+    font-family: 'RalewayCL';
     font-weight: 600;
     src: url(@fonts/Raleway-Bold.woff2) format('woff2');
   }
 
   @font-face {
-    font-family: 'Raleway';
+    font-family: 'RalewayCL';
     font-weight: 700;
     src: url(@fonts/Raleway-ExtraBold.woff2) format('woff2');
   }

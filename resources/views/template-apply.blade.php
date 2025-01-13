@@ -9,7 +9,8 @@
 
       <x-alert type="warning">
         <p>Sorry, the job you are looking for does not exist.</p>
-        Back to <a href="{{ get_permalink(get_option('page_for_opportunities')) }}">vacancies</a>.
+        Back to <a
+          href="{{ get_permalink(get_option('page_for_opportunities')) }}">{{ get_the_title(get_option('page_for_opportunities')) }}</a>.
       </x-alert>
 
     </div>

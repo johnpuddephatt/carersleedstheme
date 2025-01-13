@@ -58,6 +58,7 @@ const config = {
     },
     fontFamily: {
       sans: [
+        'RalewayCL',
         'Raleway',
         'Avenir',
         'Helvetica Neue',

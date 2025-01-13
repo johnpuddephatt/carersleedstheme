@@ -5,7 +5,7 @@
   <div class="container">
     <div class="relative grid grid-cols-2 items-center gap-6">
       <div class="{{ $block->block->align == 'full' ? 'max-w-xl text-xl' : 'max-w-lg' }} py-16">
-        <h1 class="type-xl text-blue">{{ $heading }}</h1>
+        <h1 class="type-xl mb-4 text-blue">{{ $heading }}</h1>
         <div>{!! $content !!}</div>
         @if ($buttons)
           <div class="mt-10 flex flex-wrap gap-2">
