@@ -1,7 +1,7 @@
 <div class="not-prose wp-block {{ $block->classes }} relative mx-auto" style="{{ $block->inlineStyle }}">
 
   <div
-    class="bg-{{ $behind_color ?? 'transparent' }} absolute -top-16 left-1/2 -z-10 h-[calc(50%+4rem)] w-screen !max-w-none -translate-x-1/2">
+    class="bg-{{ $behind_color ?? 'transparent' }} absolute -top-16 left-1/2 -z-10 h-[calc(50%+4rem)] w-screen !max-w-none -translate-x-1/2 2xl:-top-24">
   </div>
 
   {!! $block->preview || ($type == 'link' && !$link) ? '<div' : '<a' !!} href="{{ $type == 'page' ? get_the_permalink($page) : $link }}"
