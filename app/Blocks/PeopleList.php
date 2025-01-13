@@ -40,7 +40,7 @@ class PeopleList extends Block
      *
      * @var array
      */
-    public $keywords = [];
+    public $keywords = ['people', 'staff', 'team', 'members', 'employees', 'trustees'];
 
     /**
      * The block post type allow list.
@@ -117,7 +117,7 @@ class PeopleList extends Block
      *
      * @var array
      */
-    public $styles = ['light', 'dark'];
+    // public $styles = ['light', 'dark'];
 
     /**
      * The block preview example data.

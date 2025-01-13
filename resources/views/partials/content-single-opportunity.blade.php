@@ -76,9 +76,11 @@
             <li>Contract: {{ get_field('contract_type', $post->ID) }}</li>
           @endif
         </ul>
-        <div class="mt-8 text-center">
-          <x-button class="bg-white !px-16" label="Apply here" :url="get_permalink(get_option('page_for_applications')) . '?job_id=' . $post->ID" />
-        </div>
+        @if (get_option('page_for_applications'))
+          <div class="mt-8 text-center">
+            <x-button class="bg-white !px-16" label="Apply here" :url="get_permalink(get_option('page_for_applications')) . '?job_id=' . $post->ID" />
+          </div>
+        @endif
       </div>
 
       <div class="prose max-w-none lg:w-1/2">

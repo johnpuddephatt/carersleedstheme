@@ -41,7 +41,7 @@ class OpportunitiesList extends Block
      *
      * @var array
      */
-    public $keywords = [];
+    public $keywords = ['job', 'vacancy', 'opportunity', 'volunteering', 'vacancies'];
 
     /**
      * The block post type allow list.

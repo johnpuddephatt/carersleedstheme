@@ -36,7 +36,7 @@ return [
         // ],
 
         'opportunity' => [
-            'enter_title_here' => 'Enter vacancy title',
+            'enter_title_here' => 'Enter opportunity title',
             'menu_icon' => 'dashicons-pressthis',
             'supports' => ['title', 'editor', 'author', 'revisions'],
             'show_in_rest' => true,
@@ -46,14 +46,7 @@ return [
                 'plural' => 'Opportunities',
             ],
             'template' => [
-                [
-                    'acf/hero',
-                    [
-                        'heading' => 'Opportunities',
-                        'subtitle' => 'Find your next role',
-                        // 'background' => 'https://source.unsplash.com/1600x900/?job',
-                    ]
-                ],
+
                 [
                     'core/heading',
                     [
