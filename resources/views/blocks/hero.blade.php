@@ -4,9 +4,9 @@
 
   <div class="container">
     <div class="relative grid grid-cols-2 items-center gap-6">
-      <div class="{{ $block->block->align == 'full' ? 'max-w-xl text-xl' : 'max-w-lg' }} py-16">
+      <div class="{{ $block->block->align == 'full' ? 'max-w-xl' : 'max-w-lg' }} py-16">
         <h1 class="type-xl mb-6 text-blue-dark">{{ $heading }}</h1>
-        <div>{!! $content !!}</div>
+        <div class="text-xl">{!! $content !!}</div>
         @if ($buttons)
           <div class="mt-10 flex flex-wrap gap-2">
             @foreach ($buttons as $button)
