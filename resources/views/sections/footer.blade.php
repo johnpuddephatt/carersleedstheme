@@ -68,7 +68,7 @@
       </svg>
 
       @if ($footerNavigation)
-        <div class="mb-2 text-sm text-pink text-opacity-90">
+        <div class="mt-4 text-sm text-opacity-90">
           <nav>
             <ul class="flex flex-row justify-end gap-3">
 
