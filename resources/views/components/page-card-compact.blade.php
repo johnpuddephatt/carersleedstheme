@@ -3,6 +3,6 @@
     <h3 class="text-xl font-semibold">{{ $title }}</h3>
 
     <x-icon.card-arrow
-      class="-translate-x-1/2 text-pink opacity-0 transition group-hover:translate-x-0 group-hover:opacity-100" />
+      class="-translate-x-1/2 text-beige-dark opacity-0 transition group-hover:translate-x-0 group-hover:opacity-100" />
 
   </a>

@@ -4,10 +4,10 @@
     style="{{ $block->inlineStyle }}">
 
     @if ($title)
-      <h2 class="type-xl mb-8 text-blue">{{ $title }}</h2>
+      <h2 class="type-xl mb-12 text-blue-dark">{{ $title }}</h2>
     @endif
 
-    <div class="grid grid-cols-3 gap-8 pb-8">
+    <div class="grid grid-cols-3 gap-x-10 gap-y-6 pb-12">
 
       @foreach ($links as $link)
         @if ($link['acf_fc_layout'] == 'manual_link')
