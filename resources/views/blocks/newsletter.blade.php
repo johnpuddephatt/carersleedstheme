@@ -2,7 +2,7 @@
     style="{{ $block->inlineStyle }}">
 
     <div
-      class="{{ $block->block->align == 'full' ? '' : 'rounded-3xl my-16 2xl:my-24' }} relative flex flex-row justify-between gap-6 bg-beige p-8 xl:p-16">
+      class="{{ $block->block->align == 'full' ? '' : 'rounded-big my-16 2xl:my-24' }} relative flex flex-row justify-between gap-6 bg-beige p-8 xl:p-16">
       <div
         class="{{ $block->block->align == 'full' ? 'max-w-xl text-xl' : 'max-w-lg' }} flex flex-col justify-around py-8">
         <div>
