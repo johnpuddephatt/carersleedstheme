@@ -9,6 +9,11 @@ namespace App;
 use function Roots\bundle;
 
 
+
+add_action('admin_menu', function () {
+    remove_action('admin_notices', 'update_nag', 3);
+});
+
 add_action('admin_init', function () {
     $options_pages = ['page_for_events', 'page_for_applications', 'page_for_opportunities'];
 
