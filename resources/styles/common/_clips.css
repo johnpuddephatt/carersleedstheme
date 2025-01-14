@@ -22,4 +22,10 @@
     aspect-ratio: 0.96;
     object-fit: cover;
   }
+
+  .clip-oval-part-2 {
+    clip-path: url(#clip-oval-part-2);
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
 }
