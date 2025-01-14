@@ -117,7 +117,7 @@ class Hero extends Block
      *
      * @var array
      */
-    public $styles = ['default', 'home'];
+    public $styles = ['default', 'home', 'alternative'];
 
     /**
      * The block preview example data.

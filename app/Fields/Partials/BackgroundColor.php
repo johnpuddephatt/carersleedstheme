@@ -22,7 +22,8 @@ class BackgroundColor extends Partial
             ->setConfig('allowed_colors', [
                 'green-light',
                 'pink-light',
-                'beige-light'
+                'beige-light',
+                'gold'
             ])
             ->setConfig('return_format', 'slug');
 

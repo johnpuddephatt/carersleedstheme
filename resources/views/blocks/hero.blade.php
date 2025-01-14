@@ -30,11 +30,18 @@
               <circle cx="10.27" cy="103.33" r="7.56" fill="#eebdbc" />
             </svg>
           @endif
-          {!! wp_get_attachment_image($image, 'landscape', false, [
-              'sizes' => '25vw',
-              'class' => ' w-full h-auto ' . ($block->style == 'home' ? ' mt-12 mb-24 clip-landscape' : ' clip-oval'),
-          ]) !!}
-        @endif
+
+          @if ($block->style == 'home')
+            {!! wp_get_attachment_image($image, 'landscape', false, [
+                'sizes' => '25vw',
+                'class' => ' w-full h-auto mt-12 mb-24 clip-landscape',
+            ]) !!}
+          @else
+            {!! wp_get_attachment_image($image, 'square', false, [
+                'sizes' => '25vw',
+                'class' => ' w-full h-auto ' . ($block->style == 'alternative' ? 'clip-oval-2' : ' clip-oval'),
+            ]) !!}
+          @endif
       </div>
     </div>
   </div>
