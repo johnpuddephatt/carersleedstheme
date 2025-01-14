@@ -3,7 +3,7 @@
   style="{{ $block->inlineStyle }}">
 
   <div class="{{ $block->block->align == 'full' ? 'container gap-6' : null }} relative grid grid-cols-2 items-center">
-    <div class="{{ $block->block->align == 'full' ? 'py-16 max-w-xl' : ' p-8 lg:p-16' }} relative">
+    <div class="{{ $block->block->align == 'full' ? 'py-16 max-w-xl' : ' p-8 lg:p-16' }} relative z-10">
       <h1 class="type-xl mb-6 text-blue-dark">{{ $heading }}</h1>
       <div class="text-xl">{!! $content !!}</div>
       @if ($buttons)
