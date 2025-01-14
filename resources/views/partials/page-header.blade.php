@@ -11,6 +11,7 @@
         </svg>
         {!! get_the_post_thumbnail($post->ID, 'landscape', [
             'class' => ' clip-oval translate-x-8 -translate-y-8  block h-auto w-full',
+            'sizes' => '35vw',
         ]) !!}
 
       </div>

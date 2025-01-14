@@ -8,6 +8,11 @@ a.active {
   font-weight: bold;
 }
 
+/* To handle quirk with ACF colour picker */
+/* .bg-gold-default {
+  @apply bg-gold;
+} */
+
 .alignwide,
 .page-content > .alignwide {
   @apply max-w-7xl mx-auto;
