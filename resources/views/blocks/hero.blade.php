@@ -21,7 +21,8 @@
 
         @if ($block->style == 'home')
           <svg xmlns="http://www.w3.org/2000/svg" width="195.17" height="149.1"
-            class="absolute -right-4 -top-0 h-auto w-[calc(50%+6rem)]" viewBox="0 0 195.17 149.1">
+            class="absolute -right-4 -top-0 h-auto w-[calc(50%+3rem)] 2xl:w-[calc(50%+6rem)]"
+            viewBox="0 0 195.17 149.1">
             <path fill="#e4d3c4"
               d="M81.33 0c9.93 4 23.74 16.68 31.81 34.61 3.37 7.49 5.24 28.28-10 32.82a26.79 26.79 0 0 1-18.37-1.13c-5.85-2.52-11.68-5.83-18-5.71-13.41.26-21.86 14.95-34.48 19.49A24.21 24.21 0 0 1 3.51 44.51c6.21-10 19-14.59 24.7-24.9 3.52-6.4 4.25-13.43 8.38-19.46" />
             <path fill="#d18080"
