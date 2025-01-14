@@ -7,7 +7,7 @@ const config = {
     './index.php',
     './app/**/*.php',
     './resources/**/*.{php,vue,js}',
-    'safelist.txt',
+    './safelist.txt',
   ],
   theme: {
     container: {
