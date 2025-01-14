@@ -1,8 +1,8 @@
 <article @php(post_class())>
   <div class="container mx-auto min-h-screen xl:max-w-5xl 2xl:max-w-6xl">
     <div class="flex flex-col gap-12 pb-32 lg:flex-row-reverse">
-      <div class="max-w-screen-sm max-lg:rounded-3xl max-lg:bg-blue-light max-lg:p-4 max-sm:-mx-4 lg:w-48 xl:pt-16">
-        <div class="top-12 mx-auto border-t border-blue-bright pt-4 lg:sticky">
+      <div class="max-w-screen-sm max-lg:rounded-3xl max-lg:bg-blue-light max-lg:p-4 lg:w-48 xl:pt-16">
+        <div class="top-12 mx-auto pt-4 lg:sticky lg:border-t lg:border-blue-bright">
           {!! $toc !!}
         </div>
       </div>
