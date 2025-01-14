@@ -16,6 +16,8 @@
 </head>
 
 <body @php(body_class())>
+  @include('svg')
+
   @php(wp_body_open())
 
   <div id="app">
@@ -40,7 +42,6 @@
   @php(do_action('get_footer'))
   @php(wp_footer())
 
-  @include('svg')
 </body>
 
 </html>

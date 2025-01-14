@@ -14,6 +14,11 @@
   <div id="events" class="container mb-24 space-y-8 lg:max-w-5xl">
     {{-- <p>{{ $event_count }} events @ {{ $per_page }} per page = {{ ceil($event_count / $per_page) }} pages</p> --}}
 
+    <div x-data="{ events: [] }" x-init="() => { fetch('/wp-json/tribe/events/v1/events').then(response => response.json()).then(data => { console.log(data);
+            this.events = data }) }">
+
+    </div>
+
     <div class="flex justify-between">
       <div>
         <x-button :class="!isset($_GET['date']) || $_GET['date'] == 'all' ? 'bg-blue-light' : null" :url="setParam('date', 'all')" label="All dates" />

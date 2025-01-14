@@ -30,9 +30,9 @@ class EventArchive extends Composer
             $events_query->where('starts_after', now());
         }
 
-
-
-        // $events = $events_query->all();
+        $events_query->where('tribe_geoloc', true);
+        $events_query->where('tribe_geoloc_lat', '53.801277');
+        $events_query->where('tribe_geoloc_lng', '-1.548567');
 
 
 
