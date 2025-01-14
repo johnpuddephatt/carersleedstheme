@@ -1,8 +1,8 @@
 @if (isset($post))
-  <div>
+  <div class="overflow-hidden">
 
     @if (has_post_thumbnail($post->ID))
-      <div class="relative -mb-32 ml-auto w-1/2 max-w-4xl overflow-hidden">
+      <div class="relative -mb-32 ml-auto w-1/2 max-w-4xl">
         <svg class="absolute right-3/4 top-1/4 h-auto w-2/3" xmlns="http://www.w3.org/2000/svg" width="107.4"
           height="107.43" viewBox="0 0 107.4 107.43">
           <path fill="#ebdbd1"
@@ -10,7 +10,7 @@
             opacity=".3" />
         </svg>
         {!! get_the_post_thumbnail($post->ID, 'landscape', [
-            'class' => ' clip-oval -mr-8 -mt-8  block h-auto w-full',
+            'class' => ' clip-oval -translate-x-8 -translate-y-8  block h-auto w-full',
         ]) !!}
 
       </div>
