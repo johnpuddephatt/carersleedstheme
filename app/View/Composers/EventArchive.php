@@ -25,7 +25,7 @@ class EventArchive extends Composer
         if (isset($_GET['date']) && $_GET['date'] == 'this_week') {
             $events_query->where('starts_after', now())->where('starts_before', date('Y-m-d', strtotime('next sunday')));
         } elseif (isset($_GET['date']) && $_GET['date'] == 'next_week') {
-            $events_query->where('starts_after', date('Y-m-d', strtotime('next monday')))->where('starts_before', date('Y-m-d', strtotime('next sunday')));
+            $events_query->where('starts_after', date('Y-m-d', strtotime('next monday')))->where('starts_before', date('Y-m-d', strtotime('next sunday +7 days')));
         } else {
             $events_query->where('starts_after', now());
         }
