@@ -1,7 +1,7 @@
 @if ($links)
 
   <div
-    class="wp-block {{ $block->classes }} {{ $block->block->align ? 'container' : null }} not-prose mx-auto my-16 2xl:my-24"
+    class="wp-block {{ $block->classes }} {{ $block->block->align ? 'container' : null }} not-prose relative mx-auto my-16 2xl:my-24"
     style="{{ $block->inlineStyle }}">
 
     @if ($title)
