@@ -12,7 +12,7 @@
 
   <clipPath id="clip-oval-part" clipPathUnits="objectBoundingBox">
     <path
-      d="M0.266,0 A0.727,0.727,0,0,0,0.035,0.313 c-0.042,0.11,-0.054,0.24,0.005,0.343 A0.444,0.444,0,0,0,0.142,0.772 c0.23,0.197,0.587,0.31,0.856,0.156 V0.008 H1 L0.991,0" />
+      d="M0.938,0 H0.207 C0.058,0.195,-0.036,0.458,0.013,0.73 c0.02,0.114,0.081,0.204,0.157,0.27 h0.83 V0 h-0.062" />
   </clipPath>
 
   <clipPath id="clip-oval-2" clipPathUnits="objectBoundingBox">
