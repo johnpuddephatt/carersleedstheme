@@ -42,6 +42,7 @@
                 'class' => ' w-full h-auto ' . ($block->style == 'alternative' ? 'clip-oval-2' : ' clip-oval'),
             ]) !!}
           @endif
+        @endif
       </div>
     </div>
   </div>
