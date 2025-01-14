@@ -10,7 +10,7 @@
             opacity=".3" />
         </svg>
         {!! get_the_post_thumbnail($post->ID, 'large', [
-            'class' => ' clip-oval-part  block h-auto w-full',
+            'class' => ' clip-oval  block h-auto w-full',
         ]) !!}
 
       </div>
