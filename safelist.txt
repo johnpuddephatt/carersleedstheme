@@ -3,6 +3,7 @@ bg-green-light
 bg-beige-light
 bg-pink-light
 bg-gold-light
+bg-gold
 
 grid-cols-1
 grid-cols-2
