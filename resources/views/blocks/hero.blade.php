@@ -2,7 +2,7 @@
   class="wp-block {{ $block->classes }} bg-{{ $background_colour }} {{ $block->block->align == 'full' ? '' : ' my-16 2xl:my-24' }} {{ $block->block->align == 'wide' ? 'rounded-big' : '' }} {{ !$block->block->align ? 'rounded-3xl' : '' }} not-prose relative mx-auto overflow-hidden"
   style="{{ $block->inlineStyle }}">
 
-  <div class="{{ $block->block->align == 'full' ? 'container' : null }} relative grid grid-cols-2 items-center gap-6">
+  <div class="{{ $block->block->align == 'full' ? 'container gap-6' : null }} relative grid grid-cols-2 items-center">
     <div class="{{ $block->block->align == 'full' ? 'py-16' : ' p-8 lg:p-16' }} relative max-w-xl">
       <h1 class="type-xl mb-6 text-blue-dark">{{ $heading }}</h1>
       <div class="text-xl">{!! $content !!}</div>
