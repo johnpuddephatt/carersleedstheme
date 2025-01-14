@@ -2,7 +2,7 @@
   <div class="overflow-hidden">
 
     @if (has_post_thumbnail($post->ID))
-      <div class="relative -mb-32 ml-auto w-1/2 max-w-4xl">
+      <div class="relative -mb-32 ml-auto w-1/2 max-w-4xl pb-8">
         <svg class="absolute right-2/3 top-[15%] h-auto w-[60%]" xmlns="http://www.w3.org/2000/svg" width="107.4"
           height="107.43" viewBox="0 0 107.4 107.43">
           <path fill="#ebdbd1"
