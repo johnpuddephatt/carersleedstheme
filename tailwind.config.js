@@ -70,6 +70,7 @@ const config = {
     extend: {
       borderRadius: {
         big: '7rem',
+        small: '2rem',
       },
       typography: (theme) => ({
         DEFAULT: {

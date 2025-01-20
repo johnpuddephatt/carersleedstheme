@@ -14,7 +14,7 @@
 
       @foreach ($blocks as $block_item)
         <div
-          class="{{ $block->block->align ? 'flex-row items-start' : 'flex-col' }} flex h-56 w-full min-w-96 max-w-xl gap-4 rounded-3xl bg-white p-8">
+          class="{{ $block->block->align ? 'flex-row items-start' : 'flex-col' }} rounded-small flex w-full min-w-96 max-w-xl gap-4 bg-white p-4 md:h-56 md:p-8">
           <div class="h-12 w-12 rounded-full bg-blue-bright p-2.5">
             @if ($block_item['icon'])
               @svg($block_item['icon'], 'h-7 w-7 text-white ')
@@ -22,10 +22,10 @@
           </div>
 
           <div>
-            <div class="mb-4 text-2xl">
+            <div class="type-md md:type-lg mb-1 !font-normal md:mb-4">
               {!! $block_item['heading'] !!}
             </div>
-            <div class="text-lg">
+            <div class="type-sm !font-normal">
               {!! $block_item['subheading'] !!}</div>
           </div>
         </div>

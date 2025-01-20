@@ -8,11 +8,11 @@
               'outlined'
                   => 'after:absolute after:bottom-0 after:left-0 after:right-0 after:block after:h-[2px] after:bg-blue-bright after:transition-all hover:after:h-[3px]',
               default
-                  => '  rounded-3xl bg-green-light after:absolute after:right-1 after:top-2 after:block md:after:size-8 after:size-6 after:rounded-full after:bg-green',
+                  => '  rounded-small bg-green-light after:absolute after:right-1 after:top-2 after:block md:after:size-8 after:size-6 after:rounded-full after:bg-green',
           },
   ]) }}>
   @if ($show_image ?? false)
-    <div class="h-full w-32 flex-none overflow-hidden bg-blue-light md:w-48">
+    <div class="h-full w-32 max-w-[30%] flex-none overflow-hidden bg-blue-light md:w-48">
       {!! get_the_post_thumbnail($post->ID, 'square', [
           'sizes' => '25vw',
           'class' => ' aspect-square h-full w-full object-cover transition duration-1000 group-hover:scale-105',

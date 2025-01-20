@@ -14,7 +14,7 @@
       </div>
       @if (has_post_thumbnail($event->ID))
         <div
-          class="relative ml-auto max-w-sm -translate-y-8 translate-x-12 pt-4 md:translate-x-0 md:translate-y-0 lg:w-1/2 lg:max-w-4xl">
+          class="w-3/3 relative ml-auto max-w-sm -translate-y-8 translate-x-12 pt-4 md:translate-x-0 md:translate-y-0 lg:w-1/2 lg:max-w-4xl">
           <svg xmlns="http://www.w3.org/2000/svg" width="196.05" height="142.92"
             class="absolute right-2/3 top-0 h-auto w-full" viewBox="0 0 196.05 142.92">
             <path fill="#ebdbd1"
@@ -43,7 +43,7 @@
           @endif
 
           @if (tribe_get_embedded_map($event->ID))
-            <div class="mt-8 overflow-hidden rounded-3xl">
+            <div class="rounded-small mt-8 overflow-hidden">
               {!! tribe_get_embedded_map($event->ID) !!}
             </div>
           @endif

@@ -3,7 +3,7 @@
 <a href="{{ get_permalink($event->ID) }}"
   {{ $attributes->merge([
       'class' =>
-          'not-prose group relative flex items-center overflow-hidden rounded-3xl !no-underline  ' .
+          'not-prose group relative flex items-center overflow-hidden rounded-small !no-underline  ' .
           match ($variant) {
               'outlined' => 'border-2 border-gold',
               default
@@ -12,7 +12,7 @@
   ]) }}>
 
   @if (has_post_thumbnail($event->ID, 'square'))
-    <div class="h-full w-32 flex-none overflow-hidden bg-gold md:w-48">
+    <div class="h-full w-32 max-w-[30%] flex-none overflow-hidden bg-gold md:w-48">
 
       {!! get_the_post_thumbnail($event->ID, 'square', [
           'sizes' => '25vw',

@@ -3,7 +3,7 @@
     <div class="{{ $toc ? 'gap-12' : null }} flex flex-col pb-12 lg:flex-row-reverse lg:justify-end lg:pb-32">
 
       <div
-        class="{{ $toc ? 'max-lg:bg-blue-light xl:pt-16 max-lg:p-4 ' : null }} max-w-screen-sm max-lg:rounded-3xl lg:w-48">
+        class="{{ $toc ? 'max-lg:bg-blue-light xl:pt-16 max-lg:p-4 ' : null }} max-lg:rounded-small max-w-screen-sm lg:w-48">
         @if ($toc)
           <div class="mx-auto pt-4 lg:sticky lg:top-12 lg:border-t lg:border-blue-bright">
             {!! $toc !!}

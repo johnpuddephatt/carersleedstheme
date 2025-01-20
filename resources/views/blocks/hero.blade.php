@@ -1,11 +1,12 @@
 <div
-  class="wp-block {{ $block->classes }} bg-{{ $background_colour }} {{ $block->block->align == 'full' ? '' : ' my-16 2xl:my-24' }} {{ $block->block->align == 'wide' ? 'rounded-big' : '' }} {{ !$block->block->align ? 'rounded-3xl' : '' }} not-prose {{ $block->style == 'home' ? '!md:-mt-px' : '' }} relative mx-auto overflow-hidden"
+  class="wp-block {{ $block->classes }} bg-{{ $background_colour }} {{ $block->block->align == 'full' ? '' : ' mb-8 xl:my-16 2xl:my-24' }} {{ $block->block->align == 'wide' ? 'xl:rounded-big' : '' }} {{ !$block->block->align ? 'md:rounded-small' : '' }} not-prose {{ $block->style == 'home' ? '!md:-mt-px' : '' }} relative mx-auto overflow-hidden"
   style="{{ $block->inlineStyle }}">
 
   <div
-    class="{{ $block->block->align == 'full' ? 'container gap-6' : null }} relative flex flex-col-reverse items-center md:grid md:grid-cols-2">
-    <div class="{{ $block->block->align == 'full' ? 'md:py-16 w-full max-w-xl' : ' md:p-8 lg:p-16' }} relative z-10">
-      <h1 class="type-xl mb-4 text-blue-dark md:mb-6">{{ $heading }}</h1>
+    class="{{ $block->block->align == 'full' ? 'container md:gap-6' : 'pl-4 md:pl-8' }} relative flex flex-col-reverse items-center md:grid md:grid-cols-2">
+    <div
+      class="{{ $block->block->align == 'full' ? 'pb-16 md:py-16  max-w-xl' : ' pb-8 md:pt-8 lg:p-16' }} relative z-10 w-full">
+      <h1 class="type-xl mb-2 text-blue-dark md:mb-6">{{ $heading }}</h1>
       <div class="type-sm">{!! $content !!}</div>
       @if ($buttons)
         <div class="mt-6 flex flex-wrap gap-2 md:mt-10">
@@ -17,7 +18,7 @@
         </div>
       @endif
     </div>
-    <div class="{{ $block->block->align == 'full' ? 'py-4 w-full' : null }}">
+    <div class="{{ $block->block->align == 'full' ? 'md:py-8 py-4 w-full' : null }}">
       @if ($image)
 
         @if ($block->style == 'home')
@@ -32,18 +33,18 @@
           </svg>
 
           {!! wp_get_attachment_image($image, 'landscape', false, [
-              'sizes' => '25vw',
+              'sizes' => '75vw, (min-width: 800px) 50vw, (min-width: 1200px) 30vw',
               'class' =>
                   'w-80 ml-auto translate-x-8 md:translate-x-0 md:w-full h-auto mt-12 md:mb-24 clip-oval md:clip-landscape',
           ]) !!}
         @else
           {!! wp_get_attachment_image($image, 'square', false, [
-              'sizes' => '25vw',
+              'sizes' => '75vw, (min-width: 800px) 50vw, (min-width: 1200px) 30vw',
               'class' =>
                   ' w-80 md:w-full h-auto ml-auto ' .
                   match ($block->style) {
-                      'default' => $block->block->align == 'full' ? 'clip-oval' : 'clip-oval-part',
-                      'alternative' => $block->block->align == 'full' ? 'clip-oval-2' : 'clip-oval-part-2',
+                      'default' => $block->block->align == 'full' ? 'clip-oval' : 'clip-oval md:clip-oval-part',
+                      'alternative' => $block->block->align == 'full' ? 'clip-oval-2' : 'clip-oval-2 md:clip-oval-part-2',
                   },
           ]) !!}
         @endif

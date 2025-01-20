@@ -1,21 +1,21 @@
 @layer utilities {
   .type-xl {
-    @apply text-4xl 2xl:text-5xl font-bold;
+    @apply text-4xl 2xl:text-5xl font-bold leading-snug;
   }
 
   .type-lg {
-    @apply text-3xl font-semibold;
+    @apply text-2xl font-semibold leading-snug;
   }
 
   .type-md {
-    @apply text-xl font-bold;
+    @apply text-xl font-bold leading-snug;
   }
 
   .type-sm {
-    @apply text-lg font-semibold leading-tight;
+    @apply text-lg font-semibold leading-snug;
   }
 
   .type-xs {
-    @apply font-semibold leading-tight;
+    @apply font-semibold leading-snug;
   }
 }

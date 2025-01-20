@@ -10,7 +10,7 @@
 .page-template-template-fullwidth .page-content > p,
 .page-template-template-fullwidth .page-content > ul,
 .page-template-template-fullwidth .page-content > ol {
-  @apply mx-4;
+  @apply px-4 md:px-0;
 }
 
 .prose > h1,

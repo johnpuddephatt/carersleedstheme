@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.73 199.14"
-  class="absolute left-0 -z-10 hidden h-auto w-64 -translate-y-1/4 md:block">
+  class="absolute left-0 hidden h-auto w-64 -translate-y-1/4 md:block">
   <circle cx="39.14" cy="189.47" r="9.66" fill="#65bec5" />
   <path
     d="M52.01 9.68C38.78-1.49 18.39-3.2 3.49 5.63c-1.2.71-2.36 1.48-3.49 2.3v155.36c10.04-2.26 19.05-9.27 23.19-18.74 5.07-11.62 3.04-25.2 6.96-37.26 6.3-19.41 26.64-31.41 33.96-50.47 6.21-16.15 1.12-35.98-12.1-47.15Z"
@@ -7,11 +7,11 @@
 </svg>
 
 <div
-  class="wp-block {{ $block->classes }} {{ $block->block->align == 'full' ? '' : 'my-16 2xl:my-24' }} not-prose relative mx-auto pb-40 md:pb-24"
+  class="wp-block {{ $block->classes }} {{ $block->block->align == 'full' ? '' : 'my-16 2xl:my-24' }} not-prose relative z-10 mx-auto pb-40 md:pb-24"
   style="{{ $block->inlineStyle }}">
 
   <div
-    class="{{ $block->block->align == 'full' ? '' : 'rounded-3xl md:rounded-big' }} relative mx-4 flex flex-col justify-between bg-beige p-4 md:flex-row md:gap-6 md:p-12 xl:p-16">
+    class="{{ $block->block->align == 'full' ? '' : 'rounded-small md:rounded-big' }} relative mx-4 flex flex-col justify-between bg-beige p-4 md:flex-row md:gap-6 md:p-12 xl:p-16">
     <div
       class="{{ $block->block->align == 'full' ? 'max-w-xl text-xl' : 'max-w-lg' }} flex flex-col justify-around py-8">
       <div>

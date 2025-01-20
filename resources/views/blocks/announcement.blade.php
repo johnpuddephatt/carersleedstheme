@@ -5,9 +5,9 @@
   </div>
 
   {!! $block->preview || ($type == 'link' && !$link) ? '<div' : '<a' !!} href="{{ $type == 'page' ? get_the_permalink($page) : $link }}"
-  class="bg-{{ $background_colour }} {{ $block->block->align == 'full' ? '' : 'mx-4  rounded-3xl my-16 2xl:my-24' }} block cursor-pointer overflow-hidden !font-normal">
+  class="bg-{{ $background_colour }} {{ $block->block->align == 'full' ? 'my-16 2xl:my-24' : 'mx-4  rounded-small ' }} relative z-10 block cursor-pointer overflow-hidden !font-normal">
   <div class="group relative flex items-center">
-    <div class="hidden max-w-[50%] overflow-hidden md:block">
+    <div class="hidden w-64 max-w-[50%] overflow-hidden md:block">
       @if ($type == 'page')
         {!! get_the_post_thumbnail($page, 'landscape', [
             'sizes' => '16rem',
@@ -23,10 +23,10 @@
       @endif
     </div>
     <div class="{{ $block->block->align == 'full' ? 'max-w-xl text-xl' : 'max-w-lg' }} px-6 py-4">
-      <h2 class="{{ $block->block->align == 'full' ? 'type-lg mb-4' : 'type-md mb-2' }}">
+      <h2 class="{{ $block->block->align == 'full' ? 'type-lg mb-2 md:mb-4' : 'type-md mb-1 md:mb-2' }}">
         {{ $type == 'page' ? get_the_title($page) : $heading }}
       </h2>
-      <div>{!! $type == 'page' ? get_the_excerpt($page) : $content !!}</div>
+      <div class="leading-snug">{!! $type == 'page' ? get_the_excerpt($page) : $content !!}</div>
       @if ($type == 'page' || $link)
         <div class="{{ $block->block->align == 'full' ? 'mt-4' : 'mt-2' }} font-semibold">Read more</div>
       @endif
