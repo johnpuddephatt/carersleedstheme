@@ -1,12 +1,12 @@
   <a href="{{ get_permalink($opportunity->ID) }}"
-    class="group relative flex items-center overflow-hidden rounded-2xl bg-pink-light p-8 !no-underline">
+    class="group relative flex w-full items-center overflow-hidden rounded-2xl bg-pink-light p-4 !no-underline md:p-8">
 
     <div class="flex-1">
 
       <h3 class="type-md !mb-2 !mt-0 !text-black">{{ $opportunity->post_title }}
       </h3>
 
-      <div class="flex flex-row items-center gap-3 !font-normal">
+      <div class="flex flex-col !font-normal md:flex-row md:items-center md:gap-3">
         @if (get_field('deadline', $opportunity->ID))
           <div class="flex items-center gap-1">
             <svg xmlns="http://www.w3.org/2000/svg" class="size-5 text-pink-dark" viewBox="0 0 6.05 6.05">

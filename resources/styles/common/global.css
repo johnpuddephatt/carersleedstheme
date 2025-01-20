@@ -4,6 +4,10 @@
 @import '_clips';
 @import '_forms';
 
+img:not([src]) {
+  display: none;
+}
+
 a.active {
   font-weight: bold;
 }
@@ -77,7 +81,7 @@ a.active {
 .page-content > *:first-child,
 .page-content > .group:first-child > *:first-child,
 .post-content > .group:first-child > *:first-child {
-  @apply !mt-0;
+  @apply mt-0;
 }
 
 .page-content > *,

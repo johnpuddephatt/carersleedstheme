@@ -1,13 +1,13 @@
 @if ($news)
   <div
-    class="wp-block {{ $block->classes }} bg-{{ $background_colour ?? 'transparent' }} {{ $block->block->align ? 'container' : null }} not-prose mx-auto my-16 px-8 2xl:my-24"
+    class="wp-block {{ $block->classes }} bg-{{ $background_colour ?? 'transparent' }} {{ $block->block->align ? 'container' : null }} not-prose mx-auto my-16 px-4 2xl:my-24"
     style="{{ $block->inlineStyle }}">
 
     @if ($title)
       <h2 class="type-xl mb-12 text-blue-dark">{{ $title }}</h2>
     @endif
 
-    <div class="{{ $block->block->align ? 'grid-cols-2' : null }} mb-12 grid gap-12">
+    <div class="{{ $block->block->align ? 'md:grid-cols-2' : null }} mb-12 grid gap-4 md:gap-x-12 md:gap-y-8">
       @foreach ($news as $post)
         <x-post-card :post="$post" :show_image="$show_image" :show_excerpt="$show_excerpt" />
       @endforeach

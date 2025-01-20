@@ -7,20 +7,22 @@
           match ($variant) {
               'outlined' => 'border-2 border-gold',
               default
-                  => ' bg-gold-light after:absolute after:right-1 after:top-2 after:block after:size-8 after:rounded-full after:bg-gold',
+                  => ' bg-gold-light after:absolute after:right-1 after:top-2 after:block after:size-6 md:after:size-8 after:rounded-full after:bg-gold',
           },
   ]) }}>
 
   @if (has_post_thumbnail($event->ID, 'square'))
-    <div class="h-full w-48 flex-none overflow-hidden bg-gold">
-      <img src="{{ get_the_post_thumbnail_url($event->ID, 'square') }}"
-        alt="{{ get_the_post_thumbnail_caption($event->ID) }}"
-        class="aspect-square h-auto w-full transition duration-1000 group-hover:scale-105">
+    <div class="h-full w-32 flex-none overflow-hidden bg-gold md:w-48">
+
+      {!! get_the_post_thumbnail($event->ID, 'square', [
+          'sizes' => '25vw',
+          'class' => ' aspect-square h-full w-full object-cover transition duration-1000 group-hover:scale-105',
+      ]) !!}
     </div>
   @endif
-  <div class="py-8 pl-4 pr-12 lg:pl-8">
-    <h3 class="type-md !mb-2 !mt-0 text-balance !text-black">{{ $event->post_title }}</h3>
-    <div class="mt-2 !font-normal">
+  <div class="py-2 pl-2 pr-4 md:py-4 md:pl-4 md:pr-12 lg:pl-8">
+    <h3 class="type-sm md:type-md mb-1 text-balance !text-black">{{ $event->post_title }}</h3>
+    <div class="leading-snug">
       {{ tribe_get_start_date($event->ID, false, get_option('date_format') . '  –  ' . get_option('time_format')) }}
     </div>
   </div>

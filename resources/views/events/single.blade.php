@@ -1,19 +1,20 @@
 @extends('layouts.app') @section('content')
-  <div class="relative border-t border-green pb-72">
+  <div class="relative pb-72">
 
-    <div class="container flex flex-col-reverse gap-4 pb-8 lg:flex-row lg:items-end lg:pb-12">
+    <div class="container flex flex-col-reverse overflow-hidden pb-4 md:gap-4 md:pb-8 lg:flex-row lg:items-end lg:pb-12">
       <div class="relative z-10 lg:w-1/2">
         <a class="type-md mb-4 inline-block text-blue" href="{{ get_permalink(get_option('page_for_events')) }}">Events
           &rsaquo;
         </a>
-        <h1 class="type-xl mb-4 text-blue-dark">{{ $event->post_title }}</h1>
+        <h1 class="type-xl mb-2 text-blue-dark md:mb-4">{{ $event->post_title }}</h1>
         <p class="type-md text-blue-dark">
           {{ tribe_get_start_date($event->ID, false, get_option('date_format') . '  –  ' . get_option('time_format')) }}
         </p>
 
       </div>
       @if (has_post_thumbnail($event->ID))
-        <div class="relative ml-auto max-w-sm pt-4 lg:w-1/2 lg:max-w-4xl">
+        <div
+          class="relative ml-auto max-w-sm -translate-y-8 translate-x-12 pt-4 md:translate-x-0 md:translate-y-0 lg:w-1/2 lg:max-w-4xl">
           <svg xmlns="http://www.w3.org/2000/svg" width="196.05" height="142.92"
             class="absolute right-2/3 top-0 h-auto w-full" viewBox="0 0 196.05 142.92">
             <path fill="#ebdbd1"
@@ -23,6 +24,7 @@
 
           {!! get_the_post_thumbnail($event->ID, 'large', [
               'class' => ' clip-oval  block h-auto w-full',
+              'sizes' => '100vw, (min-width: 800px) 40vw',
           ]) !!}
 
         </div>
@@ -31,7 +33,7 @@
 
     <div class="container flex flex-col gap-8 lg:flex-row-reverse lg:justify-end lg:gap-16">
       @if (tribe_get_venue($event->ID) || tribe_get_address($event->ID) || tribe_get_embedded_map($event->ID))
-        <div class="border-t border-green pt-8 lg:w-1/2">
+        <div class="border-t border-green pt-4 md:pt-8 lg:w-1/2">
           <h3 class="type-md mb-4 text-blue-dark">Location</h3>
           @if (tribe_get_venue($event->ID))
             <p class="type-sm text-blue-dark">{{ tribe_get_venue($event->ID) }}</p>
@@ -55,7 +57,7 @@
       </div>
 
       <svg xmlns="http://www.w3.org/2000/svg" width="150.75" height="110.76" viewBox="0 0 150.75 110.76"
-        class="absolute bottom-0 right-0 -z-10 h-auto w-[50vw] lg:w-[35vw]">
+        class="absolute bottom-0 right-0 -z-10 h-auto w-[75vw] md:w-[50vw] lg:w-[35vw]">
         <defs>
           <clipPath id="ad683" transform="translate(-257.34 -389.24)">
             <path fill="none" d="M250.2 336.03h170.29V614H250.2z" />

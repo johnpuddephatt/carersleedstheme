@@ -1,13 +1,14 @@
-  <a href="{{ $url }}" class="group block border-b-2 border-blue-bright">
-    <div class="mb-6 overflow-hidden">
+  <a href="{{ $url }}" class="group block max-w-md border-b-2 border-blue-bright">
+    <div class="mb-4 overflow-hidden md:mb-6">
       @if ($image)
         {!! wp_get_attachment_image($image, 'landscape', false, [
             'sizes' => '25vw',
-            'class' => ' w-full block h-auto group-hover:scale-105 transition-transform duration-1000',
+            'class' =>
+                ' object-cover aspect-[2] md:aspect-auto w-full block h-auto group-hover:scale-105 transition-transform duration-1000',
         ]) !!}
       @else
         <div
-          class="block aspect-[3/2] h-auto w-full bg-blue-light transition-transform duration-1000 group-hover:scale-105">
+          class="block aspect-[2] h-auto w-full bg-blue-light transition-transform duration-1000 group-hover:scale-105 md:aspect-[3/2]">
         </div>
       @endif
     </div>

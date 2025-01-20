@@ -1,7 +1,7 @@
 @extends('layouts.app') @section('content')
   @while (have_posts())
     @php(the_post())
-    <div class="border-blue-bright flex min-h-screen w-full flex-row border-t">
+    <div class="flex min-h-screen w-full flex-row">
       @include('partials.page-sidebar')
 
       <div class="flex-1">

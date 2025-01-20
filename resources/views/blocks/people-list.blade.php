@@ -6,7 +6,8 @@
     <div class="space-y-4">
       @foreach ($people as $person)
         <details>
-          <summary class="group relative flex flex-row items-center rounded-2xl transition">
+          <summary style="font-size: 1em !important;"
+            class="group relative flex flex-row items-center gap-2 rounded-2xl p-4 transition md:gap-4 md:p-6">
 
             <div class="overflow-hidden rounded-full">
               {!! get_the_post_thumbnail($person->ID, 'square', [
@@ -14,8 +15,8 @@
               ]) !!}
             </div>
 
-            <div class="p-6">
-              <h3 class="type-md">{{ $person->post_title }}</h3>
+            <div class="py-2">
+              <h3 class="type-sm md:type-md">{{ $person->post_title }}</h3>
               <div class="font-normal">{{ get_field('role_title', $person->ID) }}</div>
             </div>
 
@@ -24,7 +25,7 @@
             </div>
           </summary>
 
-          <div class="p-6 pt-0">
+          <div class="p-4 pt-0 md:p-6">
             {!! $person->post_content !!}
           </div>
         </details>

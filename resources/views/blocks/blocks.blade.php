@@ -1,16 +1,16 @@
 @if ($blocks)
   <div
-    class="wp-block {{ $block->classes }} {{ $block->block->align ? 'container' : null }} not-prose mx-auto my-16 bg-blue-light px-8 py-16 2xl:my-24 2xl:py-24"
+    class="wp-block {{ $block->classes }} {{ $block->block->align ? 'container' : null }} not-prose mx-auto my-16 bg-blue-light px-8 py-12 md:py-16 2xl:my-24 2xl:py-24"
     style="{{ $block->inlineStyle }}">
 
     @if ($title)
-      <h2 class="type-xl mb-12 text-center font-semibold">{{ $title }}</h2>
+      <h2 class="type-xl mb-8 text-center font-semibold md:mb-12">{{ $title }}</h2>
     @endif
     @if ($subtitle)
-      <div class="type-md -mt-6 mb-16 text-center !font-semibold">{{ $subtitle }}</div>
+      <div class="type-md -mt-6 mb-8 text-center !font-semibold md:mb-16">{{ $subtitle }}</div>
     @endif
 
-    <div class="flex flex-row flex-wrap justify-center gap-8 lg:gap-12">
+    <div class="flex flex-row flex-wrap justify-center gap-4 md:gap-8 lg:gap-12">
 
       @foreach ($blocks as $block_item)
         <div

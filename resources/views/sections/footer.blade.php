@@ -1,13 +1,13 @@
-<footer class="bg-blue pb-4 pt-24 text-white antialiased lg:pb-8">
-  <div class="container flex max-w-none flex-col justify-between gap-16 lg:flex-row">
+<footer class="bg-blue pb-4 pt-12 text-white antialiased md:pt-24 lg:pb-8">
+  <div class="container flex max-w-none flex-col justify-between gap-8 md:gap-16 lg:flex-row">
     <div>
       <x-logo :invert="true" />
 
     </div>
     <div class="lg:ml-auto">
-      <div class="flex flex-col gap-16 lg:flex-row">
+      <div class="flex flex-col gap-8 md:gap-16 lg:flex-row">
 
-        <div class="mt-2 flex flex-row items-start gap-2 lg:justify-end">
+        <div class="flex flex-row items-start gap-2 md:mt-2 lg:justify-end">
           {{-- @foreach (['facebook', 'twitter', 'youtube', 'instagram', 'linkedin', 'vimeo'] as $account)
             @if (carbon_get_theme_option($account))
               <a rel="noopener" class="inline-block rounded-full bg-white p-2 text-blue"
@@ -38,8 +38,8 @@
 
   </div>
   <div
-    class="container mt-16 flex max-w-none flex-col-reverse items-end justify-between gap-8 text-sm font-semibold text-white text-opacity-80 lg:flex-row">
-    <p>Website by Let’s Dance</p>
+    class="container mt-8 flex max-w-none flex-col-reverse items-end justify-between gap-8 text-sm font-semibold text-white text-opacity-80 md:mt-16 lg:flex-row">
+    <p><a href="https://letsdance.agency" target="_blank">Website by Let’s Dance</a></p>
     <div class="text-right">
       <svg xmlns="http://www.w3.org/2000/svg" width="367.34" height="130.16" class="mb-2 ml-auto h-auto w-28 text-white"
         viewBox="0 0 367.34 130.16">

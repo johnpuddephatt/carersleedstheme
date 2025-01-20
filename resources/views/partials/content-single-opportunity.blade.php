@@ -8,13 +8,13 @@
 
     <div class="container flex flex-col-reverse gap-4 pb-8 lg:flex-row lg:items-end lg:pb-12">
       <div class="relative z-10 lg:w-1/2">
-        <div class="type-md mb-4 text-blue-dark">Opportunities</div>
+        <div class="type-md mb-4 text-blue">Opportunities &rsaquo;</div>
         <h1 class="type-xl mb-8 text-blue-dark">{{ $post->post_title }}</h1>
 
-        <div class="flex gap-4">
+        <div class="flex flex-col gap-1 md:flex-row md:gap-4">
           @if (get_field('deadline', $post->ID))
             <div class="flex items-center">
-              <span class="mr-2 inline-block rounded-full bg-beige-dark p-1.5">
+              <span class="mr-1 inline-block rounded-full bg-beige-dark p-1.5 md:mr-2">
                 <x-icon-calendar class="h-4 w-4 text-white" />
               </span>
               <div class="type-sm">
@@ -25,7 +25,7 @@
 
           @if (get_field('salary', $post->ID))
             <div class="flex items-center">
-              <span class="mr-2 inline-block rounded-full bg-beige-dark p-0.5">
+              <span class="mr-1 inline-block rounded-full bg-beige-dark p-0.5 md:mr-2">
                 <x-icon-pound class="h-6 w-6 text-white" />
               </span>
               <div class="type-sm">

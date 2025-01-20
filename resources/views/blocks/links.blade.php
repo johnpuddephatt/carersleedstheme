@@ -1,14 +1,14 @@
 @if ($links)
 
   <div
-    class="wp-block {{ $block->classes }} {{ $block->block->align ? 'container' : null }} not-prose relative mx-auto my-16 2xl:my-24"
+    class="wp-block {{ $block->classes }} {{ $block->block->align ? 'container' : null }} not-prose relative my-16 px-4 md:px-0 2xl:my-24"
     style="{{ $block->inlineStyle }}">
 
     @if ($title)
-      <h2 class="type-xl mb-12 text-blue-dark">{{ $title }}</h2>
+      <h2 class="type-xl mb-12 text-center text-blue-dark md:text-left">{{ $title }}</h2>
     @endif
 
-    <div class="grid grid-cols-3 gap-x-8 gap-y-6">
+    <div class="{{ $block->style == 'default' ? 'gap-8' : 'gap-4' }} grid md:grid-cols-3 md:gap-8">
 
       @foreach ($links as $link)
         @if ($link['acf_fc_layout'] == 'manual_link')

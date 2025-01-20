@@ -2,6 +2,17 @@
   max-width: var(--wp--style--global--content-size);
 }
 
+.page-template-template-fullwidth .page-content > h2,
+.page-template-template-fullwidth .page-content > h3,
+.page-template-template-fullwidth .page-content > h4,
+.page-template-template-fullwidth .page-content > h5,
+.page-template-template-fullwidth .page-content > h6,
+.page-template-template-fullwidth .page-content > p,
+.page-template-template-fullwidth .page-content > ul,
+.page-template-template-fullwidth .page-content > ol {
+  @apply mx-4;
+}
+
 .prose > h1,
 h1.wp-block-heading {
   @apply type-xl;
@@ -109,7 +120,8 @@ details[open] .open\:rotate-90 {
 }
 
 summary {
-  @apply text-blue-dark  type-md -mx-4 -mt-4 transition  py-4 px-6 cursor-pointer;
+  @apply text-blue-dark type-md -mx-4 -mt-4 transition  py-4 px-6 cursor-pointer;
+  @apply text-base !important;
 }
 
 summary:hover {

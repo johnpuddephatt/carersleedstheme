@@ -15,15 +15,17 @@
 
     </div>
   @else
-    <div class="alignwide prose pt-36">
+    <div class="alignwide pt-36">
       <div style="padding: 0 4.5%">
 
         <a class="type-md mb-4 inline-block text-blue"
           href="{{ get_permalink(get_option('page_for_opportunities')) }}">Opportunities
           &rsaquo;</a>
 
-        <h1 class="alignwide type-xl text-blue-dark">Applying for {{ get_the_title($_GET['job_id']) }}</h1>
-        {!! $content !!}
+        <h1 class="alignwide type-xl mb-4 text-blue-dark">Applying for {{ get_the_title($_GET['job_id']) }}</h1>
+        <div class="prose xl:prose-lg">
+          {!! $content !!}
+        </div>
       </div>
     </div>
 

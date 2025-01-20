@@ -1,7 +1,7 @@
 @extends('layouts.app') @section('content')
   {!! $content !!}
 
-  <div class="container pb-24 lg:max-w-5xl lg:space-y-8" id="news">
+  <div class="container space-y-4 pb-24 lg:max-w-5xl lg:space-y-8" id="news">
 
     @if (!have_posts())
       <x-alert type="warning">
@@ -11,12 +11,10 @@
       {!! get_search_form(false) !!}
     @endif
 
-    <div class="flex flex-col gap-8">
-      @while (have_posts())
-        @php(the_post())
-        <x-post-card :post="get_post()" />
-      @endwhile
-    </div>
+    @while (have_posts())
+      @php(the_post())
+      <x-post-card :post="get_post()" />
+    @endwhile
 
     <div class="mt-12 text-right text-xl">
       {!! paginate_links([

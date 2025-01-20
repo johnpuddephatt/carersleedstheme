@@ -3,32 +3,31 @@
 <a href="{{ get_permalink($post->ID) }}"
   {{ $attributes->merge([
       'class' =>
-          'not-prose font-normal group relative flex flex-row items-center  overflow-hidden ' .
+          'not-prose font-normal min-h-32 md:min-h-48 group relative flex flex-row items-center  overflow-hidden ' .
           match ($variant) {
               'outlined'
                   => 'after:absolute after:bottom-0 after:left-0 after:right-0 after:block after:h-[2px] after:bg-blue-bright after:transition-all hover:after:h-[3px]',
               default
-                  => '  rounded-3xl bg-green-light after:absolute after:right-1 after:top-2 after:block after:size-8 after:rounded-full after:bg-green',
+                  => '  rounded-3xl bg-green-light after:absolute after:right-1 after:top-2 after:block md:after:size-8 after:size-6 after:rounded-full after:bg-green',
           },
   ]) }}>
   @if ($show_image ?? false)
-    <div class="aspect-square w-48 flex-none overflow-hidden bg-blue-light">
-      @if (has_post_thumbnail($post->ID))
-        <img src="{{ get_the_post_thumbnail_url($post->ID, 'square') }}"
-          alt="{{ get_the_post_thumbnail_caption($post->ID) }}"
-          class="h-full w-full object-cover transition duration-1000 group-hover:scale-105">
-      @endif
+    <div class="h-full w-32 flex-none overflow-hidden bg-blue-light md:w-48">
+      {!! get_the_post_thumbnail($post->ID, 'square', [
+          'sizes' => '25vw',
+          'class' => ' aspect-square h-full w-full object-cover transition duration-1000 group-hover:scale-105',
+      ]) !!}
     </div>
   @endif
 
-  <div class="flex-1 py-8 pl-4 lg:pl-8 lg:pr-12">
-    <div class="mb-1 text-blue">
+  <div class="{{ $show_image ? 'pl-2' : '!px-8' }} flex-1 py-2 md:pl-4 lg:pl-8 lg:pr-12">
+    <div class="mb-1 leading-snug text-blue">
       {{ get_the_date(null, $post->ID) }}</div>
 
-    <h3 class="type-md text-balance">{{ $post->post_title }}
+    <h3 class="type-sm md:type-md text-balance">{{ $post->post_title }}
     </h3>
     @if ($show_excerpt)
-      <p class="mt-3 max-w-3xl">{!! get_the_excerpt($post->ID) !!}</p>
+      <p class="mt-3 hidden max-w-3xl md:block">{!! get_the_excerpt($post->ID) !!}</p>
     @endif
 
   </div>
