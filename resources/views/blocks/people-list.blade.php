@@ -7,7 +7,7 @@
       @foreach ($people as $person)
         <details>
           <summary style="font-size: 1em !important;"
-            class="group relative flex flex-row items-center gap-2 rounded-2xl p-4 transition md:gap-4 md:p-6">
+            class="rounded-small group relative flex flex-row items-center gap-2 p-4 transition md:gap-4 md:p-6">
 
             <div class="overflow-hidden rounded-full">
               {!! get_the_post_thumbnail($person->ID, 'square', [

@@ -31,5 +31,5 @@
 } */
 
 .editor-post-title__input {
-  @apply text-4xl bg-beige-light rounded-xl p-4 mt-16 mb-12 font-normal;
+  @apply text-4xl bg-beige-light rounded-small p-4 mt-16 mb-12 font-normal;
 }

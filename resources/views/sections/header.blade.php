@@ -29,7 +29,7 @@
         </a>
 
         <button @click="menuOpen = true" :class="{ 'hidden': menuOpen }"
-          class="inline-block rounded-2xl border-2 border-blue-bright px-6 py-2 font-semibold !no-underline transition duration-300 hover:bg-green hover:bg-opacity-20 lg:hidden"
+          class="rounded-small inline-block border-2 border-blue-bright px-6 py-2 font-semibold !no-underline transition duration-300 hover:bg-green hover:bg-opacity-20 lg:hidden"
           aria-label="Open navigation menu" title="Open navigation menu">Menu
         </button>
 

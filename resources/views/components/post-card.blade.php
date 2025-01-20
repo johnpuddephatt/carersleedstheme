@@ -8,7 +8,7 @@
               'outlined'
                   => 'after:absolute after:bottom-0 after:left-0 after:right-0 after:block after:h-[2px] after:bg-blue-bright after:transition-all hover:after:h-[3px]',
               default
-                  => '  rounded-small bg-green-light after:absolute after:right-1 after:top-2 after:block md:after:size-8 after:size-6 after:rounded-full after:bg-green',
+                  => '  rounded-medium bg-green-light after:absolute after:right-1 after:top-2 after:block md:after:size-8 after:size-6 after:rounded-full after:bg-green',
           },
   ]) }}>
   @if ($show_image ?? false)

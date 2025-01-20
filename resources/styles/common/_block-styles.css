@@ -29,7 +29,7 @@ h3.wp-block-heading {
 }
 
 .wp-block-button .wp-block-button__link {
-  @apply border-green border-2 rounded-2xl px-4 py-2 bg-transparent text-black font-semibold;
+  @apply border-green border-2 rounded-small px-4 py-2 bg-transparent text-black font-semibold;
 }
 
 .wp-block-hero .wp-block-buttons {
@@ -104,11 +104,11 @@ h3.wp-block-heading {
 }
 
 .wp-block-group.has-background {
-  @apply p-6 rounded-2xl;
+  @apply p-6 rounded-small;
 }
 
 details {
-  @apply p-4 pb-0 bg-blue-light overflow-hidden border border-blue-light hover:border-blue rounded-2xl  mb-4;
+  @apply p-4 pb-0 bg-blue-light overflow-hidden border border-blue-light hover:border-blue rounded-small  mb-4;
 }
 
 details[open] {

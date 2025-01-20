@@ -1,5 +1,5 @@
  <a href="{{ $file['url'] }}" download
-   class="{{ $block->classes }} wp-block not-prose group my-4 flex items-center gap-2 rounded-2xl bg-green-light p-6 !no-underline md:my-8 md:gap-4 md:p-8"
+   class="{{ $block->classes }} wp-block not-prose rounded-small group my-4 flex items-center gap-2 bg-green-light p-6 !no-underline md:my-8 md:gap-4 md:p-8"
    style="{{ $block->inlineStyle }}; font-size: 1em;">
    <x-icon.document class="size-10 text-green" />
    <div>

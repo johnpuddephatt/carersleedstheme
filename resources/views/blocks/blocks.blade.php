@@ -14,7 +14,7 @@
 
       @foreach ($blocks as $block_item)
         <div
-          class="{{ $block->block->align ? 'flex-row items-start' : 'flex-col' }} rounded-small flex w-full min-w-96 max-w-xl gap-4 bg-white p-4 md:h-56 md:p-8">
+          class="{{ $block->block->align ? 'flex-row items-start' : 'flex-col' }} rounded-medium flex w-full min-w-96 max-w-xl gap-4 bg-white p-4 md:h-56 md:p-8">
           <div class="h-12 w-12 rounded-full bg-blue-bright p-2.5">
             @if ($block_item['icon'])
               @svg($block_item['icon'], 'h-7 w-7 text-white ')
@@ -40,7 +40,7 @@
 
   </div>
 @elseif($block->preview)
-  <div class="rounded-xl bg-beige-light p-8">
+  <div class="rounded-small bg-beige-light p-8">
     Add a block to get started.
   </div>
 @endif

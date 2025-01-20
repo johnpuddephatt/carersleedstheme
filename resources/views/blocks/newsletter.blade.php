@@ -11,7 +11,7 @@
   style="{{ $block->inlineStyle }}">
 
   <div
-    class="{{ $block->block->align == 'full' ? '' : 'rounded-small md:rounded-big' }} relative mx-4 flex flex-col justify-between bg-beige p-4 md:flex-row md:gap-6 md:p-12 xl:p-16">
+    class="{{ $block->block->align == 'full' ? '' : 'rounded-medium md:rounded-big' }} relative mx-4 flex flex-col justify-between bg-beige p-4 md:flex-row md:gap-6 md:p-12 xl:p-16">
     <div
       class="{{ $block->block->align == 'full' ? 'max-w-xl text-xl' : 'max-w-lg' }} flex flex-col justify-around py-8">
       <div>

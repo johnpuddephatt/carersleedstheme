@@ -1,5 +1,5 @@
 <div
-  class="wp-block {{ $block->classes }} bg-{{ $background_colour }} {{ $block->block->align == 'full' ? '' : ' mb-8 xl:my-16 2xl:my-24' }} {{ $block->block->align == 'wide' ? 'xl:rounded-big' : '' }} {{ !$block->block->align ? 'md:rounded-small' : '' }} not-prose {{ $block->style == 'home' ? '!md:-mt-px' : '' }} relative mx-auto overflow-hidden"
+  class="wp-block {{ $block->classes }} bg-{{ $background_colour }} {{ $block->block->align == 'full' ? '' : ' mb-8 xl:my-16 2xl:my-24' }} {{ $block->block->align == 'wide' ? 'xl:rounded-big' : '' }} {{ !$block->block->align ? 'md:rounded-medium' : '' }} not-prose {{ $block->style == 'home' ? '!md:-mt-px' : '' }} relative mx-auto overflow-hidden"
   style="{{ $block->inlineStyle }}">
 
   <div

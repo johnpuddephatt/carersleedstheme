@@ -36,7 +36,7 @@
 
   </div>
 @elseif($block->preview)
-  <div class="rounded-xl bg-beige-light p-8">
+  <div class="rounded-small bg-beige-light p-8">
     Add some links to get started.
   </div>
 @endif

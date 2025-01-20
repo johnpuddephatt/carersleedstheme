@@ -54,7 +54,7 @@
 
     <div class="container relative flex flex-col items-start justify-between gap-8 lg:flex-row-reverse lg:gap-16">
 
-      <div class="rounded-small w-full bg-blue-light p-8 lg:w-1/2 lg:max-w-md">
+      <div class="rounded-medium w-full bg-blue-light p-8 lg:w-1/2 lg:max-w-md">
 
         <h3 class="type-md text-blue-dark">Key information</h3>
 

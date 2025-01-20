@@ -1,5 +1,5 @@
   <a href="{{ get_permalink($opportunity->ID) }}"
-    class="group relative flex w-full items-center overflow-hidden rounded-2xl bg-pink-light p-4 !no-underline md:p-8">
+    class="rounded-small group relative flex w-full items-center overflow-hidden bg-pink-light p-4 !no-underline md:p-8">
 
     <div class="flex-1">
 

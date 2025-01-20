@@ -43,7 +43,7 @@
           @endif
 
           @if (tribe_get_embedded_map($event->ID))
-            <div class="rounded-small mt-8 overflow-hidden">
+            <div class="rounded-medium mt-8 overflow-hidden">
               {!! tribe_get_embedded_map($event->ID) !!}
             </div>
           @endif

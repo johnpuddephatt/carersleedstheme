@@ -3,7 +3,7 @@
 <a href="{{ get_permalink($event->ID) }}"
   {{ $attributes->merge([
       'class' =>
-          'not-prose group relative flex items-center overflow-hidden rounded-small !no-underline  ' .
+          'not-prose group relative flex items-center overflow-hidden rounded-medium !no-underline  ' .
           match ($variant) {
               'outlined' => 'border-2 border-gold',
               default
