@@ -28,21 +28,9 @@ add_filter(
     'admin_menu',
     function ($menu) {
         remove_menu_page('index.php');
-        // remove_menu_page('plugins.php');
-        // remove_menu_page('themes.php');
-        remove_menu_page('customize.php');
-        $customize_url = add_query_arg('return', urlencode(remove_query_arg(wp_removable_query_args(), wp_unslash($_SERVER['REQUEST_URI']))), 'customize.php');
-        remove_submenu_page('themes.php', $customize_url);
-
-        // add_menu_page(
-        //     'Customizer',          // Page title
-        //     'Customise site',          // Menu title
-        //     'manage_options',      // Capability
-        //     'customize.php',     // Menu slug
-        //     '',
-        //     '',                    // Icon URL (optional)
-        //     0                      // Position (optional)
-        // );
+        // $customize_url = add_query_arg('return', urlencode(remove_query_arg(wp_removable_query_args(), wp_unslash($_SERVER['REQUEST_URI']))), 'customize.php');
+        $customize_url = add_query_arg('return', urlencode(remove_query_arg(wp_removable_query_args(), wp_unslash($_SERVER['REQUEST_URI']))), 'widgets.php');
+        remove_submenu_page('widgets.php', $customize_url);
     }
 );
 

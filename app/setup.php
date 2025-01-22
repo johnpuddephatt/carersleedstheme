@@ -8,8 +8,6 @@ namespace App;
 
 use function Roots\bundle;
 
-
-
 add_action('admin_menu', function () {
     remove_action('admin_notices', 'update_nag', 3);
 });
@@ -36,12 +34,6 @@ add_action('admin_init', function () {
         });
     }
 });
-
-
-
-
-
-
 
 
 add_filter('acf/settings/show_admin', '__return_false');
@@ -234,3 +226,21 @@ add_image_size('square', 300, 300, true);
 add_image_size('square-lg', 600, 600, true);
 add_image_size('square-xl', 900, 900, true);
 add_image_size('square-2xl', 1200, 1200, true);
+
+
+add_action('widgets_init', function () {
+    $config = [
+        'before_widget' => '<section class="widget %1$s %2$s">',
+        'after_widget' => '</section>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ];
+    register_sidebar([
+        'name' => __('Primary', 'sage'),
+        'id' => 'sidebar-primary',
+    ] + $config);
+    register_sidebar([
+        'name' => __('Footer', 'sage'),
+        'id' => 'sidebar-footer',
+    ] + $config);
+});

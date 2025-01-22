@@ -8,14 +8,14 @@
       <div class="flex flex-col gap-8 md:gap-16 lg:flex-row">
 
         <div class="flex flex-row items-start gap-2 md:mt-2 lg:justify-end">
-          {{-- @foreach (['facebook', 'twitter', 'youtube', 'instagram', 'linkedin', 'vimeo'] as $account)
-            @if (carbon_get_theme_option($account))
+          @if (get_field('social_media', 'option'))
+            @foreach (get_field('social_media', 'option') as $account)
               <a rel="noopener" class="inline-block rounded-full bg-white p-2 text-blue"
-                aria-label="{{ $account }} link" href="{{ carbon_get_theme_option($account) }}" target="_blank">
-                <x-dynamic-component :component="'icon.' . $account" class="mt-4" />
+                aria-label="{{ $account['Type'] }} link" href="{{ $account['link'] }}" target="_blank">
+                <x-dynamic-component :component="'icon.' . $account['Type']" class="mt-4" />
               </a>
-            @endif
-          @endforeach --}}
+            @endforeach
+          @endif
         </div>
         @if ($secondaryNavigation)
           <div class="">
