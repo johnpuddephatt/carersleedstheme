@@ -12,14 +12,14 @@ class Links extends Block
      *
      * @var string
      */
-    public $name = 'Links';
+    public $name = 'Cards';
 
     /**
      * The block description.
      *
      * @var string
      */
-    public $description = 'Used to add a block of links to a page';
+    public $description = 'Used to add a block of link cards to a page';
 
     /**
      * The block category.
@@ -40,7 +40,7 @@ class Links extends Block
      *
      * @var array
      */
-    public $keywords = [];
+    public $keywords = ['links', 'boxes', 'cards'];
 
     /**
      * The block post type allow list.

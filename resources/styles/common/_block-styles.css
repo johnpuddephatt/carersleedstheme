@@ -13,6 +13,11 @@
   @apply px-4 md:px-0;
 }
 
+.page-content iframe[src*='youtube.com'],
+.page-content iframe[src*='vimeo.com'] {
+  @apply aspect-video h-auto w-full;
+}
+
 .prose > h1,
 h1.wp-block-heading {
   @apply type-xl;
