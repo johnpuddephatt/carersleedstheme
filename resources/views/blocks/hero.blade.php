@@ -43,7 +43,7 @@
         {!! wp_get_attachment_image($image, 'square', false, [
             'sizes' => '75vw, (min-width: 800px) 50vw, (min-width: 1200px) 30vw',
             'class' =>
-                'translate-x-[3.25rem] -translate-y-8 md:my-8  md:translate-y-0 md:translate-x-0 w-80 md:w-full h-auto ml-auto ' .
+                'translate-x-8 -translate-y-8 {{ $block->block->align == 'full' ? 'md:my-8' : null }}  md:translate-y-0 md:translate-x-0 w-2/3 md:w-full h-auto ml-auto ' .
                 match ($block->style) {
                     'default' => $block->block->align == 'full' ? 'clip-oval' : 'clip-oval md:clip-oval-part',
                     'alternative' => $block->block->align == 'full' ? 'clip-oval-2' : 'clip-oval-2 md:clip-oval-part-2',
