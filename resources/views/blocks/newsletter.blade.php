@@ -31,7 +31,7 @@
         </div>
       </form>
     </div>
-    <div class="mx-auto -mb-48 w-full max-w-80 flex-none md:w-2/5 md:py-6">
+    <div class="mx-auto -mb-48 w-full max-w-80 flex-none md:mb-0 md:w-2/5 md:py-6">
       @if ($image)
         {!! wp_get_attachment_image($image, 'landscape', false, [
             'sizes' => '25vw',
