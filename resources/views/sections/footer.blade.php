@@ -1,8 +1,7 @@
 <footer class="bg-blue pb-4 pt-12 text-white antialiased md:pt-24 lg:pb-8">
   <div class="container flex max-w-none flex-col justify-between gap-8 md:gap-16 lg:flex-row">
     <div>
-      <x-logo :invert="true" />
-
+      <x-logo class="!w-40 md:!w-48" :invert="true" />
     </div>
     <div class="lg:ml-auto">
       <div class="flex flex-col gap-8 md:gap-16 lg:flex-row">
@@ -38,11 +37,11 @@
 
   </div>
   <div
-    class="container mt-8 flex max-w-none flex-col-reverse items-end justify-between gap-8 text-sm font-semibold text-white text-opacity-80 md:mt-16 lg:flex-row">
+    class="container mt-8 flex max-w-none flex-col-reverse justify-between gap-8 text-sm font-semibold text-white text-opacity-80 md:mt-16 md:items-end lg:flex-row">
     <p><a href="https://letsdance.agency" target="_blank">Website by Let’s Dance</a></p>
-    <div class="text-right">
-      <svg xmlns="http://www.w3.org/2000/svg" width="367.34" height="130.16" class="mb-2 ml-auto h-auto w-28 text-white"
-        viewBox="0 0 367.34 130.16">
+    <div class="md:text-right">
+      <svg xmlns="http://www.w3.org/2000/svg" width="367.34" height="130.16"
+        class="mb-2 h-auto w-28 text-white md:ml-auto" viewBox="0 0 367.34 130.16">
         <defs>
           <style>
             .prefix__cls-2a4d {
@@ -70,7 +69,7 @@
       @if ($footerNavigation)
         <div class="mt-4 text-sm text-opacity-90">
           <nav>
-            <ul class="flex flex-row justify-end gap-3">
+            <ul class="flex flex-row gap-3 md:justify-end">
 
               @foreach ($footerNavigation as $item)
                 <li>

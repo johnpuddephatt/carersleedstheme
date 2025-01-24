@@ -5,7 +5,7 @@
   <div
     class="{{ $block->block->align == 'full' ? 'container md:gap-6' : 'pl-4 md:pl-8' }} relative flex flex-col-reverse items-center md:grid md:grid-cols-2">
     <div
-      class="{{ $block->block->align == 'full' ? 'pb-16 md:py-16  max-w-xl' : ' pb-8 md:pt-8 lg:p-16' }} relative z-10 w-full">
+      class="{{ $block->block->align == 'full' ? 'pb-16 md:py-16  max-w-xl' : ' pb-12 md:pt-8 lg:p-16' }} relative z-10 w-full">
       <h1 class="type-xl mb-4 text-blue-dark md:mb-6">{{ $heading }}</h1>
       <div class="type-sm !font-normal">{!! $content !!}</div>
       @if ($buttons)
@@ -18,10 +18,11 @@
         </div>
       @endif
     </div>
-    <div class="{{ $block->block->align == 'full' ? 'md:py-8 py-4 w-full' : null }}">
-      @if ($image)
+    @if ($image)
 
-        @if ($block->style == 'home')
+      @if ($block->style == 'home')
+        <div class="{{ $block->block->align == 'full' ? 'md:py-8 py-4 w-full' : null }}">
+
           <svg xmlns="http://www.w3.org/2000/svg" width="195.17" height="149.1"
             class="absolute -right-4 -top-0 h-auto w-[calc(50%+3rem)] 2xl:w-[calc(50%+6rem)]"
             viewBox="0 0 195.17 149.1">
@@ -37,19 +38,20 @@
               'class' =>
                   'w-80 ml-auto translate-x-8 md:translate-x-0 md:w-full h-auto mt-12 md:mb-24 clip-oval md:clip-landscape',
           ]) !!}
-        @else
-          {!! wp_get_attachment_image($image, 'square', false, [
-              'sizes' => '75vw, (min-width: 800px) 50vw, (min-width: 1200px) 30vw',
-              'class' =>
-                  ' w-80 md:w-full h-auto ml-auto ' .
-                  match ($block->style) {
-                      'default' => $block->block->align == 'full' ? 'clip-oval' : 'clip-oval md:clip-oval-part',
-                      'alternative' => $block->block->align == 'full' ? 'clip-oval-2' : 'clip-oval-2 md:clip-oval-part-2',
-                  },
-          ]) !!}
-        @endif
+        </div>
+      @else
+        {!! wp_get_attachment_image($image, 'square', false, [
+            'sizes' => '75vw, (min-width: 800px) 50vw, (min-width: 1200px) 30vw',
+            'class' =>
+                'translate-x-[3.25rem] -translate-y-8 md:my-8  md:translate-y-0 md:translate-x-0 w-80 md:w-full h-auto ml-auto ' .
+                match ($block->style) {
+                    'default' => $block->block->align == 'full' ? 'clip-oval' : 'clip-oval md:clip-oval-part',
+                    'alternative' => $block->block->align == 'full' ? 'clip-oval-2' : 'clip-oval-2 md:clip-oval-part-2',
+                },
+        ]) !!}
       @endif
-    </div>
+    @endif
+
   </div>
 </div>
 
