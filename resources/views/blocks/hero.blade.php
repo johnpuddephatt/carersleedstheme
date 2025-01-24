@@ -7,7 +7,7 @@
     <div
       class="{{ $block->block->align == 'full' ? 'pb-16 md:py-16  max-w-xl' : ' pb-8 md:pt-8 lg:p-16' }} relative z-10 w-full">
       <h1 class="type-xl mb-2 text-blue-dark md:mb-6">{{ $heading }}</h1>
-      <div class="type-sm">{!! $content !!}</div>
+      <div class="type-sm font-normal">{!! $content !!}</div>
       @if ($buttons)
         <div class="mt-6 flex flex-wrap gap-2 md:mt-10">
           @foreach ($buttons as $button)
