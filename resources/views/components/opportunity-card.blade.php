@@ -1,5 +1,5 @@
   <a href="{{ get_permalink($opportunity->ID) }}"
-    class="rounded-small group relative flex w-full items-center overflow-hidden bg-pink-light p-4 !no-underline md:p-8">
+    class="group relative flex w-full items-center overflow-hidden rounded-small bg-pink-light p-4 !no-underline md:p-8">
 
     <div class="flex-1">
 
@@ -43,5 +43,7 @@
       </div>
 
     </div>
-
+    <div class="ml-auto rounded-full bg-white bg-opacity-60 p-4 transition group-hover:bg-opacity-100">
+      <x-icon.card-arrow class="h-6 w-6 text-pink-dark" />
+    </div>
   </a>
