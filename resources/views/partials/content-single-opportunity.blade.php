@@ -14,8 +14,8 @@
         <div class="flex flex-col gap-1 md:flex-row md:gap-4">
           @if (get_field('deadline', $post->ID))
             <div class="flex items-center">
-              <span class="mr-1 inline-block rounded-full bg-beige-dark p-1.5 md:mr-2">
-                <x-icon-calendar class="h-4 w-4 text-white" />
+              <span class="mr-1 inline-block rounded-full bg-beige-dark p-0.5 md:mr-2">
+                <x-icon-calendar class="h-6 w-6 text-white" />
               </span>
               <div class="type-sm">
                 Closing date: {{ date(get_option('date_format'), strtotime(get_field('deadline', $post->ID))) }}
