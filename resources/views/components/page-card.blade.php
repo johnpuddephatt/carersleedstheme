@@ -1,4 +1,4 @@
-  <a href="{{ $url }}" class="group block max-w-md border-b-2 border-blue-bright">
+  <a href="{{ $url }}" class="group mx-auto block max-w-md border-b-2 border-blue-bright">
     <div class="mb-4 overflow-hidden md:mb-6">
       @if ($image)
         {!! wp_get_attachment_image($image, 'landscape', false, [

@@ -1,4 +1,5 @@
-  <a href="{{ $url }}" class="group flex items-center justify-between rounded-r-full bg-beige px-3 py-3">
+  <a href="{{ $url }}"
+    class="group mx-auto flex max-w-md items-center justify-between rounded-r-full bg-beige px-3 py-3">
 
     <h3 class="truncate text-xl font-semibold">{{ $title }}</h3>
 
