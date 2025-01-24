@@ -7,14 +7,14 @@
       <h2 class="type-xl mb-8 text-center font-semibold md:mb-12">{{ $title }}</h2>
     @endif
     @if ($subtitle)
-      <div class="type-md -mt-6 mb-8 text-center !font-semibold md:mb-16">{{ $subtitle }}</div>
+      <div class="type-sm -mt-6 mb-8 text-center !font-semibold md:mb-16">{{ $subtitle }}</div>
     @endif
 
     <div class="flex flex-row flex-wrap justify-center gap-4 md:gap-8 lg:gap-12">
 
       @foreach ($blocks as $block_item)
         <div
-          class="{{ $block->block->align ? 'flex-row items-start' : 'flex-col' }} rounded-medium flex w-full min-w-96 max-w-xl gap-4 bg-white p-4 md:h-56 md:p-8">
+          class="{{ $block->block->align ? 'flex-row items-start' : 'flex-col' }} flex w-full min-w-96 max-w-xl gap-4 rounded-medium bg-white p-4 md:h-56 md:p-8">
           <div class="h-12 w-12 rounded-full bg-blue-bright p-2.5">
             @if ($block_item['icon'])
               @svg($block_item['icon'], 'h-7 w-7 text-white ')
