@@ -48,7 +48,7 @@
                     'default' => $block->block->align == 'full' ? 'clip-oval' : 'clip-oval md:clip-oval-part ',
                     'alternative' => $block->block->align == 'full' ? 'clip-oval-2' : 'clip-oval-2 md:clip-oval-part-2 ',
                 } .
-                (block->block->align == 'full' ? 'md:my-8' : null),
+                ($block->block->align == 'full' ? 'md:my-8' : null),
         ]) !!}
       @endif
     @endif
