@@ -1,4 +1,4 @@
-  <div class="relative w-full overflow-hidden border-t border-green pb-72 pt-32">
+  <div class="relative w-full overflow-hidden pb-72 pt-32">
 
     <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-1/2 top-12 w-1/4 min-w-96" viewBox="0 0 107.4 107.43">
       <path fill="#eadad0"
@@ -54,11 +54,11 @@
 
     <div class="container relative flex flex-col items-start justify-between gap-8 lg:flex-row-reverse lg:gap-16">
 
-      <div class="rounded-medium w-full bg-blue-light p-8 lg:w-1/2 lg:max-w-md">
+      <div class="my-4 w-full rounded-medium bg-blue-light p-8 lg:w-1/2 lg:max-w-md">
 
         <h3 class="type-md text-blue-dark">Key information</h3>
 
-        <ul class="mt-4 list-inside list-disc">
+        <ul class="mt-4 list-inside list-disc space-y-2">
           @if (get_field('location', $post->ID))
             <li>Location: {{ get_field('location', $post->ID) }}</li>
           @endif

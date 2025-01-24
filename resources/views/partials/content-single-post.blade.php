@@ -1,11 +1,11 @@
-<div class="relative border-t border-green pb-72">
+<div class="relative overflow-hidden border-t border-green pb-72">
 
-  <div class="container flex flex-col-reverse gap-4 overflow-hidden lg:flex-row lg:items-end">
+  <div class="container flex flex-col-reverse gap-4 lg:flex-row lg:items-end">
     <div class="relative z-10 pb-8 lg:w-1/2 lg:pb-12">
       <a class="type-md mb-4 inline-block text-blue" href="{{ get_permalink(get_option('page_for_posts')) }}">News
         &rsaquo;
       </a>
-      <h1 class="type-xl text-blue-dark">{{ get_the_title() }}</h1>
+      <h1 class="type-xl text-blue-dark">{!! get_the_title() !!}</h1>
 
     </div>
     @if (has_post_thumbnail())

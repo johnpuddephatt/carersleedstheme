@@ -7,9 +7,14 @@
           &rsaquo;
         </a>
         <h1 class="type-xl mb-2 text-blue-dark md:mb-4">{{ $event->post_title }}</h1>
-        <p class="type-md text-blue-dark">
-          {{ tribe_get_start_date($event->ID, false, get_option('date_format') . '  –  ' . get_option('time_format')) }}
-        </p>
+        <div class="flex items-center">
+          <span class="mr-1 inline-block rounded-full bg-blue-bright p-0.5 md:mr-2">
+            <x-icon-calendar class="h-6 w-6 text-white" />
+          </span>
+          <p class="type-md text-blue-dark">
+            {{ tribe_get_start_date($event->ID, false, get_option('date_format') . '  –  ' . get_option('time_format')) }}
+          </p>
+        </div>
 
       </div>
       @if (has_post_thumbnail($event->ID))
@@ -43,7 +48,7 @@
           @endif
 
           @if (tribe_get_embedded_map($event->ID))
-            <div class="rounded-medium mt-8 overflow-hidden">
+            <div class="mt-8 overflow-hidden rounded-medium">
               {!! tribe_get_embedded_map($event->ID) !!}
             </div>
           @endif

@@ -3,10 +3,43 @@
 }
 
 #main .happyforms-form .happyforms-submit {
-  @apply border-2  border-green !important;
-  @apply rounded-small px-4 py-2 bg-transparent text-black font-semibold;
+  @apply rounded-small border-2  border-green bg-green-dark text-white !important;
+  @apply px-4 py-2 hover:border-green-dark   font-semibold;
 }
 
 #main .happyforms-form hr {
   @apply border-blue-light border-b-2;
+}
+
+#main .happyforms-part--submit {
+  @apply flex flex-row-reverse gap-2;
+  flex-flow: row-reverse;
+}
+
+#main .happyforms-save-session {
+  @apply mr-0 rounded-small w-1/3 border-2  border-green !important;
+  @apply no-underline px-4 py-2 bg-transparent text-black font-semibold;
+}
+
+.happyforms-styles .happyforms-part input[type='text']:focus,
+.happyforms-styles .happyforms-part input[type='password']:focus,
+.happyforms-styles .happyforms-part input[type='email']:focus,
+.happyforms-styles .happyforms-part input[type='tel']:focus,
+.happyforms-styles .happyforms-part input[type='number']:focus,
+.happyforms-styles .happyforms-part input[type='date']:focus,
+.happyforms-styles .happyforms-part input[type='time']:focus,
+.happyforms-styles .happyforms-part input[type='datetime-local']:focus,
+.happyforms-styles .happyforms-part input[type='month']:focus,
+.happyforms-styles .happyforms-part textarea:focus,
+.happyforms-styles
+  .happyforms-part--signature
+  .happyforms--signature-area--container.focus,
+.happyforms-styles .happyforms-part--scrollable_terms .scrollbox:focus,
+.happyforms-styles .happyforms-part select.happyforms-select:focus {
+  border-color: #00a0ad !important;
+  box-shadow: inset 0 0 0 1px 00a0ad !important;
+}
+
+#main .happyforms-form {
+  --happyforms-color-part-border-focus: #00a0ad;
 }

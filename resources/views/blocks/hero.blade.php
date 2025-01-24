@@ -1,9 +1,9 @@
 <div
-  class="wp-block {{ $block->classes }} bg-{{ $background_colour }} {{ $block->block->align == 'full' ? '' : ' mb-8 xl:my-16 2xl:my-24' }} {{ $block->block->align == 'wide' ? 'xl:rounded-big' : '' }} {{ !$block->block->align ? 'md:rounded-medium' : '' }} not-prose {{ $block->style == 'home' ? '!md:-mt-px' : '' }} relative mx-auto overflow-hidden"
+  class="wp-block {{ $block->classes }} bg-{{ $background_colour }} {{ $block->block->align == 'full' ? '' : ' mb-8 xl:my-16 2xl:my-24' }} {{ $block->block->align == 'wide' ? 'xl:rounded-big' : '' }} {{ !$block->block->align ? 'md:rounded-medium' : '' }} not-prose {{ $block->style == 'home' ? '!md:-mt-px' : '' }} {{ $block->style == 'alternative' ? ' rounded-medium max-lg:!mx-4 mt-12 md:mt-0 md:overflow-hidden' : ' mx-auto overflow-hidden' }} relative"
   style="{{ $block->inlineStyle }}">
 
   <div
-    class="{{ $block->block->align == 'full' ? 'container md:gap-6' : 'pl-4 md:pl-8' }} relative flex flex-col-reverse items-center md:grid md:grid-cols-2">
+    class="{{ $block->block->align == 'full' ? ' md:gap-6' : 'px-4 md:pr-0 md:pl-8' }} container relative flex min-h-48 flex-col-reverse items-center md:grid md:grid-cols-2">
     <div
       class="{{ $block->block->align == 'full' ? 'pb-16 md:py-16  max-w-xl' : ' pb-12 md:pt-8 lg:p-16' }} relative z-10 w-full">
       <h1 class="type-xl mb-4 text-blue-dark md:mb-6">{{ $heading }}</h1>
