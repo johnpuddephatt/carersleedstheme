@@ -39,7 +39,8 @@ class ThemeOptions extends Field
             ->addSelect('Type')
             ->addChoices(['Twitter', 'Facebook', 'Instagram', 'LinkedIn', 'Bluesky'])
             ->addUrl('link')
-            ->endRepeater();
+            ->endRepeater()
+            ->addText('company_info');
 
 
 
