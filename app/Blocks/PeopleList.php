@@ -163,6 +163,7 @@ class PeopleList extends Block
                     'posts_per_page' => -1,
                     'tax_query' => $tax_query,
                     'orderby' => 'menu_order',
+                    'order' => 'ASC',
                 ]
             )
         ];
