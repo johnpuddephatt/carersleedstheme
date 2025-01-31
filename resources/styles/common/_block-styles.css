@@ -42,7 +42,7 @@ h3.wp-block-heading {
 }
 
 p.is-style-large {
-  @apply type-sm;
+  @apply type-md mb-2;
 }
 
 /* 
