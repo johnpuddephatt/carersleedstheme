@@ -10,7 +10,7 @@ export function template() {
     // }),
     wp.blocks.createBlock('acf/hero', {
       data: {
-        field_hero_background_colour: 'blue-light',
+        field_hero_background_colour: 'green-light',
         field_hero_heading: 'Section title',
         field_hero_content: 'Section introduction.',
         field_hero_buttons: '',

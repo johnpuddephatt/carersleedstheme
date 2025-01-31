@@ -1,13 +1,13 @@
 <div class="wp-block not-prose {{ $block->classes }}" style="{{ $block->inlineStyle }}">
   @if ($title)
-    <h3 class="type-lg mb-8">{{ $title }}</h3>
+    <h2 class="text-blue">{{ $title }}</h2>
   @endif
   @if ($people)
     <div class="space-y-4">
       @foreach ($people as $person)
         <details x-data="{ open: false }">
           <summary @click="console.log(open);open = !open" style="font-size: 1em !important;"
-            class="r group relative flex flex-row items-center gap-2 p-4 transition md:gap-4 md:p-6">
+            class="group relative flex flex-row items-center gap-2 p-4 transition md:gap-4 md:p-6">
 
             <div class="overflow-hidden rounded-full">
               {!! get_the_post_thumbnail($person->ID, 'square', [
