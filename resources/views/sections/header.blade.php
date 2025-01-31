@@ -8,7 +8,7 @@
           <ul class="flex flex-row items-center gap-8">
             @foreach ($secondaryNavigation as $item)
               <li>
-                <a class="inline-block text-blue-dark" class="{{ $item->classes }}"
+                <a class="{{ $item->classes ?? 'text-blue-dark' }} inline-block"
                   href="{{ $item->url }}">{!! $item->label !!}</a>
               </li>
             @endforeach
