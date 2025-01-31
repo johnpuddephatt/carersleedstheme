@@ -5,17 +5,17 @@
       "js/app.0cfbe0.js"
     ],
     "css": [
-      "css/app.daca65.css"
+      "css/app.417b4b.css"
     ],
     "dependencies": []
   },
   "editor": {
     "js": [
       "js/runtime.c039ed.js",
-      "js/editor.8f95fa.js"
+      "js/editor.eabed1.js"
     ],
     "css": [
-      "css/editor.9f31d9.css"
+      "css/editor.31247d.css"
     ],
     "dependencies": [
       "wp-data",

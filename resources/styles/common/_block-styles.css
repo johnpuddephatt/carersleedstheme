@@ -40,6 +40,11 @@ h3.wp-block-heading {
 .wp-block-hero .wp-block-buttons {
   @apply mt-8;
 }
+
+p.is-style-large {
+  @apply type-sm;
+}
+
 /* 
 .post-content .wp-block-button__link,
 .page-content .wp-block-button__link,
