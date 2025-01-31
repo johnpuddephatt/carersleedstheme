@@ -13,7 +13,7 @@
       @endif
     </div>
     <div class="flex justify-between border-blue-bright pb-2">
-      <h3 class="type-md">{{ $title }}</h3>
+      <h3 class="type-md">{!! $title !!}</h3>
       <x-icon.card-arrow
         class="mt-1 flex-none -translate-x-1/2 text-blue opacity-0 transition group-hover:translate-x-0 group-hover:opacity-100" />
     </div>
