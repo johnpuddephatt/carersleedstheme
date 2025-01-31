@@ -161,7 +161,8 @@ class PeopleList extends Block
                 [
                     'post_type' => 'person',
                     'posts_per_page' => -1,
-                    'tax_query' => $tax_query
+                    'tax_query' => $tax_query,
+                    'orderby' => 'menu_order',
                 ]
             )
         ];
