@@ -77,10 +77,10 @@ a.active {
   @apply transition-all font-bold antialiased decoration-blue/20 hover:decoration-blue/70;
 }
 
-.post-content > *:first-child,
-.page-content > *:first-child,
-.page-content > .group:first-child > *:first-child,
-.post-content > .group:first-child > *:first-child {
+.post-content > :not(.wp-block-hero):first-child,
+.page-content > :not(.wp-block-hero):first-child,
+.page-content > .group:first-child > :not(.wp-block-hero):first-child,
+.post-content > .group:first-child > :not(.wp-block-hero):first-child {
   @apply mt-0;
 }
 
