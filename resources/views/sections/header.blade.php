@@ -8,7 +8,8 @@
           <ul class="flex flex-row items-center gap-8">
             @foreach ($secondaryNavigation as $item)
               <li>
-                <a class="inline-block text-blue-dark" href="{{ $item->url }}">{!! $item->label !!}</a>
+                <a class="inline-block text-blue-dark" class="{{ $item->classes }}"
+                  href="{{ $item->url }}">{!! $item->label !!}</a>
               </li>
             @endforeach
           </ul>
@@ -29,7 +30,7 @@
         </a>
 
         <button @click="menuOpen = true" :class="{ 'hidden': menuOpen }"
-          class="rounded-small inline-block border-2 border-blue-bright px-6 py-2 font-semibold !no-underline transition duration-300 hover:bg-green hover:bg-opacity-20 lg:hidden"
+          class="inline-block rounded-small border-2 border-blue-bright px-6 py-2 font-semibold !no-underline transition duration-300 hover:bg-green hover:bg-opacity-20 lg:hidden"
           aria-label="Open navigation menu" title="Open navigation menu">Menu
         </button>
 
