@@ -24,6 +24,14 @@ add_action('load-index.php', function () {
     wp_redirect(admin_url('edit.php?post_type=page'));
 });
 
+
+add_filter('embed_oembed_html', function ($html) {
+    if (str_contains($html, 'youtube.com')) {
+        $html = str_replace('youtube.com', 'youtube-nocookie.com', $html);
+    }
+    return $html;
+}, 10);
+
 add_filter(
     'admin_menu',
     function ($menu) {
