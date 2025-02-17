@@ -14,7 +14,7 @@
           @include('blocks.blocks', [
               'block' => (object) [
                   'classes' => 'bg-blue-light alignfull !mb-0',
-                  'block' => (object) ['align' => false],
+                  'block' => (object) ['align' => 'alignfull'],
                   'preview' => false,
                   'inlineStyle' => '',
               ],
