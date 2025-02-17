@@ -19,4 +19,8 @@
       @endif
     </div>
   </div>
+@elseif($block->preview)
+  <div class="rounded-small bg-beige-light p-8">
+    Select posts to get started.
+  </div>
 @endif

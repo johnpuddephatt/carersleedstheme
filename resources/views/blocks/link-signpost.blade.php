@@ -12,4 +12,9 @@
       <x-icon.card-arrow class="h-6 w-6 text-beige-dark" />
     </div>
   </a>
+@elseif($block->preview)
+  <div class="rounded-small bg-beige-light p-8">
+    Add a link to get started.
+  </div>
+
 @endif
