@@ -19,6 +19,10 @@
   @apply aspect-video h-auto w-full rounded-small;
 }
 
+.page-content > *:last-child {
+  @apply mb-0;
+}
+
 .prose > h1,
 h1.wp-block-heading {
   @apply type-xl;
