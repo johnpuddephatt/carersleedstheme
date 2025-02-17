@@ -139,13 +139,18 @@ summary::marker {
 }
 
 details summary::after {
-  @apply mx-auto absolute bg-white bg-opacity-60 right-4 -translate-y-1/2 top-1/2 size-14 block rounded-full p-2;
+  @apply mx-auto absolute bg-white bg-opacity-60 right-4  -translate-y-1/2 top-1/2 size-10 block rounded-full p-1;
 
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="rgba(1,105,125)" ><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>');
-  background-size: 2rem;
+  background-size: 1.5rem;
   background-repeat: no-repeat;
   background-position: center;
   content: '';
+}
+
+.wp-block-people-list details summary::after {
+  @apply right-6 md:right-8 p-2 size-14;
+  background-size: 2rem;
 }
 
 details summary:hover::after {
