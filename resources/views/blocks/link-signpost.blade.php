@@ -5,7 +5,7 @@
     <div>
       <h3 class="type-sm md:type-md mb-1">{{ $title }}</h3>
       @if ($description ?? false)
-        <div class="font-normal leading-snug">{!! wp_trim_words($description, 20) !!}</div>
+        <div class="font-normal leading-snug">{!! wp_trim_words($description, 24) !!}</div>
       @endif
     </div>
     <div class="ml-auto rounded-full bg-white bg-opacity-60 p-4 transition group-hover:bg-opacity-100">
