@@ -1,8 +1,8 @@
   @if ($secondaryNavigation)
     <div class="border-green bg-blue pb-2 pt-3 text-white md:border-b md:bg-white md:text-blue-dark lg:pb-3 lg:pt-6">
       <div class="container flex max-w-none items-center justify-center md:justify-between">
-        <div class="type-xs md:type-sm">
-          Need to talk? Call us on 0113 380 4300
+        <div class="type-xs md:type-sm prose">
+          {!! get_field('header_text', 'option') !!}
         </div>
         <nav class="hidden lg:block">
           <ul class="flex flex-row items-center gap-8">

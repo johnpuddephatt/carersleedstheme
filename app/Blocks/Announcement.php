@@ -198,7 +198,7 @@ class Announcement extends Block
                 'page' => 'Page or post',
             ])
             ->addPostObject('page', [
-                'post_type' => ['page', 'post'],
+                'post_type' => ['page', 'post', 'tribe_events', 'opportunity'],
                 'return_format' => 'id',
                 'conditional_logic' => [
                     [

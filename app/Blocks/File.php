@@ -147,11 +147,14 @@ class File extends Block
      */
     public function with(): array
     {
+
+
         return [
             // 'items' => $this->items(),
             'file' => get_field('file'),
             'name' => get_field('name'),
             'description' => get_field('description'),
+
         ];
     }
 
@@ -164,7 +167,6 @@ class File extends Block
 
         $fields->addFile('file')
             ->setLabel('File')
-
             ->setRequired();
 
         $fields->addText('name')->setInstructions('Leave blank to use the default file name');
