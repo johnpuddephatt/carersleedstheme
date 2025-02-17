@@ -2,6 +2,9 @@
   @if ($title)
     <h2 class="text-blue">{{ $title }}</h2>
   @endif
+  @if ($description)
+    <p class="-mt-4 mb-8">{!! $description !!}</p>
+  @endif
   @if ($people)
     <div class="space-y-4">
       @foreach ($people as $person)

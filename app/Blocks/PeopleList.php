@@ -157,6 +157,7 @@ class PeopleList extends Block
 
         return [
             'title' => get_field('title'),
+            'description' => get_field('description'),
             'people' => get_posts(
                 [
                     'post_type' => 'person',
@@ -177,6 +178,7 @@ class PeopleList extends Block
         $fields = Builder::make('people_list');
 
         $fields->addText('title');
+        $fields->addTextarea('description');
 
         $fields->addTaxonomy('type', [
             'taxonomy' => 'role_type',
