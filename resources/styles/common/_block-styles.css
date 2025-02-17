@@ -15,7 +15,7 @@
 
 .page-content iframe[src*='youtube.com'],
 .page-content iframe[src*='vimeo.com'] {
-  @apply aspect-video h-auto w-full;
+  @apply aspect-video h-auto w-full rounded-small;
 }
 
 .prose > h1,
