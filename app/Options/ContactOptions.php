@@ -31,13 +31,13 @@ class ContactOptions extends Field
         $fields
 
 
-            ->addText('title')
-            ->addText('subtitle')
+            ->addText('contact_title')
+            ->addText('contact_subtitle')
             // ->addPartial(\App\Fields\Partials\BackgroundColor::class)
 
-            ->addLink('read_more_link')
+            ->addLink('contact_read_more_link')
 
-            ->addFlexibleContent('blocks', [
+            ->addFlexibleContent('contact_blocks', [
                 'layout' => 'block',
                 'button_label' => 'Add Block',
             ])

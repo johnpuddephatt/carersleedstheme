@@ -90,12 +90,36 @@ add_action('admin_head', function () {
 add_action('customize_controls_print_styles', function () {
     echo <<<'HTML'
 <style>
+    
     #happyforms-steps-nav [data-step="style"] {
         display: none;
     }
 </style>
 HTML;
 });
+
+
+
+add_action('admin_head', function () {
+    $screen = get_current_screen();
+    // if ($screen && $screen->id === 'settings_page_my_options_page') {
+    echo "<style>            
+            [data-toolbar='simple'] iframe {
+            height: 75px !important;
+            min-height: 75px !important;
+            }
+
+            [data-toolbar='simple'] .mce-statusbar {
+            display: none;
+            }
+
+             [data-toolbar='simple'] .mce-top-part {
+            display: none;
+            }
+        </style>";
+    // }
+});
+
 
 
 /**

@@ -10,6 +10,20 @@
 
         @includeFirst(['partials.content-page-' . get_post_type(), 'partials.content-page'])
 
+        @if (get_field('show_cta'))
+          @include('blocks.blocks', [
+              'block' => (object) [
+                  'classes' => 'bg-blue-light alignfull !mb-0',
+                  'block' => (object) ['align' => false],
+                  'preview' => false,
+                  'inlineStyle' => '',
+              ],
+              'title' => get_field('contact_title', 'option'),
+              'subtitle' => get_field('contact_subtitle', 'option'),
+              'blocks' => get_field('contact_blocks', 'option'),
+              'more_link' => get_field('contact_link', 'option'),
+          ])
+        @endif
         @include('partials.page-siblings')
       </div>
     </div>
