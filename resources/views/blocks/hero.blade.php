@@ -3,7 +3,7 @@
   style="{{ $block->inlineStyle }}">
 
   <div
-    class="{{ $block->block->align == 'full' ? ' md:gap-6' : 'px-4 md:pr-0 md:pl-8' }} container relative flex min-h-80 flex-col-reverse items-center md:grid md:min-h-[36rem] md:grid-cols-2">
+    class="{{ $block->block->align == 'full' ? ' min-h-80 md:gap-6' : 'min-h-24 px-4 md:pr-0 md:pl-8' }} container relative flex flex-col-reverse items-center md:grid md:min-h-[36rem] md:grid-cols-2">
     <div
       class="{{ $block->block->align == 'full' ? 'pb-16 md:py-16  max-w-xl' : ' pb-12 md:pt-8 lg:p-16' }} relative z-10 w-full">
       <h1 class="type-xl mb-4 text-blue-dark md:mb-6">{{ $heading }}</h1>
