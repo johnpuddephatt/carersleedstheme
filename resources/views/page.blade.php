@@ -13,7 +13,7 @@
         @if (get_field('show_cta'))
           @include('blocks.blocks', [
               'block' => (object) [
-                  'classes' => 'bg-blue-light alignfull !mb-0',
+                  'classes' => 'bg-blue-light alignfull !my-0',
                   'block' => (object) ['align' => 'alignfull'],
                   'preview' => false,
                   'inlineStyle' => '',
