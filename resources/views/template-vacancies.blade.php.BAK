@@ -15,7 +15,7 @@
     </div>
 
     @if (!$vacancies->have_posts())
-      <div class="my-16 2xl:my-24">
+      <div class="my-12 2xl:my-16">
         <x-alert type="warning">
           Sorry, no vacancies were found.
         </x-alert>

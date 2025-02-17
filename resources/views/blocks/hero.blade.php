@@ -1,5 +1,5 @@
 <div
-  class="wp-block {{ $block->classes }} bg-{{ $background_colour }} {{ $block->block->align == 'full' ? '' : ' mb-8 xl:my-16 2xl:my-24' }} {{ $block->block->align == 'wide' ? 'xl:rounded-big' : '' }} {{ !$block->block->align ? 'md:rounded-medium' : '' }} not-prose {{ $block->style == 'home' ? '!md:-mt-px' : '' }} {{ $block->style == 'alternative' ? ' rounded-medium max-lg:!mx-4 mt-12 md:mt-0 md:overflow-hidden' : ' mx-auto overflow-hidden' }} relative"
+  class="wp-block {{ $block->classes }} bg-{{ $background_colour }} {{ $block->block->align == 'full' ? '' : ' mb-8 xl:my-12 2xl:my-16' }} {{ $block->block->align == 'wide' ? 'xl:rounded-big' : '' }} {{ !$block->block->align ? 'md:rounded-medium' : '' }} not-prose {{ $block->style == 'home' ? '!md:-mt-px' : '' }} {{ $block->style == 'alternative' ? ' rounded-medium max-lg:!mx-4 mt-12 md:mt-0 md:overflow-hidden' : ' mx-auto overflow-hidden' }} relative"
   style="{{ $block->inlineStyle }}">
 
   <div

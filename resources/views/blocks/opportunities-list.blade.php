@@ -1,4 +1,4 @@
-<div class="{{ $block->classes }} my-16 2xl:my-24" style="{{ $block->inlineStyle }}">
+<div class="{{ $block->classes }} my-12 2xl:my-16" style="{{ $block->inlineStyle }}">
   @if ($title)
     <h2 class="type-lg mb-12 text-blue-dark">{{ $title }}</h2>
   @endif

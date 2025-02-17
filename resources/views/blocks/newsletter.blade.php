@@ -7,7 +7,7 @@
 </svg>
 
 <div
-  class="wp-block {{ $block->classes }} {{ $block->block->align == 'full' ? '' : 'my-16 2xl:my-24' }} not-prose relative z-10 mx-auto pb-40 md:pb-24"
+  class="wp-block {{ $block->classes }} {{ $block->block->align == 'full' ? '' : 'my-12 2xl:my-16' }} not-prose relative z-10 mx-auto pb-40 md:pb-24"
   style="{{ $block->inlineStyle }}">
 
   <div
