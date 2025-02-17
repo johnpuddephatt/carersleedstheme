@@ -33,6 +33,10 @@ h3.wp-block-heading {
   @apply type-md text-green-dark;
 }
 
+.prose .group:first-child h2 {
+  @apply mt-4;
+}
+
 .wp-block-button .wp-block-button__link {
   @apply border-green border-2 rounded-small px-4 py-2 bg-transparent text-black font-semibold;
 }
@@ -98,7 +102,7 @@ p.is-style-large {
 }
 
 .wp-block-quote.has-background {
-  @apply pt-0.5 p-6 border-l-blue;
+  @apply pt-0.5 my-8 p-6 border-l-blue;
 }
 
 .wp-block-quote.is-style-large {
@@ -114,7 +118,7 @@ p.is-style-large {
 }
 
 .wp-block-group.has-background {
-  @apply p-6 rounded-small;
+  @apply p-6 my-12 md:my-16 md:p-8 rounded-small;
 }
 
 details {
