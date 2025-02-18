@@ -14,6 +14,8 @@ class ThemeOptions extends Field
      */
     public $name = 'Theme options';
 
+    public $slug = 'theme-options';
+
     /**
      * The option page document title.
      *

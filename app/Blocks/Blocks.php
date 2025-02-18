@@ -170,6 +170,7 @@ class Blocks extends Block
             // 'background_colour' => get_field('background_colour'),
             'blocks' => get_field('blocks'),
             'more_link' => get_field('read_more_link'),
+            'display_default_contact_info' => get_field('display_default_contact_info'),
         ];
     }
 
@@ -181,16 +182,64 @@ class Blocks extends Block
         $fields = Builder::make('blocks');
 
         $fields
+            ->addTrueFalse('display_default_contact_info', [
+                'label' => 'Display default contact info',
+                'ui' => 1,
+                'default_value' => 1,
+                'instructions' => 'This will display the default contact info as defined in Theme Options. If you want to override the default contact info, set this to No and fill in the fields below.',
+            ])
+            ->addText('title', [
+                'conditional_logic' => [
+                    [
+                        [
+                            'field' => 'display_default_contact_info',
+                            'operator' => '==',
+                            'value' => 0,
+                        ],
+                    ],
 
-            ->addText('title')
-            ->addText('subtitle')
+                ]
+            ])
+            ->addText('subtitle', [
+                'conditional_logic' => [
+                    [
+                        [
+                            'field' => 'display_default_contact_info',
+                            'operator' => '==',
+                            'value' => 0,
+                        ],
+                    ],
+
+                ]
+            ])
             // ->addPartial(\App\Fields\Partials\BackgroundColor::class)
 
-            ->addLink('read_more_link')
+            ->addLink('read_more_link', [
+                'conditional_logic' => [
+                    [
+                        [
+                            'field' => 'display_default_contact_info',
+                            'operator' => '==',
+                            'value' => 0,
+                        ],
+                    ],
+
+                ]
+            ])
 
             ->addFlexibleContent('blocks', [
                 'layout' => 'block',
                 'button_label' => 'Add Block',
+                'conditional_logic' => [
+                    [
+                        [
+                            'field' => 'display_default_contact_info',
+                            'operator' => '==',
+                            'value' => 0,
+                        ],
+                    ],
+
+                ]
             ])
 
             ->addLayout('block', [

@@ -29,8 +29,6 @@ class ContactOptions extends Field
         $fields = Builder::make('contact_options');
 
         $fields
-
-
             ->addText('contact_title')
             ->addText('contact_subtitle')
             // ->addPartial(\App\Fields\Partials\BackgroundColor::class)

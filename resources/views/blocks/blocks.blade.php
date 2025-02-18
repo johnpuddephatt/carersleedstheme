@@ -1,3 +1,11 @@
+@php
+  if (get_field('display_default_contact_info')) {
+      $title = get_field('contact_title', 'option');
+      $subtitle = get_field('contact_subtitle', 'option');
+      $blocks = get_field('contact_blocks', 'option');
+      $more_link = get_field('contact_link', 'option');
+  }
+@endphp
 @if ($blocks)
   <div
     class="wp-block {{ $block->classes }} {{ $block->block->align ? 'container' : null }} not-prose mx-auto my-16 bg-blue-light px-8 py-12 md:py-16 2xl:my-24 2xl:py-24"

@@ -18,10 +18,6 @@
                   'preview' => false,
                   'inlineStyle' => '',
               ],
-              'title' => get_field('contact_title', 'option'),
-              'subtitle' => get_field('contact_subtitle', 'option'),
-              'blocks' => get_field('contact_blocks', 'option'),
-              'more_link' => get_field('contact_link', 'option'),
           ])
         @endif
         @include('partials.page-siblings')
