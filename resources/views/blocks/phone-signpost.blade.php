@@ -1,5 +1,5 @@
 @if ($number ?? false)
-  <a href="tel:{{ $number }}"
+  <a href="tel:{{ preg_replace('/[^0-9]/', '', $number) }}"
     class="{{ $block->classes }} wp-block not-prose not-prose group my-4 flex items-center gap-2 rounded-small bg-beige p-6 !no-underline md:my-8 md:p-8"
     style="{{ $block->inlineStyle }}; font-size: 1em;">
     <div class="rounded-full bg-white bg-opacity-60 p-3 transition group-hover:bg-opacity-100">
