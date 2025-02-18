@@ -164,6 +164,7 @@ class Blocks extends Block
      */
     public function with(): array
     {
+
         return [
             'title' => get_field('title'),
             'subtitle' => get_field('subtitle'),
