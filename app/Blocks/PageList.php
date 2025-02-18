@@ -164,16 +164,21 @@ class PageList extends Block
      */
     public function with(): array
     {
+
+        $pages = get_pages(['child_of' => get_field('page')]);
+        $pages = array_map(
+            function ($page) {
+                return ['title' => $page->post_title, 'link' => $page->permalink];
+            },
+            $pages
+        );
+
+        usort($pages, function ($a, $b) {
+            return $a['title'] <=> $b['title'];
+        });
+
         return [
-            'pages' => get_pages(['child_of' => get_field('page')])
-            // 'pages' => wp_list_pages([
-            //     'title_li' => null,
-            //     'depth' => 999,
-            //     'echo' => false,
-            //     'child_of' => get_field('page'),
-            //     'sort_column' => 'title',
-            //     'walker' => new \App\Walker\AlphabeticalWalker(),
-            // ]),
+            'pages' => $pages
         ];
     }
 

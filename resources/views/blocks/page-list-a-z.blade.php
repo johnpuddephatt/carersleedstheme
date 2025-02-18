@@ -1,3 +1,3 @@
 @foreach ($pages as $page)
-  <a href="{{ $page->permalink }}">{{ $page->post_title }}</a><br>
+  <a href="{{ $page['link'] }}">{!! $page['title'] !!}</a><br>
 @endforeach
