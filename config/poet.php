@@ -1,6 +1,5 @@
 <?php
 
-//  dd(get_post_types());
 
 return [
     /*
@@ -45,52 +44,6 @@ return [
                 'singular' => 'Opportunity',
                 'plural' => 'Opportunities',
             ],
-            'template' => [
-
-                [
-                    'core/heading',
-                    [
-                        'level' => 2,
-                        'placeholder' => 'Enter heading',
-                        'content' => 'About the role'
-                    ]
-                ],
-                [
-                    'core/paragraph',
-                    [
-                        'placeholder' => 'Lorem ipsum dolar amet...',
-                    ]
-                ],
-                [
-                    'core/heading',
-                    [
-                        'level' => 2,
-                        'placeholder' => 'Enter heading',
-                        'content' => 'About Carers Leeds'
-                    ]
-                ],
-                [
-                    'core/paragraph',
-                    [
-                        'placeholder' => 'Lorem ipsum dolar amet...',
-                    ]
-                ],
-                [
-                    'core/heading',
-                    [
-                        'level' => 2,
-                        'placeholder' => 'Enter heading',
-                        'content' => 'How to apply'
-                    ]
-                ],
-                [
-                    'core/paragraph',
-                    [
-                        'placeholder' => 'Lorem ipsum dolar amet...',
-                    ]
-                ],
-
-            ]
         ],
 
         'person' => [

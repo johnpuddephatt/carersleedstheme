@@ -8,6 +8,70 @@ namespace App;
 
 use function Roots\bundle;
 
+
+
+add_action('init', function () {
+    $post_type_object = get_post_type_object('opportunity');
+    $blocks = [];
+    if (get_field('default_vacancy_sections', 'option')) {
+        foreach (get_field('default_vacancy_sections', 'option') as $section) {
+            $blocks[] =
+                [
+                    'core/heading',
+                    [
+                        'level' => 2,
+                        'placeholder' => 'Enter heading',
+                        'content' => $section['title']
+                    ]
+                ];
+
+            $blocks[] = [
+                'core/paragraph',
+                [
+                    'placeholder' => 'Lorem ipsum dolar amet...',
+                    'content' => str_replace("\n", '', strip_tags($section['content'], "<a><strong><em><ul><ol><li>"))
+                ]
+            ];
+        }
+    }
+
+    if (get_field('default_vacancy_faqs', 'option')) {
+
+        function getParagraphs($content_array)
+        {
+            $paragraphs = [];
+            foreach ($content_array as $content) {
+                $paragraphs[] = [
+                    'core/paragraph',
+                    [
+                        'placeholder' => 'Lorem ipsum dolar amet...',
+                        'content' => strip_tags($content, "<a><strong><em><ul><ol><li>")
+                    ]
+                ];
+            }
+            return $paragraphs;
+        }
+
+        foreach (get_field('default_vacancy_faqs', 'option') as $section) {
+
+            $content = str_replace("\n", '', $section['content']);
+
+            $content_array = explode("</p><p>", $content);
+
+            $blocks[] =
+                [
+                    'core/details',
+                    ['summary' => $section['title']],
+
+                    getParagraphs($content_array)
+
+                ];
+        }
+    }
+
+    $post_type_object->template = $blocks;
+});
+
 add_action('admin_menu', function () {
     remove_action('admin_notices', 'update_nag', 3);
 });
@@ -139,25 +203,6 @@ add_action('wp_enqueue_scripts', function () {
 add_action('enqueue_block_editor_assets', function () {
     bundle('editor')->enqueue();
 }, 100);
-
-// function theme_blocks_init()
-// {
-//     // Directory containing the blocks, within the 'resources/views' directory.
-//     $directory = resource_path('views') . '/blocks/';
-
-//     // Iterate over the directory provided and look for blocks.
-//     $block_directory = new \DirectoryIterator($directory);
-
-//     foreach ($block_directory as $block) {
-//         if ($block->isDir() && !$block->isDot()) {
-//             register_block_type($block->getRealpath());
-//         }
-//     }
-// }
-
-// add_action('init', __NAMESPACE__ . '\\theme_blocks_init');
-
-
 
 /**
  * Register the initial theme setup.
