@@ -8,9 +8,26 @@ namespace App;
 
 use function Roots\bundle;
 
+function getParagraphs($content)
+{
+    $content_array = explode("</p><p>", $content);
 
+    $paragraphs = [];
+    foreach ($content_array as $content) {
+        $paragraphs[] = [
+            'core/paragraph',
+            [
+                'placeholder' => 'Lorem ipsum dolar amet...',
+                'content' => str_replace("\n", "", strip_tags($content, "<a><strong><em><ul><ol><li>"))
+            ]
+        ];
+    }
+    return $paragraphs;
+}
 
 add_action('init', function () {
+
+
     $post_type_object = get_post_type_object('opportunity');
     $blocks = [];
     if (get_field('default_vacancy_sections', 'option')) {
@@ -25,45 +42,25 @@ add_action('init', function () {
                     ]
                 ];
 
-            $blocks[] = [
-                'core/paragraph',
-                [
-                    'placeholder' => 'Lorem ipsum dolar amet...',
-                    'content' => str_replace("\n", '', strip_tags($section['content'], "<a><strong><em><ul><ol><li>"))
-                ]
-            ];
+
+            $blocks = array_merge($blocks, getParagraphs($section['content']));
         }
     }
 
     if (get_field('default_vacancy_faqs', 'option')) {
 
-        function getParagraphs($content_array)
-        {
-            $paragraphs = [];
-            foreach ($content_array as $content) {
-                $paragraphs[] = [
-                    'core/paragraph',
-                    [
-                        'placeholder' => 'Lorem ipsum dolar amet...',
-                        'content' => strip_tags($content, "<a><strong><em><ul><ol><li>")
-                    ]
-                ];
-            }
-            return $paragraphs;
-        }
+
 
         foreach (get_field('default_vacancy_faqs', 'option') as $section) {
 
             $content = str_replace("\n", '', $section['content']);
-
-            $content_array = explode("</p><p>", $content);
 
             $blocks[] =
                 [
                     'core/details',
                     ['summary' => $section['title']],
 
-                    getParagraphs($content_array)
+                    getParagraphs($content)
 
                 ];
         }
