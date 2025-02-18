@@ -165,14 +165,15 @@ class PageList extends Block
     public function with(): array
     {
         return [
-
-            'pages' => wp_list_pages([
-                'title_li' => null,
-                'depth' => 999,
-                'echo' => false,
-                'child_of' => get_field('page'),
-                'sort_column' => 'title'
-            ]),
+            'pages' => get_pages(['child_of' => get_field('page')])
+            // 'pages' => wp_list_pages([
+            //     'title_li' => null,
+            //     'depth' => 999,
+            //     'echo' => false,
+            //     'child_of' => get_field('page'),
+            //     'sort_column' => 'title',
+            //     'walker' => new \App\Walker\AlphabeticalWalker(),
+            // ]),
         ];
     }
 
