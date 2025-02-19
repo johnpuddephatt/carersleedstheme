@@ -9,7 +9,7 @@
     <div class="container flex flex-col-reverse gap-4 pb-8 lg:flex-row lg:items-end lg:pb-12">
       <div class="relative z-10 lg:w-1/2">
         <div class="type-md mb-4 text-blue">Opportunities &rsaquo;</div>
-        <h1 class="type-xl mb-8 text-blue-dark">{{ $post->post_title }}</h1>
+        <h1 class="type-2xl mb-8 text-blue-dark">{{ $post->post_title }}</h1>
 
         <div class="flex flex-col gap-1 md:flex-row md:gap-4">
           @if (get_field('deadline', $post->ID))

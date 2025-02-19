@@ -32,7 +32,7 @@
           </div>
         @endif
 
-        <h2 class="type-xl mb-8 max-w-3xl text-blue">
+        <h2 class="type-2xl mb-8 max-w-3xl text-blue">
           {!! $title !!}
         </h2>
 

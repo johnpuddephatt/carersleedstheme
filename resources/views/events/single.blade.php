@@ -6,7 +6,7 @@
         <a class="type-md mb-4 inline-block text-blue" href="{{ get_permalink(get_option('page_for_events')) }}">Events
           &rsaquo;
         </a>
-        <h1 class="type-xl mb-2 text-blue-dark md:mb-4">{{ $event->post_title }}</h1>
+        <h1 class="type-2xl mb-2 text-blue-dark md:mb-4">{{ $event->post_title }}</h1>
         <div class="flex items-center">
           <span class="mr-1 inline-block rounded-full bg-blue-bright p-0.5 md:mr-2">
             <x-icon-calendar class="h-6 w-6 text-white" />
