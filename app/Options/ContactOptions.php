@@ -12,7 +12,7 @@ class ContactOptions extends Field
      *
      * @var string
      */
-    public $name = 'Theme Options';
+    public $name = 'Contact Options';
 
     /**
      * The option page document title.
@@ -20,6 +20,8 @@ class ContactOptions extends Field
      * @var string
      */
     public $title = 'Contact Options | Options';
+
+    public $parent = 'theme-options';
 
     /**
      * The option page field group.
@@ -62,6 +64,8 @@ class ContactOptions extends Field
                 'label'         => 'Icon',
                 'return_format' => 'value', // or 'icon'
             ])
+
+            ->addLink('link')
 
             ->endFlexibleContent();
 

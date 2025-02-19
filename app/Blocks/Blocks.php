@@ -260,11 +260,12 @@ class Blocks extends Block
                 'toolbar' => 'simple',
                 'media_upload' => 0,
             ])
-            // ->addUrl('link')
+
             ->addField('icon', 'svg_icon_picker', [
                 'label'         => 'Icon',
                 'return_format' => 'value', // or 'icon'
             ])
+            ->addLink('link')
 
             ->endFlexibleContent();
 

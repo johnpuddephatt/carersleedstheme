@@ -22,7 +22,7 @@
 
       @foreach ($blocks as $block_item)
         <div
-          class="{{ $block->block->align ? 'flex-row items-start' : 'flex-col' }} flex w-full min-w-96 max-w-xl gap-4 rounded-medium bg-white p-4 md:h-56 md:p-8">
+          class="{{ $block->block->align ? 'flex-row items-start' : 'flex-col' }} group relative flex w-full min-w-96 max-w-xl gap-4 rounded-medium bg-white p-4 md:h-56 md:p-8">
           <div class="h-12 w-12 rounded-full bg-blue-bright p-2.5">
             @if ($block_item['icon'])
               @svg($block_item['icon'], 'h-7 w-7 text-white ')
@@ -35,7 +35,13 @@
             </div>
             <div class="type-sm !font-normal">
               {!! $block_item['subheading'] !!}</div>
+
+            @if ($block_item['link'])
+              <x-button class="mt-4 !px-6 !py-1 after:absolute after:inset-0 after:block" :label="$block_item['link']['title']"
+                :url="$block_item['link']['url']" :target="$block_item['link']['target']" />
+            @endif
           </div>
+
         </div>
       @endforeach
     </div>
