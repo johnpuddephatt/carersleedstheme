@@ -61,7 +61,7 @@ a.active {
 }
 
 .page-sidebar-tree .children li a {
-  @apply text-base gap-2 flex items-start before:mt-3 before:w-6 before:h-px before:bg-blue before:bg-opacity-25;
+  @apply text-base gap-2 flex items-start before:mt-3 before:w-6 before:flex-none before:h-px before:bg-blue before:bg-opacity-25;
 }
 
 .page-sidebar-tree .current_page_item > a {
