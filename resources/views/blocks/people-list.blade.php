@@ -12,7 +12,7 @@
           <summary @click="console.log(open);open = !open" style="font-size: 1em !important;"
             class="not-prose group relative flex flex-row items-center gap-2 p-4 transition md:gap-4 md:p-6">
 
-            <div class="overflow-hidden rounded-full">
+            <div class="flex-none overflow-hidden rounded-full">
               {!! get_the_post_thumbnail($person->ID, 'square', [
                   'class' => ' h-auto !my-0 block w-24 group-hover:scale-105 ease-in-out transition-transform duration-1000',
               ]) !!}
