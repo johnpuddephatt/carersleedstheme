@@ -28,15 +28,5 @@
         </div>
       </div>
     </div>
-
-    <div class="alignwide mb-24 space-y-8">
-      <hr>
-      <hr>
-      <hr>
-      {!! do_shortcode("[form id='43882']") !!}
-      <hr>
-      <hr>
-      <hr>
-    </div>
   @endif
 @endsection
