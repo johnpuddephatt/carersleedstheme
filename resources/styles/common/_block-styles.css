@@ -35,7 +35,7 @@ h2.wp-block-heading {
 
 .prose > h3,
 h3.wp-block-heading {
-  @apply type-md text-green-dark;
+  @apply text-green-dark;
 }
 
 .prose .group:first-child h2 {
