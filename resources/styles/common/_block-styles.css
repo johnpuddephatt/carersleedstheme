@@ -140,7 +140,7 @@ details[open] .open\:rotate-90 {
 
 summary {
   @apply text-blue-dark list-none type-md relative -mx-4 pr-12 -mt-4 transition  py-6 px-6 cursor-pointer;
-  @apply text-base !important;
+  font-size: 1em !important;
 }
 
 summary::marker {
