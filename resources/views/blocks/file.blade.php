@@ -1,6 +1,6 @@
 @if ($file)
   <a href="{{ $file['url'] }}" download
-    class="{{ $block->classes }} wp-block not-prose group relative my-4 flex items-center gap-2 rounded-small bg-green-light p-6 !no-underline md:my-8 md:gap-4 md:p-8"
+    class="{{ $block->classes }} wp-block not-prose group relative my-4 flex flex-nowrap items-center gap-2 rounded-small bg-green-light p-6 !no-underline md:my-8 md:gap-4 md:p-8"
     style="{{ $block->inlineStyle }}; font-size: 1em;">
 
     <x-icon.document class="relative z-10 size-14 flex-none text-green" />
