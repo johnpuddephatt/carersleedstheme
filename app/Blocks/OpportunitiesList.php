@@ -163,7 +163,7 @@ class OpportunitiesList extends Block
             ->addSelect('type', [
                 'label' => 'Type',
                 'choices' => [
-                    'vacancy' => 'Job',
+                    'opportunity' => 'Job',
                     'volunteering' => 'Volunteering',
                 ]
             ])
