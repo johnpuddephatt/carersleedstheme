@@ -8,34 +8,9 @@
 
     <div class="container flex flex-col-reverse gap-4 pb-8 lg:flex-row lg:items-end lg:pb-12">
       <div class="relative z-10 lg:w-1/2">
-        <div class="type-md mb-4 text-blue">Opportunities &rsaquo;</div>
+        <div class="type-md mb-4 text-blue">Volunteering &rsaquo;</div>
         <h1 class="type-2xl mb-8 text-blue-dark">{{ $post->post_title }}</h1>
-
-        <div class="flex flex-col gap-1 md:flex-row md:gap-4">
-          @if (get_field('deadline', $post->ID))
-            <div class="flex items-center">
-              <span class="mr-1 inline-block rounded-full bg-beige-dark p-0.5 md:mr-2">
-                <x-icon-calendar class="h-6 w-6 text-white" />
-              </span>
-              <div class="type-sm">
-                Closing date: {{ date(get_option('date_format'), strtotime(get_field('deadline', $post->ID))) }}
-              </div>
-            </div>
-          @endif
-
-          @if (get_field('salary', $post->ID))
-            <div class="flex items-center">
-              <span class="mr-1 inline-block rounded-full bg-beige-dark p-0.5 md:mr-2">
-                <x-icon-pound class="h-6 w-6 text-white" />
-              </span>
-              <div class="type-sm">
-                Pay: {{ get_field('salary', $post->ID) }}
-              </div>
-            </div>
-          @endif
-        </div>
       </div>
-
     </div>
 
     <div class="container relative flex flex-col items-start justify-between gap-8 lg:flex-row-reverse lg:gap-16">
@@ -48,25 +23,17 @@
           @if (get_field('location', $post->ID))
             <li>Location: {{ get_field('location', $post->ID) }}</li>
           @endif
-          @if (get_field('salary', $post->ID))
-            <li>
-              Pay: {{ get_field('salary', $post->ID) }}</li>
-          @endif
-          @if (get_field('deadline', $post->ID))
-            <li>Closing date: {{ get_field('deadline', $post->ID) }}</li>
-          @endif
+
           @if (get_field('hours', $post->ID))
             <li>Hours: {{ get_field('hours', $post->ID) }}</li>
           @endif
-          @if (get_field('contract_type', $post->ID))
-            <li>Contract: {{ get_field('contract_type', $post->ID) }}</li>
-          @endif
+
         </ul>
-        @if (get_option('page_for_applications'))
+        {{-- @if (get_option('page_for_applications'))
           <div class="mt-8 text-center">
             <x-button class="bg-white !px-16" label="Apply here" :url="get_permalink(get_option('page_for_applications')) . '?job_id=' . $post->ID" />
           </div>
-        @endif
+        @endif --}}
       </div>
 
       <div class="prose max-w-none lg:w-1/2">

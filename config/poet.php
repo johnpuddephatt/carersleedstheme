@@ -35,14 +35,26 @@ return [
         // ],
 
         'opportunity' => [
-            'enter_title_here' => 'Enter opportunity title',
+            'enter_title_here' => 'Enter job title',
             'menu_icon' => 'dashicons-pressthis',
             'supports' => ['title', 'editor', 'author', 'revisions'],
             'show_in_rest' => true,
             'has_archive' => false,
             'labels' => [
-                'singular' => 'Opportunity',
-                'plural' => 'Opportunities',
+                'singular' => 'Job',
+                'plural' => 'Jobs',
+            ],
+        ],
+
+        'volunteering' => [
+            'enter_title_here' => 'Enter volunteering opportunity title',
+            'menu_icon' => 'dashicons-pressthis',
+            'supports' => ['title', 'editor', 'author', 'revisions'],
+            'show_in_rest' => true,
+            'has_archive' => false,
+            'labels' => [
+                'singular' => 'Volunteering',
+                'plural' => 'Volunteering',
             ],
         ],
 

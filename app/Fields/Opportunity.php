@@ -12,16 +12,12 @@ class Opportunity extends Field
      */
     public function fields(): array
     {
-        $fields = Builder::make('opportunity', ['position' => 'side']);
+        $fields = Builder::make('volunteering', ['position' => 'side']);
 
         $fields
-            ->setLocation('post_type', '==', 'opportunity')
-            ->addDatePicker('deadline')
-            ->addText('contract_type')
-            ->addText('salary')
-            ->addText('hours')
-            ->addText('location');
-
+            ->setLocation('post_type', '==', 'volunteering')
+            ->addText('location')
+            ->addText('hours');
 
         return $fields->build();
     }

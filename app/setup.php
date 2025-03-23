@@ -67,6 +67,47 @@ add_action('init', function () {
     }
 
     $post_type_object->template = $blocks;
+
+
+    $post_type_object = get_post_type_object('volunteering');
+    $blocks = [];
+    if (get_field('default_volunteering_sections', 'option')) {
+        foreach (get_field('default_volunteering_sections', 'option') as $section) {
+            $blocks[] =
+                [
+                    'core/heading',
+                    [
+                        'level' => 2,
+                        'placeholder' => 'Enter heading',
+                        'content' => $section['title']
+                    ]
+                ];
+
+
+            $blocks = array_merge($blocks, getParagraphs($section['content']));
+        }
+    }
+
+    if (get_field('default_volunteering_faqs', 'option')) {
+
+
+
+        foreach (get_field('default_volunteering_faqs', 'option') as $section) {
+
+            $content = str_replace("\n", '', $section['content']);
+
+            $blocks[] =
+                [
+                    'core/details',
+                    ['summary' => $section['title']],
+
+                    getParagraphs($content)
+
+                ];
+        }
+    }
+
+    $post_type_object->template = $blocks;
 });
 
 add_action('admin_menu', function () {

@@ -145,7 +145,7 @@ class OpportunitiesList extends Block
         return [
             'title' => get_field('title'),
             'opportunities' => get_posts([
-                'post_type' => 'opportunity',
+                'post_type' => get_field('type') ?? 'opportunity',
                 'posts_per_page' => get_field('number') ?: 3,
             ]),
         ];
@@ -159,6 +159,13 @@ class OpportunitiesList extends Block
         $fields = Builder::make('opportunities_list');
 
         $fields
+            ->addSelect('type', [
+                'label' => 'Type',
+                'choices' => [
+                    'vacancy' => 'Job',
+                    'volunteering' => 'Volunteering',
+                ]
+            ])
             ->addText('title')
             ->addNumber('number');
 
