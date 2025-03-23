@@ -145,9 +145,10 @@ class OpportunitiesList extends Block
         return [
             'title' => get_field('title'),
             'opportunities' => get_posts([
-                'post_type' => get_field('type') ?? 'opportunity',
+                'post_type' => get_field('type') ?: 'opportunity',
                 'posts_per_page' => get_field('number') ?: 3,
             ]),
+            'no_opportunities_message' => get_field('no_opportunities_message'),
         ];
     }
 
@@ -167,6 +168,7 @@ class OpportunitiesList extends Block
                 ]
             ])
             ->addText('title')
+            ->addTextarea("no_opportunities_message")
             ->addNumber('number');
 
 

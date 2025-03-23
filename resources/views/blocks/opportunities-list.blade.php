@@ -6,7 +6,9 @@
     @forelse ($opportunities as $opportunity)
       <x-opportunity-card :opportunity="$opportunity" />
     @empty
-      <p class="rounded-small bg-pink-light p-8 text-center">No opportunities to show you.</p>
+      <p class="rounded-small bg-pink-light p-8 text-center">
+        {{ $no_opportunities_message ?: 'No opportunities to show you.' }}
+      </p>
     @endforelse
   </div>
 </div>
