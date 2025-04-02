@@ -30,15 +30,25 @@ class EventArchive extends Composer
             $events_query->where('starts_after', now());
         }
 
-        $events_query->where('tribe_geoloc', true);
-        $events_query->where('tribe_geoloc_lat', '53.801277');
-        $events_query->where('tribe_geoloc_lng', '-1.548567');
+        if (isset($_GET['location'])  && $_GET['location'] !== 'all') {
+            $events_query->where('meta_query', [
+                [
+                    'key' => 'event_location',
+                    'value' => $_GET['location'],
+                ],
+            ]);
+        }
 
+        if (isset($_GET['category']) && $_GET['category'] !== 'all') {
+            $events_query->where('category', $_GET['category']);
+        }
+        // $events_query->where('category', 'bereavement');
 
+        // $events_query->where('tribe_geoloc', true);
+        // $events_query->where('tribe_geoloc_lat', '53.801277');
+        // $events_query->where('tribe_geoloc_lng', '-1.548567');
 
         return [
-
-
             'content' => apply_filters('the_content', get_the_content(null, false)),
             'event_count' => $events_query->per_page(9999)->count(),
             'per_page' => get_option('posts_per_page'),
@@ -46,32 +56,6 @@ class EventArchive extends Composer
                 ->per_page(get_option('posts_per_page'))
                 ->page((int) get_query_var('paged'))
                 ->all(),
-
-
-            // 'per_page' => $events_query->per_page(),
-
-
-
-            // "events" => new \WP_Query([
-            //     'post_type' => 'tribe_events',
-            //     'paged' => (int) get_query_var('paged'),
-            //     'orderby' => ['start_date' => 'ASC'],
-            //     'meta_query' => [
-
-            //         'relation' => 'OR',
-
-            //         [
-            //             'key' => '_EventHideFromUpcoming',
-            //             'compare' => 'NOT EXISTS'
-            //         ],
-            //         [
-            //             'key' => '_EventHideFromUpcoming',
-            //             'compare' => '!=',
-            //             'value' => 'yes'
-            //         ]
-            //     ],
-            // ]),
-
         ];
     }
 }

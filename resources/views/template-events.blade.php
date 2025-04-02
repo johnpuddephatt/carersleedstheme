@@ -23,7 +23,19 @@
 
     </div>
 
-    <div class="hidden justify-between">
+    <div>
+      <x-button :class="!isset($_GET['category']) || $_GET['category'] == 'all' ? 'bg-blue-light' : null" :url="setParam('category', 'all')" label="All categories" />
+      <x-button :class="isset($_GET['category']) && $_GET['category'] == 'bereavement' ? 'bg-blue-light' : null" :url="setParam('category', 'bereavement')" label="Bereavement" />
+    </div>
+
+    <div>
+      <x-button :class="!isset($_GET['location']) || $_GET['location'] == 'all' ? 'bg-blue-light' : null" :url="setParam('location', 'all')" label="All" />
+      <x-button :class="isset($_GET['location']) && $_GET['location'] == 'south' ? 'bg-blue-light' : null" :url="setParam('location', 'south')" label="South" />
+      <x-button :class="isset($_GET['location']) && $_GET['location'] == 'centre' ? 'bg-blue-light' : null" :url="setParam('location', 'centre')" label="City centre" />
+
+    </div>
+
+    <div class="justify-between">
       <div>
         <x-button :class="!isset($_GET['date']) || $_GET['date'] == 'all' ? 'bg-blue-light' : null" :url="setParam('date', 'all')" label="All dates" />
         <x-button :class="isset($_GET['date']) && $_GET['date'] == 'this_week' ? 'bg-blue-light' : null" :url="setParam('date', 'this_week')" label="This week" />
