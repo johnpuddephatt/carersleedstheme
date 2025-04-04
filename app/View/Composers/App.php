@@ -26,9 +26,10 @@ class App extends Composer
             'primaryNavigation' => $this->primaryNavigation(),
             'secondaryNavigation' => $this->secondaryNavigation(),
             'footerNavigation' => $this->footerNavigation(),
+            'footerNavigation2' => $this->footerNavigation2(),
             'og' => [
                 'description' => get_the_excerpt() ?: get_bloginfo('description'),
-                'image' => get_the_post_thumbnail_url(get_the_ID(), 'large') ?: wp_get_attachment_image_src(get_field('social_media_image', 'options'), 'large')[0]
+                'image' => get_the_post_thumbnail_url(get_the_ID(), 'large') ?: (wp_get_attachment_image_src(get_field('social_media_image', 'options'), 'large')[0] ?? null),
             ],
         ];
     }
@@ -68,6 +69,17 @@ class App extends Composer
     public function footerNavigation()
     {
         $navigation = (new Navi())->build('footer_navigation');
+
+        if ($navigation->isEmpty()) {
+            return;
+        }
+
+        return $navigation->toArray();
+    }
+
+    public function footerNavigation2()
+    {
+        $navigation = (new Navi())->build('footer_navigation_2');
 
         if ($navigation->isEmpty()) {
             return;

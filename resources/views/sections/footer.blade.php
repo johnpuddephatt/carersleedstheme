@@ -19,12 +19,12 @@
             @endforeach
           @endif
         </div>
-        @if ($secondaryNavigation)
+        @if ($footerNavigation2)
           <div class="">
             <nav>
               <ul class="columns-2 gap-8 font-semibold">
 
-                @foreach ($secondaryNavigation as $item)
+                @foreach ($footerNavigation2 as $item)
                   <li>
                     <a class="inline-block" href="{{ $item->url }}">{{ $item->label }}</a>
                   </li>

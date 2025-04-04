@@ -13,7 +13,6 @@
     </script>
   @endif
 
-  <meta property="og:title" content="{!! $title !!}" />
   <meta property="og:description" content="{!! $og['description'] !!}" />
   <meta property="og:image" content="{!! $og['image'] !!}" />
 
