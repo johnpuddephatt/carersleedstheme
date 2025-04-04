@@ -25,7 +25,7 @@ a.active {
 
 .alignfull,
 .page-content > .alignfull,
-.alignwide .wp-block {
+.alignfull .wp-block {
   @apply max-w-full;
 }
 
