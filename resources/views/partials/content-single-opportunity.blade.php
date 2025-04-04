@@ -55,6 +55,9 @@
           @if (get_field('deadline', $post->ID))
             <li>Closing date: {{ get_field('deadline', $post->ID) }}</li>
           @endif
+          @if (get_field('interview_date', $post->ID))
+            <li>Interview date: {{ get_field('interview_date', $post->ID) }}</li>
+          @endif
           @if (get_field('hours', $post->ID))
             <li>Hours: {{ get_field('hours', $post->ID) }}</li>
           @endif

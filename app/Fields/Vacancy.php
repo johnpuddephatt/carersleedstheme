@@ -19,7 +19,8 @@ class Vacancy extends Field
             ->addText('contract_type')
             ->addText('salary')
             ->addText('hours')
-            ->addText('location');
+            ->addText('location')
+            ->addText('interview_date');
 
         return $fields->build();
     }
