@@ -126,6 +126,14 @@ p.is-style-large {
   @apply p-6 my-12 md:my-16 md:p-8 rounded-small;
 }
 
+.wp-block-file:not(.wp-element-button) {
+  @apply !text-base;
+}
+
+.wp-block-file > div {
+  @apply !w-full;
+}
+
 details {
   @apply p-4 pb-0 bg-blue-light overflow-hidden border border-blue-light hover:border-blue rounded-small  mb-4;
 }
