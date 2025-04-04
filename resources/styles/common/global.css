@@ -18,12 +18,14 @@ a.active {
 } */
 
 .alignwide,
-.page-content > .alignwide {
+.page-content > .alignwide,
+.alignwide .wp-block {
   @apply max-w-7xl mx-auto;
 }
 
 .alignfull,
-.page-content > .alignfull {
+.page-content > .alignfull,
+.alignwide .wp-block {
   @apply max-w-full;
 }
 
