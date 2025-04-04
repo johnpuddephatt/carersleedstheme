@@ -5,7 +5,7 @@ namespace App\Fields;
 use Log1x\AcfComposer\Builder;
 use Log1x\AcfComposer\Field;
 
-class Opportunity extends Field
+class Volunteering extends Field
 {
     /**
      * The field group.
