@@ -130,7 +130,7 @@ p.is-style-large {
   @apply !text-base;
 }
 
-.wp-block-file > div {
+.acf-block-component.wp-block-file > div {
   @apply !w-full;
 }
 
