@@ -27,7 +27,7 @@
           @php($ancestors = array_reverse(get_post_ancestors($post->ID)))
           <div class="mb-4">
             @foreach ($ancestors as $ancestor)
-              <a href="{{ get_permalink($ancestor) }}">{{ get_the_title($ancestor) }}</a> &gt;
+              <a href="{{ get_permalink($ancestor) }}">{!! get_the_title($ancestor) !!}</a> &gt;
             @endforeach
           </div>
         @endif
