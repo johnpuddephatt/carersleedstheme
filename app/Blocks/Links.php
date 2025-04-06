@@ -200,6 +200,9 @@ class Links extends Block
                 'post_type' => ['page', 'post'],
                 'return_format' => 'id',
             ])
+            ->addTrueFalse('include_child_links', [
+                'ui' => 1,
+            ])
             ->addTrueFalse('override_details', [
                 'ui' => 1,
             ])

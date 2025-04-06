@@ -20,10 +20,25 @@
           @php($url = get_the_permalink($link['page']))
           @php($title = $link['override_details'] && $link['title'] ? $link['title'] : get_the_title($link['page']))
           @php($image = $link['override_details'] && $link['image'] ? $link['image'] : get_post_thumbnail_id($link['page']))
+
+          <!-- prettier-ignore-start -->
+          @if ($link['include_child_links'] ?? false)    
+            @php($children = get_children([
+              'post_parent' => $link['page'],
+              'post_type' => 'any',
+              'numberposts' => -1,
+              'post_status' => 'publish',
+          ]))
+          @endif
+          <!-- prettier-ignore-end -->
         @endif
 
         @if ($block->style == 'default')
-          <x-page-card :url="$url" :title="$title" :image="$image" />
+          @if ($link['include_child_links'] ?? false)
+            <x-page-card-with-children :title="$title" :image="$image" :children="$children" />
+          @else
+            <x-page-card :url="$url" :title="$title" :image="$image" />
+          @endif
         @elseif ($block->style == 'compact')
           <x-page-card-compact :url="$url" :title="$title" :image="$image" />
         @endif
