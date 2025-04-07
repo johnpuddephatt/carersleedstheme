@@ -12,7 +12,7 @@
   @if (!(isset($_GET['type']) || isset($_GET['location'])))
     {!! $content !!}
 
-    <div x-data="{}" class="container mb-16 space-y-4 md:mb-24 md:space-y-8 lg:max-w-5xl">
+    <div x-data="{}" class="container mb-8 space-y-4 md:space-y-8 lg:max-w-5xl">
       {{-- <p>{{ $event_count }} events @ {{ $per_page }} per page = {{ ceil($event_count / $per_page) }} pages</p> --}}
 
       {{-- <div>
@@ -75,6 +75,7 @@
       </div> 
 
     </div> --}}
+      <h2 class="type-lg !mt-12 text-center">Upcoming events</h2>
 
     </div>
   @else
