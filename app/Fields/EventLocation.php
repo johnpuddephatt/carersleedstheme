@@ -5,7 +5,7 @@ namespace App\Fields;
 use Log1x\AcfComposer\Builder;
 use Log1x\AcfComposer\Field;
 
-class Events extends Field
+class EventLocation extends Field
 {
     /**
      * The field group.

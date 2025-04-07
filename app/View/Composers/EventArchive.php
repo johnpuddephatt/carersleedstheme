@@ -22,19 +22,30 @@ class EventArchive extends Composer
 
         $events_query = tribe_events();
 
-        if (isset($_GET['date']) && $_GET['date'] == 'this_week') {
-            $events_query->where('starts_after', now())->where('starts_before', date('Y-m-d', strtotime('next sunday')));
-        } elseif (isset($_GET['date']) && $_GET['date'] == 'next_week') {
-            $events_query->where('starts_after', date('Y-m-d', strtotime('next monday')))->where('starts_before', date('Y-m-d', strtotime('next sunday +7 days')));
-        } else {
-            $events_query->where('starts_after', now());
-        }
+        // if (isset($_GET['date']) && $_GET['date'] == 'this_week') {
+        //     $events_query->where('starts_after', now())->where('starts_before', date('Y-m-d', strtotime('next sunday')));
+        // } elseif (isset($_GET['date']) && $_GET['date'] == 'next_week') {
+        //     $events_query->where('starts_after', date('Y-m-d', strtotime('next monday')))->where('starts_before', date('Y-m-d', strtotime('next sunday +7 days')));
+        // } else {
+
+        // }
+
+        $events_query->where('starts_after', now());
 
         if (isset($_GET['location'])  && $_GET['location'] !== 'all') {
             $events_query->where('meta_query', [
                 [
                     'key' => 'event_location',
                     'value' => $_GET['location'],
+                ],
+            ]);
+        }
+
+        if (isset($_GET['type'])  && $_GET['type'] !== 'all') {
+            $events_query->where('meta_query', [
+                [
+                    'key' => 'event_type',
+                    'value' => $_GET['type'],
                 ],
             ]);
         }

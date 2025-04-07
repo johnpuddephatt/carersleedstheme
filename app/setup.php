@@ -25,6 +25,8 @@ function getParagraphs($content)
     return $paragraphs;
 }
 
+
+
 add_action('init', function () {
 
 

@@ -55,6 +55,17 @@ add_filter('tribe_events_rewrite_base_slugs', function ($slugs) {
     return $slugs;
 });
 
+add_action('add_meta_boxes', function () {
+    $screen = get_current_screen();
+    if (!$screen) {
+        return;
+    }
+    remove_meta_box('tribe_events_event_options', $screen->id, 'side');
+    remove_meta_box('tribe-events-status', $screen->id, 'side');
+}, 20);
+
+
+
 
 add_filter('tribe_template_file', function ($file) {
 
