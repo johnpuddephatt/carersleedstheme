@@ -16,12 +16,13 @@ class Vacancy extends Field
 
         $fields
             ->setLocation('post_type', '==', 'opportunity')
+            ->addDatePicker('closing_date')
             ->addText('contract_type')
             ->addText('salary')
             ->addText('hours')
             ->addText('location')
             ->addText('interview_date')
-            ->addDatePicker('closing_date');
+        ;
 
         return $fields->build();
     }
