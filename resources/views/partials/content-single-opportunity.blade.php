@@ -53,7 +53,7 @@
               Pay: {{ get_field('salary', $post->ID) }}</li>
           @endif
           @if (get_field('deadline', $post->ID))
-            <li>Closing date: {{ get_field('deadline', $post->ID) }}</li>
+            <li>Closing date: {{ date(get_option('date_format'), strtotime(get_field('deadline', $post->ID))) }}</li>
           @endif
           @if (get_field('interview_date', $post->ID))
             <li>Interview date: {{ get_field('interview_date', $post->ID) }}</li>
