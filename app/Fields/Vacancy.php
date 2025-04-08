@@ -21,7 +21,7 @@ class Vacancy extends Field
             ->addText('hours')
             ->addText('location')
             ->addText('interview_date')
-            ->addDate('closing_date');
+            ->addDatePicker('closing_date');
 
         return $fields->build();
     }
