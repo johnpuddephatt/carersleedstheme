@@ -30,7 +30,7 @@
                 <x-icon-pound class="h-6 w-6 text-white" />
               </span>
               <div class="type-sm">
-                Pay: {{ get_field('salary', $post->ID) }}
+                Salary: {{ get_field('salary', $post->ID) }}
               </div>
             </div>
           @endif
@@ -51,7 +51,7 @@
           @endif
           @if (get_field('salary', $post->ID))
             <li>
-              Pay: {{ get_field('salary', $post->ID) }}</li>
+              Salary: {{ get_field('salary', $post->ID) }}</li>
           @endif
           @if (get_field('deadline', $post->ID))
             <li>Closing date:
