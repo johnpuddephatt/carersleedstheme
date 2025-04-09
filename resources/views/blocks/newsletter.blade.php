@@ -34,7 +34,7 @@
     <div class="mx-auto -mb-48 w-full max-w-80 flex-none md:mb-0 md:w-2/5 md:py-6">
       @if ($image)
         {!! wp_get_attachment_image($image, 'square', false, [
-            'sizes' => '80vw, (min-width: 768px) 20rem',
+            'sizes' => '(min-width: 768px) 20rem, 75vw',
             'class' => ' rounded-full object-cover aspect-square h-auto w-full',
         ]) !!}
       @endif
