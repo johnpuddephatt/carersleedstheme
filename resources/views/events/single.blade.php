@@ -2,7 +2,7 @@
   <div class="relative pb-72">
 
     <div class="container flex flex-col-reverse overflow-hidden pb-4 md:gap-4 md:pb-8 lg:flex-row lg:items-end lg:pb-12">
-      <div class="relative z-10 lg:w-1/2">
+      <div class="relative z-10 pt-24 lg:w-1/2">
         <a class="type-md mb-4 inline-block text-blue" href="{{ get_permalink(get_option('page_for_events')) }}">Events
           &rsaquo;
         </a>
