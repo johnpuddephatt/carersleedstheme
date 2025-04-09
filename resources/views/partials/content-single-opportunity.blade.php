@@ -18,7 +18,8 @@
                 <x-icon-calendar class="h-6 w-6 text-white" />
               </span>
               <div class="type-sm">
-                Closing date: {{ date(get_option('date_format'), strtotime(get_field('deadline', $post->ID))) }}
+                Closing date:
+                {{ date(get_option('date_format') . ', ' . get_option('time_format'), strtotime(get_field('deadline', $post->ID))) }}
               </div>
             </div>
           @endif
@@ -53,7 +54,9 @@
               Pay: {{ get_field('salary', $post->ID) }}</li>
           @endif
           @if (get_field('deadline', $post->ID))
-            <li>Closing date: {{ date(get_option('date_format'), strtotime(get_field('deadline', $post->ID))) }}</li>
+            <li>Closing date:
+              {{ date(get_option('date_format') . ', ' . get_option('time_format'), strtotime(get_field('deadline', $post->ID))) }}
+            </li>
           @endif
           @if (get_field('interview_date', $post->ID))
             <li>Interview date: {{ get_field('interview_date', $post->ID) }}</li>

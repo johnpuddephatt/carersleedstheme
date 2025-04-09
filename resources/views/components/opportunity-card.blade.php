@@ -23,6 +23,7 @@
             </svg>
 
             <span class="">Closing date:</span>
+
             {{ date(get_option('date_format'), strtotime(get_field('deadline', $opportunity->ID))) }}
 
           </div>
