@@ -35,14 +35,14 @@
           </svg>
 
           {!! wp_get_attachment_image($image, 'landscape', false, [
-              'sizes' => ' (min-width: 1200px) 30vw, (min-width: 800px) 50vw, 75vw',
+              'sizes' => ' (min-width: 1200px) 40vw, (min-width: 800px) 55vw, 75vw',
               'class' =>
                   'w-80 ml-auto translate-x-8 md:translate-x-0 md:w-full h-auto mt-12 md:mb-24 clip-oval md:clip-landscape',
           ]) !!}
         </div>
       @else
         {!! wp_get_attachment_image($image, 'square', false, [
-            'sizes' => ' (min-width: 1200px) 30vw, (min-width: 800px) 50vw, 75vw',
+            'sizes' => ' (min-width: 1200px) 40vw, (min-width: 800px) 55vw, 75vw',
             'class' =>
                 'translate-x-8 -translate-y-8  md:translate-y-0 md:translate-x-0 w-2/3 md:w-full h-auto ml-auto ' .
                 match ($block->style) {
