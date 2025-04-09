@@ -147,6 +147,14 @@ class OpportunitiesList extends Block
             'opportunities' => get_posts([
                 'post_type' => get_field('type') ?: 'opportunity',
                 'posts_per_page' => get_field('number') ?: 3,
+                'meta_query' => [
+                    [
+                        'key' => 'deadline',
+                        'value' => date('Y-m-d H:i:s'),
+                        'compare' => '>=',
+                    ],
+
+                ],
             ]),
             'no_opportunities_message' => get_field('no_opportunities_message'),
         ];
