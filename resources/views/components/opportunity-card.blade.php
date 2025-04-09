@@ -22,8 +22,9 @@
               <rect width=".59" height=".4" x="3.66" y="3.67" fill="currentColor" rx=".08" />
             </svg>
 
-            <span class="">Deadline:</span>
+            <span class="">Closing date:</span>
             {{ date(get_option('date_format'), strtotime(get_field('deadline', $opportunity->ID))) }}
+
           </div>
         @endif
 

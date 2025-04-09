@@ -54,6 +54,11 @@
           @endif
           @if (get_field('deadline', $post->ID))
             <li>Closing date: {{ date(get_option('date_format'), strtotime(get_field('deadline', $post->ID))) }}</li>
+
+            <p>DEBUG</p>
+            <p>{{ get_field('deadline', $post->ID) }}</p>
+            <p>{{ get_option('date_format') }}</p>
+            <p>{{ strtotime(get_field('deadline', $post->ID)) }}</p>
           @endif
           @if (get_field('interview_date', $post->ID))
             <li>Interview date: {{ get_field('interview_date', $post->ID) }}</li>

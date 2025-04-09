@@ -16,7 +16,9 @@ class Vacancy extends Field
 
         $fields
             ->setLocation('post_type', '==', 'opportunity')
-            ->addDatePicker('deadline')
+            ->addDatePicker('deadline', [
+                'return_format' => 'Y-m-d',
+            ])
             ->addText('contract_type')
             ->addText('salary')
             ->addText('hours')
