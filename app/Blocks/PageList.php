@@ -170,7 +170,7 @@ class PageList extends Block
             function ($page) {
                 return [
                     'title' => $page->post_title,
-                    'link' => $page->permalink,
+                    'link' => get_permalink($page->ID),
                     'image' => get_post_thumbnail_id($page->ID, 'medium'),
                 ];
             },
