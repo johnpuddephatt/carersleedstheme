@@ -119,7 +119,7 @@ class PageList extends Block
      *
      * @var array
      */
-    public $styles = ['default', 'compact'];
+    public $styles = ['links', 'compact', 'cards'];
 
     /**
      * The block preview example data.
@@ -168,7 +168,11 @@ class PageList extends Block
         $pages = get_pages(['child_of' => get_field('page')]);
         $pages = array_map(
             function ($page) {
-                return ['title' => $page->post_title, 'link' => $page->permalink];
+                return [
+                    'title' => $page->post_title,
+                    'link' => $page->permalink,
+                    'image' => get_post_thumbnail_id($page->ID, 'medium'),
+                ];
             },
             $pages
         );
@@ -178,7 +182,7 @@ class PageList extends Block
         });
 
         return [
-            'pages' => $pages
+            'pages' => $pages,
         ];
     }
 
@@ -190,10 +194,12 @@ class PageList extends Block
         $fields = Builder::make('pages_alphabetical');
 
         $fields
+
             ->addPostObject('page', [
                 'post_type' => ['page'],
                 'return_format' => 'id',
             ]);
+
 
         return $fields->build();
     }
