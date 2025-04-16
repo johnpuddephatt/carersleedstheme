@@ -19,3 +19,11 @@
     </div>
   </div>
 </article>
+
+@if (get_field('show_exit'))
+  <a href="{{ get_field('exit_url', 'option') ?? 'https://www.bbc.co.uk/weather/2644688' }}"
+    class="type-md sticky bottom-6 right-0 z-50 mb-8 ml-auto flex w-64 items-center gap-2 rounded-l-full bg-blue-light px-6 py-4 shadow-lg transition duration-300 hover:bg-blue hover:text-white">
+    Leave this page
+    <x-icon.card-arrow class="h-6 w-6" />
+  </a>
+@endif

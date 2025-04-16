@@ -20,6 +20,11 @@ class Page extends Field
                 'label' => 'Show "Get in touch" boxes at bottom of page?',
                 'default_value' => 0,
                 'ui' => 1,
+            ])
+            ->addTrueFalse('show_exit', [
+                'label' => 'Show "Exit this page" button when viewing this page?',
+                'default_value' => 0,
+                'ui' => 1,
             ]);
 
         return $fields->build();

@@ -8,6 +8,13 @@ namespace App;
 
 use function Roots\bundle;
 
+add_action('template_redirect', function ($template) {
+    global $wp_query;
+    if ($wp_query->is_404) {
+        return '404!';
+    }
+});
+
 function getParagraphs($content)
 {
     $content_array = explode("</p><p>", $content);
@@ -117,7 +124,7 @@ add_action('admin_menu', function () {
 });
 
 add_action('admin_init', function () {
-    $options_pages = ['page_for_events', 'page_for_applications', 'page_for_opportunities'];
+    $options_pages = ['page_for_events', 'page_for_applications', 'page_for_opportunities', 'page_for_404'];
 
     foreach ($options_pages as $option) {
         add_settings_field($option, ucfirst(str_replace('_', ' ', $option)), function ($args) use ($option) {

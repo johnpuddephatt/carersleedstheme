@@ -50,7 +50,8 @@ class ThemeOptions extends Field
                     'instructions' => 'This image will be used as the default social media preview if no image is set on the page.',
                     'return_format' => 'id'
                 ]
-            );
+            )
+        ;
 
 
 

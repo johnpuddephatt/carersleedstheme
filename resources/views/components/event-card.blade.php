@@ -21,9 +21,30 @@
     </div>
   @endif
   <div class="py-2 pl-2 pr-4 md:py-4 md:pl-4 md:pr-12 lg:pl-8">
-    <h3 class="type-sm md:type-md mb-1 text-balance !text-black">{{ $event->post_title }}</h3>
+
     <div class="leading-snug">
-      {{ tribe_get_start_date($event->ID, false, get_option('date_format') . '  –  ' . get_option('time_format')) }}
+      {!! tribe_get_start_date($event->ID, false, get_option('date_format')) !!}
+      &nbsp; &mdash; &nbsp;
+      {!! tribe_get_start_date($event->ID, false, get_option('time_format')) !!}
+
+      @if (tribe_get_end_date($event->ID, false, get_option('time_format')) !==
+              tribe_get_start_date($event->ID, false, get_option('time_format')))
+        -
+        {{ tribe_get_end_date($event->ID, false, get_option('time_format')) }}
+      @endif
     </div>
+    <h3 class="type-sm md:type-md mb-3 mt-2 text-balance !text-black">{{ $event->post_title }}</h3>
+    @if (tribe_get_venue($event->ID))
+
+      <p class="flex items-center">
+        <span class="mr-1 inline-block rounded-full bg-gold p-0.5 md:mr-2">
+          <x-icon.marker class="h-6 w-6 text-white" />
+        </span>
+        {{ tribe_get_venue($event->ID) }}
+
+        @if (tribe_get_address($event->ID))
+          {{ ', ' . tribe_get_address($event->ID) }}
+        @endif
+    @endif
   </div>
 </a>

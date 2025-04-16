@@ -12,7 +12,16 @@
             <x-icon-calendar class="h-6 w-6 text-white" />
           </span>
           <p class="type-md text-blue-dark">
-            {{ tribe_get_start_date($event->ID, false, get_option('date_format') . '  –  ' . get_option('time_format')) }}
+
+            {!! tribe_get_start_date($event->ID, false, get_option('date_format')) !!}
+            &nbsp; &mdash; &nbsp;
+            {!! tribe_get_start_date($event->ID, false, get_option('time_format')) !!}
+
+            @if (tribe_get_end_date($event->ID, false, get_option('time_format')) !==
+                    tribe_get_start_date($event->ID, false, get_option('time_format')))
+              -
+              {{ tribe_get_end_date($event->ID, false, get_option('time_format')) }}
+            @endif
           </p>
         </div>
 
@@ -45,6 +54,9 @@
           @endif
           @if (tribe_get_address($event->ID))
             <p class="type-sm text-blue-dark">{{ tribe_get_address($event->ID) }}</p>
+          @endif
+          @if (tribe_get_address($event->ID))
+            <p class="type-sm text-blue-dark">{{ tribe_get_zip($event->ID) }}</p>
           @endif
 
           @if (tribe_get_embedded_map($event->ID))
