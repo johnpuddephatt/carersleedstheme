@@ -53,7 +53,7 @@
             <ul class="flex flex-col gap-4 max-lg:container lg:flex-row lg:gap-12">
               @foreach ($primaryNavigation as $item)
                 <li>
-                  <a class="max-w-lg:text-white inline-block text-lg font-semibold text-white max-lg:text-2xl md:text-blue-dark lg:py-2"
+                  <a class="max-w-lg:text-white inline-block text-lg font-semibold text-white max-lg:text-2xl lg:py-2 lg:text-blue-dark"
                     href="{{ $item->url }}">{!! $item->label !!}</a>
                 </li>
               @endforeach
