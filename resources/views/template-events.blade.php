@@ -13,50 +13,28 @@
     {!! $content !!}
 
     <div x-data="{}" class="container mb-8 space-y-4 md:space-y-8 lg:max-w-5xl">
-      {{-- <p>{{ $event_count }} events @ {{ $per_page }} per page = {{ ceil($event_count / $per_page) }} pages</p> --}}
-
-      {{-- <div>
-      <x-button :class="!isset($_GET['category']) || $_GET['category'] == 'all' ? 'bg-blue-light' : null" :url="setParam('category', 'all')" label="All categories" />
-      <x-button :class="isset($_GET['category']) && $_GET['category'] == 'bereavement' ? 'bg-blue-light' : null" :url="setParam('category', 'bereavement')" label="Bereavement" />
-    </div> --}}
 
       <div class="grid gap-4 md:grid-cols-3">
-        <a class="{{ isset($_GET['type']) && $_GET['type'] == 'social' ? 'bg-blue-light' : null }} overflow-hidden rounded-medium bg-gold-light"
-          href="{{ setParam('type', 'social') }} ">
-          <img src="" class="block aspect-[2] bg-gold" />
-          <div class="p-6">
-            <h3 class="type-md mb-2">Socials & meet-ups</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            </p>
-          </div>
-        </a>
 
-        <a class="{{ isset($_GET['type']) && $_GET['type'] == 'workshop' ? 'bg-blue-light' : null }} overflow-hidden rounded-medium bg-gold-light"
-          href="{{ setParam('type', 'workshop') }} ">
+        @foreach (get_field('event_types', 'option') as $type)
+          <a class="{{ isset($_GET['type']) && $_GET['type'] == $type['slug'] ? 'bg-blue-light' : null }} overflow-hidden rounded-medium bg-gold-light"
+            href="{{ setParam('type', $type['slug']) }} ">
 
-          <img src="" class="block aspect-[2] bg-gold" />
-          <div class="p-6">
-            <h3 class="type-md mb-2">Workshops</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            </p>
-          </div>
-        </a>
+            {!! wp_get_attachment_image($type['image'], 'landscape', null, [
+                'class' => 'block bg-gold"',
+            ]) !!}
+            <div class="p-6">
+              <h3 class="type-md mb-2">{{ $type['title'] }}</h3>
+              <p>
+                {{ $type['description'] }}
+              </p>
+            </div>
+          </a>
+        @endforeach
 
-        <a class="{{ isset($_GET['type']) && $_GET['type'] == 'advice' ? 'bg-blue-light' : null }} overflow-hidden rounded-medium bg-gold-light"
-          href="{{ setParam('type', 'advice') }} ">
-          <img src="" class="block aspect-[2] bg-gold" />
-          <div class="p-6">
-            <h3 class="type-md mb-2">Drop-in advice</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            </p>
-          </div>
-        </a>
       </div>
 
-      <h2 class="type-lg !mt-12 text-center">Find an event near you</h2>
+      <h2 class="type-lg !mt-12 text-center text-blue-dark">Find an event near you</h2>
       <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
         <x-button-pill :class="!isset($_GET['location']) || $_GET['location'] == 'all' ? 'bg-blue-light' : null" :url="get_permalink(get_option('page_for_events'))" label="All" />
         <x-button-pill :class="isset($_GET['location']) && $_GET['location'] == 'south' ? 'bg-blue-light' : null" :url="setParam('location', 'south')" label="South Leeds" />
@@ -75,7 +53,7 @@
       </div> 
 
     </div> --}}
-      <h2 class="type-lg !mt-12 text-center">Upcoming events</h2>
+      <h2 class="type-lg !mt-12 text-center text-blue-dark">Upcoming events</h2>
 
     </div>
   @else

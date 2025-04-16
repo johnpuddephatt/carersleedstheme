@@ -153,6 +153,9 @@ class EventSignpost extends Block
         // ];
         if (get_field('type') === 'next') {
             return [
+                'heading' => get_field('heading'),
+                'empty_message' => get_field('empty_message'),
+                'hide_when_empty' => get_field('hide_when_empty'),
                 'event_signpost' => tribe_get_events([
                     'posts_per_page' => 1,
                     'start_date' => 'now',
@@ -163,6 +166,9 @@ class EventSignpost extends Block
 
 
         return [
+            'heading' => get_field('heading'),
+            'empty_message' => get_field('empty_message'),
+            'hide_when_empty' => get_field('hide_when_empty'),
             'event_signpost' => (get_field('event') ? get_post(get_field('event')) : null)
         ];
     }
@@ -175,6 +181,28 @@ class EventSignpost extends Block
         $fields = Builder::make('event_signpost');
 
         $fields
+
+            ->addText('heading')
+
+            ->addTrueFalse('hide_when_empty', [
+                'label' => 'Hide when empty',
+                'ui' => 1
+            ])
+
+            ->addText('empty_message', [
+                'label' => 'Message when empty',
+                'default_value' => 'No events found',
+                'conditional_logic' => [
+                    [
+                        [
+                            'field' => 'hide_when_empty',
+                            'operator' => '==',
+                            'value' => 0,
+                        ],
+                    ],
+                ],
+            ])
+
             ->addSelect('type', [
                 'label' => 'Type',
                 'choices' => [

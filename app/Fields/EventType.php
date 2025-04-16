@@ -13,18 +13,19 @@ class EventType extends Field
     public function fields(): array
     {
         $fields = Builder::make('event_type', ['position' => 'side', 'title' => 'Event type']);
-
         $fields
             ->setLocation('post_type', '==', 'tribe_events')
             ->addSelect('event_type', [
                 'label' => 'Type',
-                'choices' => [
-                    '' => 'Select an event type',
-                    'social' => 'Socials & meet-ups',
-                    'workshop' => 'Workshops',
-                    'advice' => 'Drop-in advice',
-                    'other' => 'Other',
-                ],
+                'choices' => array_merge(
+                    [
+                        '' => 'Select an event type'
+                    ],
+                    array_column(get_field('event_types', 'option'), 'title', 'slug'),
+                    [
+                        'other' => 'Other'
+                    ]
+                ),
                 'default_value' => 'social',
             ]);
 
