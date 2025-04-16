@@ -39,8 +39,11 @@ class EventsOptions extends Field
             ->addRepeater('event_types', [
                 'label' => 'Event types',
                 'layout' => 'block',
+                'max' => 3,
             ])
-            ->addText('slug')
+            ->addText('slug', [
+                'instructions' => 'Do not edit unless you know what you are doing. This will require reassigning all events to this type.',
+            ])
 
             ->addText('title')
             ->addText('description')
