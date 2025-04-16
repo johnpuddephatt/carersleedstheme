@@ -50,7 +50,7 @@ a.active {
 }
 
 .page-sidebar-tree li a {
-  @apply container block py-4 text-xl font-semibold text-blue bg-white bg-opacity-0 hover:bg-opacity-50 transition;
+  @apply container block py-4 text-xl font-semibold text-blue bg-blue-light bg-opacity-0 hover:bg-opacity-50 transition;
 }
 
 .page-sidebar-tree .children {
