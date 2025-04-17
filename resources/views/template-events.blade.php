@@ -41,7 +41,7 @@
         <x-button-pill :class="isset($_GET['location']) && $_GET['location'] == 'north' ? 'bg-blue-light' : null" :url="setParam('location', 'north')" label="North Leeds" />
         <x-button-pill :class="isset($_GET['location']) && $_GET['location'] == 'east' ? 'bg-blue-light' : null" :url="setParam('location', 'east')" label="East Leeds" />
         <x-button-pill :class="isset($_GET['location']) && $_GET['location'] == 'west' ? 'bg-blue-light' : null" :url="setParam('location', 'west')" label="West Leeds" />
-        <x-button-pill :class="isset($_GET['location']) && $_GET['location'] == 'centre' ? 'bg-blue-light' : null" :url="setParam('location', 'centre')" label="City centre" />
+        <x-button-pill :class="isset($_GET['location']) && $_GET['location'] == 'leeds-city-centre' ? 'bg-blue-light' : null" :url="setParam('location', 'leeds-city-centre')" label="Leeds City Centre" />
 
       </div>
 
