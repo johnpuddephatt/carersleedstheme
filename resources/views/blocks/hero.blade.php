@@ -5,7 +5,7 @@
   <div
     class="{{ $block->block->align == 'full' ? ' min-h-80 md:gap-6 md:min-h-[36rem]' : 'min-h-24 px-4 md:pr-0 md:pl-8' }} container relative flex flex-col-reverse items-center md:grid md:grid-cols-2">
     <div
-      class="{{ $block->block->align == 'full' ? 'pb-16 md:py-16  max-w-xl' : ' pb-12 md:pt-8 lg:p-16' }} relative z-10 w-full">
+      class="{{ $block->block->align == 'full' ? 'pb-16 md:py-16  max-w-xl' : ' pb-12 md:pt-8 ' }} {{ $block->block->align == 'wide' ? 'lg:p-16' : 'px-4' }} relative z-10 w-full">
       <h1 class="{{ $block->block->align == 'full' ? 'type-2xl' : 'type-xl' }} mb-4 text-blue-dark md:mb-6">
         {{ $heading }}</h1>
       <div class="type-sm !font-normal">{!! $content !!}</div>
@@ -46,8 +46,10 @@
             'class' =>
                 'translate-x-8 -translate-y-8  md:translate-y-0 md:translate-x-0 w-2/3 md:w-full h-auto ml-auto ' .
                 match ($block->style) {
-                    'default' => $block->block->align == 'full' ? 'clip-oval ' : 'clip-oval md:clip-oval-part ',
-                    'alternative' => $block->block->align == 'full' ? 'clip-oval-2 ' : 'clip-oval-2 md:clip-oval-part-2 ',
+                    'default' => $block->block->align == 'full' ? 'clip-oval ' : 'clip-oval md:clip-oval-part h-full ',
+                    'alternative' => $block->block->align == 'full'
+                        ? 'clip-oval-2 '
+                        : 'clip-oval-2 md:clip-oval-part-2 h-full ',
                 } .
                 ($block->block->align == 'full' ? 'md:my-8' : null),
         ]) !!}

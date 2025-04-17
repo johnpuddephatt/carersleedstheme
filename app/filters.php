@@ -37,8 +37,19 @@ add_filter(
     function ($menu) {
         remove_menu_page('index.php');
         // $customize_url = add_query_arg('return', urlencode(remove_query_arg(wp_removable_query_args(), wp_unslash($_SERVER['REQUEST_URI']))), 'customize.php');
-        $customize_url = add_query_arg('return', urlencode(remove_query_arg(wp_removable_query_args(), wp_unslash($_SERVER['REQUEST_URI']))), 'widgets.php');
-        remove_submenu_page('widgets.php', $customize_url);
+
+        remove_submenu_page('widgets.php', add_query_arg('return', urlencode(remove_query_arg(wp_removable_query_args(), wp_unslash($_SERVER['REQUEST_URI']))), 'widgets.php'));
+
+        remove_submenu_page(
+            'edit.php?post_type=tribe_events',
+            'edit-tags.php?taxonomy=post_tag&amp;post_type=tribe_events' // must be &amp;
+        );
+
+        //importer
+        remove_submenu_page(
+            'edit.php?post_type=tribe_events',
+            'aggregator'
+        );
     }
 );
 
