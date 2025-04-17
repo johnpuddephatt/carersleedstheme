@@ -44,7 +44,7 @@
         {!! wp_get_attachment_image($image, 'square', false, [
             'sizes' => ' (min-width: 1200px) 40vw, (min-width: 800px) 55vw, 75vw',
             'class' =>
-                'translate-x-8 -translate-y-8  md:translate-y-0 md:translate-x-0 w-2/3 md:w-full h-auto ml-auto ' .
+                'translate-x-8 -translate-y-6  md:translate-y-0 md:translate-x-0 w-2/3 md:w-full h-auto ml-auto ' .
                 match ($block->style) {
                     'default' => $block->block->align == 'full' ? 'clip-oval ' : 'clip-oval md:clip-oval-part h-full ',
                     'alternative' => $block->block->align == 'full'
