@@ -64,7 +64,6 @@
         {{ strpos($_GET['location'] ?? '', 'leeds') !== 0 ? 'Leeds' : '' }}</h1>
 
       </h1>
-      {{ strpos($_GET['location'] ?? '', 'leeds') }}
 
     </div>
   @endif
