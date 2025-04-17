@@ -227,9 +227,32 @@ add_action('admin_head', function () {
              [data-toolbar='simple'] .mce-top-part {
             display: none;
             }
+
+            .edit-post-fullscreen-mode-close.components-button {
+            background-color: #eee;
+}
+
+.edit-post-fullscreen-mode-close.components-button:before {
+content: none;
+}
         </style>";
     // }
 });
+
+add_action('login_enqueue_scripts', function () { ?>
+    <style type="text/css">
+        #login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/public/logo.svg);
+            height: 120px;
+            width: 200px;
+
+            background-size: 100% auto;
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
+    </style>
+<?php });
 
 
 

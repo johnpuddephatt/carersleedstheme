@@ -23,7 +23,7 @@ class EventLocation extends Field
                     'south' => 'South Leeds',
                     'east' => 'East Leeds',
                     'west' => 'West Leeds',
-                    'centre' => 'Leeds City Centre',
+                    'leeds-city-centre' => 'Leeds City Centre',
                 ],
                 'default_value' => 'north',
             ]);
