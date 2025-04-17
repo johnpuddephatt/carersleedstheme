@@ -5,9 +5,9 @@
   <div
     class="{{ $block->block->align == 'full' ? ' min-h-80 md:gap-6 md:min-h-[36rem]' : 'min-h-24 px-4 md:pr-0 md:pl-8' }} container relative flex flex-col-reverse items-center md:grid md:grid-cols-2">
     <div
-      class="{{ $block->block->align == 'full' ? 'pb-16 md:py-16  max-w-xl' : '  ' }} {{ $block->block->align == 'wide' ? 'lg:p-16 pb-12 md:pt-8' : '' }} {{ $block->block->align == 'normal' ? 'pr-4 py-8' : '' }} relative z-10 w-full">
+      class="{{ $block->block->align == 'full' ? 'pb-16 md:py-16  max-w-xl' : '  ' }} {{ $block->block->align == 'wide' ? 'lg:p-16 pb-12 md:pt-8' : '' }} {{ $block->block->align == '' ? 'pr-4 py-8' : '' }} relative z-10 w-full">
       <h1 class="{{ $block->block->align == 'full' ? 'type-2xl' : 'type-xl' }} mb-4 text-blue-dark md:mb-6">
-        {{ $heading }} {{ $block->block->align }}</h1>
+        {{ $heading }}</h1>
       <div class="type-sm !font-normal">{!! $content !!}</div>
       @if ($buttons)
         <div class="mt-6 flex flex-wrap gap-2 md:mt-10">
