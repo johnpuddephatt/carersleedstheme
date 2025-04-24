@@ -4,7 +4,7 @@
   @include('partials.page-header')
 
   @if (get_search_query())
-    <div class="container mx-auto">
+    <div class="container mx-auto lg:max-w-5xl">
       <h1 class="type-xl my-16 mb-8 text-blue-dark">
         {!! __('Search results for', 'sage') !!} <strong>{!! get_search_query() !!}</strong></h1>
     </div>
