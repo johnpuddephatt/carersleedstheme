@@ -16,6 +16,22 @@
   <meta property="og:description" content="{!! $og['description'] !!}" />
   <meta property="og:image" content="{!! $og['image'] !!}" />
 
+  @if ($analytics ?? false)
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ $analytics }}"></script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+
+      gtag('config', '{{ $analytics }}');
+    </script>
+  @endif
+
 </head>
 
 <body @php(body_class())>
