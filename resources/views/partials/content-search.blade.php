@@ -1,5 +1,5 @@
 <a href="{{ get_permalink() }}"
-  class="not-prose group relative flex min-h-32 flex-row items-center overflow-hidden rounded-medium bg-green-light font-normal after:absolute after:right-1 after:top-2 after:block after:size-6 after:rounded-full after:bg-green md:min-h-48 md:after:size-8">
+  class="not-prose group relative flex min-h-32 flex-row items-center overflow-hidden rounded-medium  font-normal after:absolute after:right-1 after:top-2 after:block after:size-6 {{ if(get_post_type() === 'post') ? 'bg-green-light after:rounded-full after:bg-green md:min-h-48 md:after:size-8' : 'bg-beige' }} ">
 
   <div>
     <div class="flex-1 px-8 py-2 md:pl-4 lg:pl-8 lg:pr-12">

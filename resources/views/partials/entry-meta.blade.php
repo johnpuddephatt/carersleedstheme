@@ -1,4 +1,4 @@
-<time class="mb-4 inline-block text-lg lg:text-2xl" datetime="{{ get_post_time('c', true) }}">
+<time class="mb-1 leading-snug text-blue" datetime="{{ get_post_time('c', true) }}">
   {{ get_the_date() }}
 </time>
 {{-- 
