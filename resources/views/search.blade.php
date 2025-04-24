@@ -16,7 +16,7 @@
 
   {!! get_search_form(false) !!}
 
-  <div class="container mx-auto mt-8 space-y-8 lg:max-w-5xl">
+  <div class="container mx-auto mb-16 mt-8 space-y-8 lg:max-w-5xl">
     @while (have_posts())
       @php(the_post())
       @include('partials.content-search')
