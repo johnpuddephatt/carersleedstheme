@@ -3,7 +3,7 @@
     <div class="container py-24 lg:max-w-5xl">
       <a href="{{ get_permalink(get_option('page_for_posts')) }}">&larr; Back to all news</a>
       <h1 class="type-xl mt-8 text-blue-dark">
-        {{ get_queried_object()->name }}
+        {!! get_queried_object()->name !!}
       </h1>
     </div>
   @else
