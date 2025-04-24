@@ -3,15 +3,17 @@
 @section('content')
   @include('partials.page-header')
 
+  @if (get_search_query())
+    <div class="container mx-auto">
+      <h1 class="type-xl my-16 mb-8 text-blue-dark">
+        {!! __('Search results for', 'sage') !!} <strong>{!! get_search_query() !!}</strong></h1>
+    </div>
+  @endif
+
   @if (!have_posts())
     <x-alert type="warning">
       {!! __('Sorry, no results were found.', 'sage') !!}
     </x-alert>
-  @else
-    <div class="container mx-auto space-y-8 lg:max-w-5xl">
-      <h1 class="type-xl my-16 text-blue-dark">
-        {!! __('Search results for', 'sage') !!} <strong>{!! get_search_query() !!}</strong></h1>
-    </div>
   @endif
 
   {!! get_search_form(false) !!}
