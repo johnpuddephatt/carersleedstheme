@@ -10,8 +10,10 @@
 
     {!! get_search_form(false) !!}
   @else
-    <h1 class="type-xl my-16 text-blue-dark">
-      {!! __('Search results for', 'sage') !!} <strong>{!! get_search_query() !!}</strong></h1>
+    <div class="container mx-auto space-y-8 lg:max-w-5xl">
+      <h1 class="type-xl my-16 text-blue-dark">
+        {!! __('Search results for', 'sage') !!} <strong>{!! get_search_query() !!}</strong></h1>
+    </div>
   @endif
 
   <div class="container mx-auto space-y-8 lg:max-w-5xl">
