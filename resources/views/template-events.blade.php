@@ -61,10 +61,10 @@
 
       <a href="{{ get_permalink(get_option('page_for_events')) }}">&larr; Back to all events</a>
       @if (($_GET['location'] ?? false) == 'online')
-        <h1 class="type-xl">Online events</h1>
+        <h1 class="type-xl text-blue-dark">Online events</h1>
       @else
         <a href="{{ setParam('location', null) }}">&larr; Clear location filter</a>
-        <h1 class="type-xl">{{ ucfirst($_GET['type'] ?? 'All') }} events in
+        <h1 class="type-xl text-blue-dark">{{ ucfirst($_GET['type'] ?? 'All') }} events in
           {{ ucwords(str_replace('-', ' ', $_GET['location'] ?? '')) }}
           {{ strpos($_GET['location'] ?? '', 'leeds') !== 0 ? 'Leeds' : '' }}</h1>
 
