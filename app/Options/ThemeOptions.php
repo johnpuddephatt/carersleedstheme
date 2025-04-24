@@ -51,7 +51,6 @@ class ThemeOptions extends Field
                     'return_format' => 'id'
                 ]
             )
-            ->addText('google_analytics', ['help_text' => 'e.g. G-5PFNSMXX2A'])
         ;
 
 
