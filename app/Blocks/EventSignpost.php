@@ -152,15 +152,26 @@ class EventSignpost extends Block
         //     'post_signpost' => null
         // ];
         if (get_field('type') === 'next') {
+
+            $query = [
+                'posts_per_page' => 1,
+                'start_date' => 'now',
+            ];
+
+            if (get_field('event_type') && get_field('event_type') !== 'any') {
+                $query['meta_query'] = [
+                    [
+                        'key' => 'event_type',
+                        'value' => get_field('event_type'),
+                    ],
+                ];
+            }
+
             return [
                 'heading' => get_field('heading'),
                 'empty_message' => get_field('empty_message'),
                 'hide_when_empty' => get_field('hide_when_empty'),
-                'event_signpost' => tribe_get_events([
-                    'posts_per_page' => 1,
-                    'start_date' => 'now',
-                    'category'            => get_field('category') ?: null,
-                ])[0] ?? null
+                'event_signpost' => tribe_get_events($query)[0] ?? null
             ];
         }
 
@@ -208,6 +219,16 @@ class EventSignpost extends Block
                 'choices' => [
                     'next' => 'Next event',
                     'specific' => 'Specific event',
+                ],
+            ])
+
+            ->addSelect('event_type', [
+                'label' => 'Event type',
+                'choices' => [
+                    'any' => 'Any',
+                    'workshop' => 'Workshop',
+                    'social' => 'Social',
+                    'advice' => 'Advice',
                 ],
             ])
 
