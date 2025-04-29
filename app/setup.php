@@ -36,6 +36,7 @@ function getParagraphs($content)
 
 add_action('init', function () {
 
+    register_taxonomy_for_object_type('post_tag', 'page');
 
     $post_type_object = get_post_type_object('opportunity');
     $blocks = [];
