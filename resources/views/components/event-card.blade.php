@@ -36,7 +36,7 @@
     <h3 class="type-sm md:type-md mb-3 mt-2 text-balance !text-black">{{ $event->post_title }}</h3>
     @if (tribe_get_venue($event->ID))
 
-      <p class="flex items-center">
+      <p class="flex items-start leading-none">
         <span class="mr-1 inline-block rounded-full bg-gold p-0.5 md:mr-2">
           <x-icon.marker class="h-6 w-6 text-white" />
         </span>
