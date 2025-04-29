@@ -45,14 +45,6 @@
 
       </div>
 
-      {{-- <div class="justify-between">
-      <div>
-        <x-button :class="!isset($_GET['date']) || $_GET['date'] == 'all' ? 'bg-blue-light' : null" :url="setParam('date', 'all')" label="All dates" />
-        <x-button :class="isset($_GET['date']) && $_GET['date'] == 'this_week' ? 'bg-blue-light' : null" :url="setParam('date', 'this_week')" label="This week" />
-        <x-button :class="isset($_GET['date']) && $_GET['date'] == 'next_week' ? 'bg-blue-light' : null" :url="setParam('date', 'next_week')" label="Next week" />
-      </div> 
-
-    </div> --}}
       <h2 class="type-lg !mt-12 text-center text-blue-dark">Upcoming events</h2>
 
     </div>
@@ -63,7 +55,7 @@
       @if (($_GET['location'] ?? false) == 'online')
         <h1 class="type-xl text-blue-dark">Online events</h1>
       @else
-        <a href="{{ setParam('location', null) }}">&larr; Clear location filter</a>
+        {{-- <a href="{{ setParam('location', null) }}">&larr; Clear location filter</a> --}}
         <h1 class="type-xl text-blue-dark">{{ ucfirst($_GET['type'] ?? 'All') }} events in
           {{ ucwords(str_replace('-', ' ', $_GET['location'] ?? '')) }}
           {{ strpos($_GET['location'] ?? '', 'leeds') !== 0 ? 'Leeds' : '' }}</h1>
