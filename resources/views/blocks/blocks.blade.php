@@ -12,10 +12,11 @@
     style="{{ $block->inlineStyle }}">
 
     @if ($title)
-      <h2 class="type-xl mb-8 text-center font-semibold text-blue-dark md:mb-12">{{ $title }}</h2>
+      <h2 class="type-xl relative mb-8 text-center font-semibold text-blue-dark md:mb-12">{{ $title }}</h2>
     @endif
     @if ($subtitle)
-      <div class="type-sm -mt-6 mb-8 text-center !font-semibold text-blue-dark md:mb-16">{{ $subtitle }}</div>
+      <div class="type-sm relative -mt-6 mb-8 text-center !font-semibold text-blue-dark md:mb-16">{{ $subtitle }}
+      </div>
     @endif
 
     <div class="flex flex-row flex-wrap justify-center gap-4 md:gap-8 lg:gap-12">
