@@ -1,4 +1,4 @@
-<div class="cookie-notice border-t-px fixed bottom-0 left-0 right-0 z-20 border-blue bg-blue-light py-4 shadow">
+<div class="cookie-notice border-t-px fixed bottom-0 left-0 right-0 z-20 border-blue bg-green-light py-4 shadow">
   <div class="container flex items-center gap-3">
     <p class="font-medium">
       {{ get_field('privacy_banner', 'option') }} <a class="underline" href=" {{ get_privacy_policy_url() }}">Find
