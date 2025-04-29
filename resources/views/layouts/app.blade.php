@@ -23,7 +23,7 @@
       if (localStorage.getItem('cookiesAccepted') === 'true') {
         window.dataLayer = window.dataLayer || [];
 
-        console.log('analytics loaded!');
+        console.log('Google Analytics loaded:', '{{ $analytics }}');
 
         function gtag() {
           dataLayer.push(arguments);
