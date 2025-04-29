@@ -20,15 +20,17 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ $analytics }}"></script>
 
     <script>
-      window.dataLayer = window.dataLayer || [];
+      if (localStorage.getItem('cookiesAccepted') === 'true') {
+        window.dataLayer = window.dataLayer || [];
 
-      function gtag() {
-        dataLayer.push(arguments);
+        console.log('analytics loaded!');
+
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', '{{ $analytics }}');
       }
-
-      gtag('js', new Date());
-
-      gtag('config', '{{ $analytics }}');
     </script>
   @endif
 
@@ -56,6 +58,7 @@
       </aside>
     @endif
     @include('sections.footer')
+    @include('partials.cookies')
   </div>
 
   @php(do_action('get_footer'))
