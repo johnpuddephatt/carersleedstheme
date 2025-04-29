@@ -156,6 +156,7 @@ class EventSignpost extends Block
             $query = [
                 'posts_per_page' => 1,
                 'start_date' => 'now',
+                'category' => get_field('category') ?: null,
             ];
 
             if (get_field('event_type') && get_field('event_type') !== 'any') {
