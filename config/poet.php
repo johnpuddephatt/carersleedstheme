@@ -63,6 +63,7 @@ return [
             'menu_icon' => 'dashicons-networking',
             'supports' => ['thumbnail', 'title', 'editor'],
             'show_in_rest' => true,
+            'exclude_from_search' => true,
             'has_archive' => false,
             'labels' => [
                 'singular' => 'Person',
