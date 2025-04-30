@@ -14,11 +14,6 @@ document.addEventListener('alpine:init', () => {
   Alpine.data('search', () => ({
     init() {
       this.client = algoliasearch(appId, apiKey);
-
-      // this.index = client.initSearch(indexName);
-
-      // Search for "test"
-
       this.searchReady = true;
     },
     client: null,
@@ -42,30 +37,12 @@ document.addEventListener('alpine:init', () => {
         ],
       });
 
+      console.log('Search results:', results);
+
       this.results = results[0].hits;
       this.totalHits = results[0].nbHits;
       this.resultsPerPage = results[0].hitsPerPage;
       this.searching = false;
-      //   if (this.term === '') return;
-      //   this.noResults = false;
-      //   console.log(`search for ${this.term}`);
-
-      //   //          let rawResults = await this.index.search(this.term);
-      //   let rawResults = await this.index.search(this.term, {
-      //     attributesToSnippet: ['content'],
-      //   });
-
-      //   if (rawResults.nbHits === 0) {
-      //     this.noResults = true;
-      //     return;
-      //   }
-      //   this.totalHits = rawResults.nbHits;
-      //   this.resultsPerPage = rawResults.hitsPerPage;
-      //   this.results = rawResults.hits.map((h) => {
-      //     h.snippet = h._snippetResult.content.value;
-      //     h.date = new Intl.DateTimeFormat('en-us').format(new Date(h.date));
-      //     return h;
-      //   });
     },
   }));
 });

@@ -25,9 +25,8 @@
       </button>
 
       <input placeholder="Start typing to search..."
-        @keyup.debounce.500="if(term.length >= 3) { console.log(term); search() } else {results = null}"
-        x-ref="searchInput"
-        class="mb-4 block w-full border-b border-b-blue-bright px-8 pb-3 text-2xl -outline-offset-1 focus-visible:border-b-2 focus-visible:outline-none"
+        @keyup.debounce.500="if(term.length >= 3) { search() } else {results = null}" x-ref="searchInput"
+        class="block w-full border-b border-b-blue-bright px-8 pb-3 text-2xl -outline-offset-1 focus-visible:border-b-2 focus-visible:outline-none"
         type="search" x-model="term">
 
       <style>
@@ -57,7 +56,7 @@
               but there were no results. </p>
           </div>
           <div x-show="results">
-            <p class="border-b border-blue-light px-8 pb-4 text-right">Showing <span
+            <p class="border-b border-blue-light px-8 py-4 text-right">Showing <span
                 x-text="resultsPerPage < totalHits ? resultsPerPage : totalHits"></span> result<span
                 x-text="totalHits == 1 ? null : 's'"></span>.</p><template x-for="result in results"><a
                 :href="result.permalink"
@@ -71,7 +70,10 @@
                 </svg>
 
                 <div>
+                  <div x-show="result.post_type == 'tribe_events' || result.post_type == 'post'"
+                    class="type-xs mb-2 text-blue" x-html="result.post_date_formatted"></div>
                   <h3 class="type-sm mb-2" x-html="result.post_title"></h3>
+
                   <p class="inline-flex items-center gap-0.5 rounded bg-blue-light py-0.5 pl-2 pr-3 text-sm font-semibold text-blue-dark"
                     x-show="result.post_type == 'page'">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
