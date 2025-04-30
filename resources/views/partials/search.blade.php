@@ -57,22 +57,61 @@
               but there were no results. </p>
           </div>
           <div x-show="results">
-            <p class="mx-8 text-right">Showing <span
+            <p class="border-b border-blue-light px-8 pb-4 text-right">Showing <span
                 x-text="resultsPerPage < totalHits ? resultsPerPage : totalHits"></span> result<span
                 x-text="totalHits == 1 ? null : 's'"></span>.</p><template x-for="result in results"><a
-                :href="result.permalink" class="flex items-center gap-4 border-b border-blue-light px-8 py-4"><img
-                  :src="result.images.thumbnail ? result.images.thumbnail.url : 'https://placehold.co/150x150'"
+                :href="result.permalink"
+                class="flex items-center gap-4 border-b border-blue-light px-8 py-4 transition hover:bg-blue-light hover:bg-opacity-20"><img
+                  x-show="result.images.thumbnail" :src="result.images.thumbnail ? result.images.thumbnail.url : null"
                   class="h-24 w-24 rounded-medium object-cover" />
+                <svg x-show="!result.images.thumbnail" class="h-24 w-24 rounded-medium bg-blue-light text-blue-bright"
+                  xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 36 36">
+                  <path fill="currentColor" stroke-width="1.5"
+                    d="M8.4 18C8.3 12.1 13 7.3 18.8 7.2h.5c3.1-.2 6.1 1 8.2 3.2l-2.9 3.4c-1.4-1.4-3.3-2.3-5.3-2.3-3.4 0-6.1 2.9-6.1 6.3v.2c0 3.6 2.5 6.6 6 6.6 2.1 0 4.1-.9 5.5-2.4l2.9 3c-2.1 2.5-5.3 3.9-8.5 3.7-5.8 0-10.6-4.6-10.7-10.4v-.4" />
+                </svg>
+
                 <div>
                   <h3 class="type-sm mb-2" x-html="result.post_title"></h3>
-                  <p class="inline-block rounded bg-blue-light px-3 py-0.5 text-sm font-semibold text-blue-dark"
-                    x-show="result.post_type == 'page'">Page</p>
-                  <p class="inline-block rounded bg-green-light px-3 py-0.5 text-sm font-semibold text-green-dark"
-                    x-show="result.post_type == 'post'">News</p>
-                  <p class="inline-block rounded bg-gold-light px-3 py-0.5 text-sm font-semibold text-gold-dark"
-                    x-show="result.post_type == 'tribe_events'">What’s on</p>
-                  <p class="inline-block rounded bg-pink-light px-3 py-0.5 text-sm font-semibold text-pink-dark"
-                    x-show="result.post_type == 'person'">Person</p>
+                  <p class="inline-flex items-center gap-0.5 rounded bg-blue-light py-0.5 pl-2 pr-3 text-sm font-semibold text-blue-dark"
+                    x-show="result.post_type == 'page'">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-3.5">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                    </svg>
+
+                    Page
+                  </p>
+                  <p class="inline-flex items-center gap-0.5 rounded bg-green-light py-0.5 pl-2 pr-3 text-sm font-semibold text-green-dark"
+                    x-show="result.post_type == 'post'">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-3.5">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 1 1 0-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 0 1-1.44-4.282m3.102.069a18.03 18.03 0 0 1-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 0 1 8.835 2.535M10.34 6.66a23.847 23.847 0 0 0 8.835-2.535m0 0A23.74 23.74 0 0 0 18.795 3m.38 1.125a23.91 23.91 0 0 1 1.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 0 0 1.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 0 1 0 3.46" />
+                    </svg>
+
+                    News
+                  </p>
+                  <p class="inline-flex items-center gap-0.5 rounded bg-gold-light py-0.5 pl-2 pr-3 text-sm font-semibold text-gold-dark"
+                    x-show="result.post_type == 'tribe_events'">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-3.5">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+                    </svg>
+
+                    What’s on
+                  </p>
+                  <p class="inline-flex items-center gap-0.5 rounded bg-pink-light py-0.5 pl-2 pr-3 text-sm font-semibold text-pink-dark"
+                    x-show="result.post_type == 'person'">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-3.5">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                    </svg>
+
+                    Person
+                  </p>
                 </div>
               </a></template>
           </div>
