@@ -13,6 +13,11 @@
     </script>
   @endif
 
+  <script>
+    window.algoliaAppId = '{{ get_field('algolia_app_id', 'options') }}';
+    window.algoliaApiKey = '{{ get_field('algolia_api_key', 'options') }}';
+  </script>
+
   <meta property="og:description" content="{!! $og['description'] !!}" />
   <meta property="og:image" content="{!! $og['image'] !!}" />
 

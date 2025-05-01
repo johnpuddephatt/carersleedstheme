@@ -6,8 +6,9 @@ import domReady from '@roots/sage/client/dom-ready';
 import Alpine from 'alpinejs';
 window.Alpine = Alpine;
 
-const appId = '4XIM8DEENA';
-const apiKey = 'e1f78d985745a4d6f156b18ef93d2b6c';
+const appId = window.algoliaAppId;
+const apiKey = window.algoliaApiKey;
+
 const indexName = 'wp_searchable_posts';
 
 document.addEventListener('alpine:init', () => {
@@ -36,8 +37,6 @@ document.addEventListener('alpine:init', () => {
           },
         ],
       });
-
-      console.log('Search results:', results);
 
       this.results = results[0].hits;
       this.totalHits = results[0].nbHits;
