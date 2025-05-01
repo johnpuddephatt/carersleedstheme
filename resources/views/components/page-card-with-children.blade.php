@@ -15,7 +15,8 @@
       <h3 class="type-md pb-2">{!! $title !!}</h3>
 
       @foreach ($children as $child)
-        <a href="{{ get_the_permalink($child->ID) }}" class="group flex justify-between gap-1 !font-medium">
+        <a href="{{ get_the_permalink($child->ID) }}"
+          class="group flex items-center justify-between gap-1 !font-medium transition hover:bg-green-light">
           {{ get_the_title($child->ID) }}
 
           <x-icon.card-arrow stroke="1" class="mt-1 flex-none text-blue" />
