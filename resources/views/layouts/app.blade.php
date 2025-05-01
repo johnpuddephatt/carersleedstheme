@@ -14,8 +14,8 @@
   @endif
 
   <script>
-    window.algoliaAppId = '{{ get_field('algolia_app_id', 'options') }}';
-    window.algoliaApiKey = '{{ get_field('algolia_api_key', 'options') }}';
+    window.algoliaAppId = ' {{ get_option('options_algolia_app_id') }}';
+    window.algoliaApiKey = ' {{ get_option('options_algolia_api_key') }}';
   </script>
 
   <meta property="og:description" content="{!! $og['description'] !!}" />
