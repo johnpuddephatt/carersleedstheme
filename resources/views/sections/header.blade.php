@@ -6,10 +6,7 @@
       </div>
       <nav class="hidden lg:block">
         <ul class="flex flex-row items-center gap-8">
-          @if ($_GET['search'] ?? false)
-            @include('partials.search')
-          @endif
-
+          @include('partials.search')
           @foreach ($secondaryNavigation as $item)
             <li>
               <a class="{{ $item->classes ?? 'text-blue-dark' }} inline-block"

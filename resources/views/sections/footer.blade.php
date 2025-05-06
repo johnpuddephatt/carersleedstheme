@@ -19,6 +19,20 @@
             @endforeach
           @endif
         </div>
+
+        <div id="google_translate_element"></div>
+
+        <script type="text/javascript">
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+              pageLanguage: 'en'
+            }, 'google_translate_element');
+          }
+        </script>
+
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+
         @if ($footerNavigation2)
           <div class="">
             <nav>
@@ -29,6 +43,7 @@
                     <a class="inline-block" href="{{ $item->url }}">{{ $item->label }}</a>
                   </li>
                 @endforeach
+
               </ul>
             </nav>
           </div>
