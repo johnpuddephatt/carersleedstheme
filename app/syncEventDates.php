@@ -16,7 +16,7 @@ function wds_algolia_custom_fields(array $attributes, WP_Post $post)
 
         // Only index when a field has content.
         if (! empty($data)) {
-            $attributes[$field] = $data;
+            $attributes[$field] = $data[0];
         }
     }
 

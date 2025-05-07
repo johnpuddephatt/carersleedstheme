@@ -58,10 +58,12 @@
           <div x-show="results">
             <p class="border-b border-blue-light px-8 py-4 text-right">Showing <span
                 x-text="resultsPerPage < totalHits ? resultsPerPage : totalHits"></span> result<span
-                x-text="totalHits == 1 ? null : 's'"></span>.</p><template x-for="result in results"><a
-                :href="result.permalink"
-                class="flex items-center gap-4 border-b border-blue-light px-8 py-4 transition hover:bg-blue-light hover:bg-opacity-20"><img
-                  x-show="result.images.thumbnail" :src="result.images.thumbnail ? result.images.thumbnail.url : null"
+                x-text="totalHits == 1 ? null : 's'"></span>.</p>
+
+            <template x-for="result in results"><a :href="result.permalink"
+                class="flex items-center gap-4 border-b border-blue-light px-8 py-4 transition hover:bg-blue-light hover:bg-opacity-20">
+                <img x-show="result.images.thumbnail"
+                  :src="result.images.thumbnail ? result.images.thumbnail.url : null"
                   class="h-24 w-24 rounded-medium object-cover" />
                 <svg x-show="!result.images.thumbnail" class="h-24 w-24 rounded-medium bg-blue-light text-blue-bright"
                   xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 36 36">
@@ -70,8 +72,10 @@
                 </svg>
 
                 <div>
-                  <div x-show="result.post_type == 'tribe_events' || result.post_type == 'post'"
-                    class="type-xs mb-2 text-blue" x-html="result.post_date_formatted"></div>
+                  <div x-show="result._EventStartDate == 'tribe_events' " class="type-xs mb-2 text-blue"
+                    x-html="result.post_date_formatted"></div>
+                  <div x-show="result.post_type == 'post'" class="type-xs mb-2 text-blue"
+                    x-html="result.post_date_formatted"></div>
                   <h3 class="type-sm mb-2" x-html="result.post_title"></h3>
 
                   <p class="inline-flex items-center gap-0.5 rounded bg-blue-light py-0.5 pl-2 pr-3 text-sm font-semibold text-blue-dark"
@@ -104,16 +108,7 @@
 
                     What’s on
                   </p>
-                  <p class="inline-flex items-center gap-0.5 rounded bg-pink-light py-0.5 pl-2 pr-3 text-sm font-semibold text-pink-dark"
-                    x-show="result.post_type == 'person'">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                      stroke="currentColor" class="size-3.5">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                    </svg>
 
-                    Person
-                  </p>
                 </div>
               </a></template>
           </div>
