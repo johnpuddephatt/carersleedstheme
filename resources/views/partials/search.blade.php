@@ -56,12 +56,12 @@
               but there were no results. </p>
           </div>
           <div x-show="results">
-            <p class="border-b border-blue-light px-8 py-4 text-right">Showing <span
+            {{-- <p class="border-b border-blue-light px-8 py-4 text-right">Showing <span
                 x-text="resultsPerPage < totalHits ? resultsPerPage : totalHits"></span> result<span
-                x-text="totalHits == 1 ? null : 's'"></span>.</p>
+                x-text="totalHits == 1 ? null : 's'"></span>.</p> --}}
 
             <template x-for="result in results"><a
-                x-show="(result.post_type !== 'tribe_events') || new Date(result._EventStartDate) > new Date()"
+                x-show="['post', 'page', 'tribe_events'].includes(result.post_type) && (result.post_type !== 'tribe_events') || new Date(result._EventStartDate) > new Date()"
                 :href="result.permalink"
                 class="flex items-center gap-4 border-b border-blue-light px-8 py-4 transition hover:bg-blue-light hover:bg-opacity-20">
                 <img x-show="result.images.thumbnail"
@@ -79,7 +79,7 @@
                     <div class="type-xs mb-2 text-blue"
                       x-html="new Date(result._EventStartDate).toLocaleDateString('en-GB', {
                         year: 'numeric',
-                        month: 'short',
+                        month: 'long',
                         day: '2-digit',
                       })">
                     </div>
