@@ -73,7 +73,7 @@
 
                 <div>
                   <div x-show="result._EventStartDate == 'tribe_events' " class="type-xs mb-2 text-blue"
-                    x-html="result.post_date_formatted"></div>
+                    x-html="result._EventStartDate"></div>
                   <div x-show="result.post_type == 'post'" class="type-xs mb-2 text-blue"
                     x-html="result.post_date_formatted"></div>
                   <h3 class="type-sm mb-2" x-html="result.post_title"></h3>
