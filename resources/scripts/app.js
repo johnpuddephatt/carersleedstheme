@@ -34,24 +34,6 @@ document.addEventListener('alpine:init', () => {
           {
             indexName,
             query: this.term,
-            params: {
-              facetFilters: [
-                [
-                  'post_type_label:Events',
-                  'post_type_label:Pages',
-                  'post_type_label:Posts',
-                ],
-              ],
-              facets: ['*'],
-            },
-            facetFilters: [
-              [
-                'post_type_label:Events',
-                'post_type_label:Pages',
-                'post_type_label:Posts',
-              ],
-            ],
-            facets: ['*'],
           },
         ],
       });

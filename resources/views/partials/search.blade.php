@@ -72,8 +72,16 @@
                 </svg>
 
                 <div>
-                  <div x-show="result.post_type == 'tribe_events' " class="type-xs mb-2 text-blue"
-                    x-html="result._EventStartDate"></div>
+                  <template x-if="result.post_type == 'tribe_events'">
+                    <div class="type-xs mb-2 text-blue"
+                      x-html="new Date(result._EventStartDate).toLocaleDateString('en-GB', {
+                        year: 'numeric',
+                        month: '2-digit',
+                        day: '2-digit',
+                      })">
+                    </div>
+
+                  </template>
                   <div x-show="result.post_type == 'post'" class="type-xs mb-2 text-blue"
                     x-html="result.post_date_formatted"></div>
                   <h3 class="type-sm mb-2" x-html="result.post_title"></h3>
