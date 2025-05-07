@@ -72,7 +72,7 @@
                 </svg>
 
                 <div>
-                  <div x-show="result._EventStartDate == 'tribe_events' " class="type-xs mb-2 text-blue"
+                  <div x-show="result.post_type == 'tribe_events' " class="type-xs mb-2 text-blue"
                     x-html="result._EventStartDate"></div>
                   <div x-show="result.post_type == 'post'" class="type-xs mb-2 text-blue"
                     x-html="result.post_date_formatted"></div>
