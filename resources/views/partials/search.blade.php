@@ -60,15 +60,18 @@
                 x-text="resultsPerPage < totalHits ? resultsPerPage : totalHits"></span> result<span
                 x-text="totalHits == 1 ? null : 's'"></span>.</p>
 
-            <template x-for="result in results"><a :href="result.permalink"
+            <template x-for="result in results"><a
+                x-show="result.post_type !== 'tribe_events' || new Date(result._EventStartDate) > new Date()"
+                :href="result.permalink"
                 class="flex items-center gap-4 border-b border-blue-light px-8 py-4 transition hover:bg-blue-light hover:bg-opacity-20">
                 <img x-show="result.images.thumbnail"
                   :src="result.images.thumbnail ? result.images.thumbnail.url : null"
                   class="h-24 w-24 rounded-medium object-cover" />
                 <svg x-show="!result.images.thumbnail" class="h-24 w-24 rounded-medium bg-blue-light text-blue-bright"
                   xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 36 36">
-                  <path fill="currentColor" stroke-width="1.5"
-                    d="M8.4 18C8.3 12.1 13 7.3 18.8 7.2h.5c3.1-.2 6.1 1 8.2 3.2l-2.9 3.4c-1.4-1.4-3.3-2.3-5.3-2.3-3.4 0-6.1 2.9-6.1 6.3v.2c0 3.6 2.5 6.6 6 6.6 2.1 0 4.1-.9 5.5-2.4l2.9 3c-2.1 2.5-5.3 3.9-8.5 3.7-5.8 0-10.6-4.6-10.7-10.4v-.4" />
+                  <path fill="currentColor" stroke-width="1.5" d=" M8.4 18C8.3 12.1 13 7.3 18.8 7.2h.5c3.1-.2 6.1 1 8.2 3.2l-2.9 3.4c-1.4-1.4-3.3-2.3-5.3-2.3-3.4
+                0-6.1 2.9-6.1 6.3v.2c0 3.6 2.5 6.6 6 6.6 2.1 0 4.1-.9 5.5-2.4l2.9 3c-2.1 2.5-5.3 3.9-8.5 3.7-5.8
+                0-10.6-4.6-10.7-10.4v-.4" />
                 </svg>
 
                 <div>
@@ -118,7 +121,8 @@
                   </p>
 
                 </div>
-              </a></template>
+              </a>
+            </template>
           </div>
         </div>
       </template>
