@@ -8,12 +8,12 @@ namespace App;
 
 use function Roots\bundle;
 
-add_action('template_redirect', function ($template) {
-    global $wp_query;
-    if ($wp_query->is_404) {
-        return '404!';
-    }
-});
+// add_action('template_redirect', function ($template) {
+//     global $wp_query;
+//     if ($wp_query->is_404) {
+//         return '404!';
+//     }
+// });
 
 function getParagraphs($content)
 {
