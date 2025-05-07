@@ -76,7 +76,7 @@
                     <div class="type-xs mb-2 text-blue"
                       x-html="new Date(result._EventStartDate).toLocaleDateString('en-GB', {
                         year: 'numeric',
-                        month: '2-digit',
+                        month: 'short',
                         day: '2-digit',
                       })">
                     </div>
