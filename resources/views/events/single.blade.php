@@ -14,13 +14,16 @@
           <p class="type-md text-blue-dark">
 
             {!! tribe_get_start_date($event->ID, false, get_option('date_format')) !!}
-            &nbsp; &mdash; &nbsp;
-            {!! tribe_get_start_date($event->ID, false, get_option('time_format')) !!}
 
-            @if (tribe_get_end_date($event->ID, false, get_option('time_format')) !==
-                    tribe_get_start_date($event->ID, false, get_option('time_format')))
-              -
-              {{ tribe_get_end_date($event->ID, false, get_option('time_format')) }}
+            @if (tribe_get_start_date($event->ID, false, get_option('time_format')) !== '00:00')
+              &nbsp; &mdash; &nbsp;
+              {!! tribe_get_start_date($event->ID, false, get_option('time_format')) !!}
+
+              @if (tribe_get_end_date($event->ID, false, get_option('time_format')) !==
+                      tribe_get_start_date($event->ID, false, get_option('time_format')))
+                -
+                {{ tribe_get_end_date($event->ID, false, get_option('time_format')) }}
+              @endif
             @endif
           </p>
         </div>
