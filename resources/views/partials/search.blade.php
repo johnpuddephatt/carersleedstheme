@@ -61,7 +61,7 @@
                 x-text="totalHits == 1 ? null : 's'"></span>.</p> --}}
 
             <template x-for="result in results"><a
-                x-show="['post', 'page', 'tribe_events'].includes(result.post_type) && (result.post_type !== 'tribe_events') || (!result.permalink.contains('__trashed') && new Date(result._EventStartDate) > new Date())"
+                x-show="['post', 'page', 'tribe_events'].includes(result.post_type) && ((result.post_type !== 'tribe_events') || (!result.permalink.contains('__trashed') && new Date(result._EventStartDate) > new Date()))"
                 :href="result.permalink"
                 class="flex items-center gap-4 border-b border-blue-light px-8 py-4 transition hover:bg-blue-light hover:bg-opacity-20">
                 <img x-show="result.images.thumbnail"
