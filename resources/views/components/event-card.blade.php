@@ -24,7 +24,8 @@
 
     <div class="leading-snug">
       {!! tribe_get_start_date($event->ID, false, get_option('date_format')) !!}
-      @if (tribe_get_start_date($event->ID, false, get_option('time_format')) !== '00:00')
+      {{-- @if (tribe_get_start_date($event->ID, false, get_option('time_format')) !== '00:00') --}}
+      @if (!tribe_event_is_all_day($event->ID))
         &nbsp; &mdash; &nbsp;
         {!! tribe_get_start_date($event->ID, false, get_option('time_format')) !!}
 
@@ -43,7 +44,6 @@
           <x-icon.marker class="h-6 w-6 text-white" />
         </span>
         {!! tribe_get_venue($event->ID) !!}
-
         @if (tribe_get_address($event->ID))
           {!! ', ' . tribe_get_address($event->ID) !!}
         @endif
