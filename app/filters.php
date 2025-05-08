@@ -86,7 +86,8 @@ add_filter('tribe_template_file', function ($file) {
         $path = 'single';
     }
 
-    if (in_array($path, ['default-template', 'single'])) {
+
+    if (in_array($path, ['default-template', 'single', 'summary'])) {
         return view()->exists("events.{$path}")
             ? view("events.{$path}")->makeLoader()
             : $file;

@@ -61,7 +61,7 @@
                 x-text="totalHits == 1 ? null : 's'"></span>.</p> --}}
 
             <template x-for="result in results"><a
-                x-show="['post', 'page', 'tribe_events'].includes(result.post_type) && ((result.post_type !== 'tribe_events') || (!result.permalink.includes('__trashed') && new Date(result._EventStartDate) > (new Date()).setHours(0,0,0,0)))"
+                x-show="['post', 'page', 'tribe_events', 'tribe_event_series'].includes(result.post_type) && ((result.post_type !== 'tribe_events') || (!result.permalink.includes('__trashed') && new Date(result._EventStartDate) > (new Date()).setHours(0,0,0,0)))"
                 :href="result.permalink"
                 class="flex items-center gap-4 border-b border-blue-light px-8 py-4 transition hover:bg-blue-light hover:bg-opacity-20">
                 <img x-show="result.images.thumbnail"
@@ -83,8 +83,10 @@
                         day: '2-digit',
                       })">
                     </div>
-
                   </template>
+
+                  <div x-show="result.post_type == 'tribe_event_series'" class="type-xs mb-2 text-blue">Multiple dates
+                  </div>
                   <div x-show="result.post_type == 'post'" class="type-xs mb-2 text-blue"
                     x-html="result.post_date_formatted"></div>
                   <h3 class="type-sm mb-2" x-html="result.post_title"></h3>
@@ -110,7 +112,7 @@
                     News
                   </p>
                   <p class="inline-flex items-center gap-0.5 rounded bg-gold-light py-0.5 pl-2 pr-3 text-sm font-semibold text-gold-dark"
-                    x-show="result.post_type == 'tribe_events'">
+                    x-show="['tribe_events', 'tribe_event_series'].includes(result.post_type)">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                       stroke="currentColor" class="size-3.5">
                       <path stroke-linecap="round" stroke-linejoin="round"
