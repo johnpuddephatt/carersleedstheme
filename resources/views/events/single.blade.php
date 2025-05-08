@@ -15,8 +15,10 @@
 
             {!! tribe_get_start_date($event->ID, false, get_option('date_format')) !!}
 
-            @if (tribe_get_start_date($event->ID, false, get_option('time_format')) !== '00:00')
-              &nbsp; &mdash; &nbsp;
+            &nbsp; &mdash; &nbsp;
+            @if (tribe_event_is_all_day($event->ID))
+              All day
+            @else
               {!! tribe_get_start_date($event->ID, false, get_option('time_format')) !!}
 
               @if (tribe_get_end_date($event->ID, false, get_option('time_format')) !==
