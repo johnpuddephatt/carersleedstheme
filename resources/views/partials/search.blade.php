@@ -1,4 +1,4 @@
-<div x-data="search" class="flex items-center" @keyup.escape.window="searchOpen = false"
+<div x-cloak x-data="search" class="flex items-center" @keyup.escape.window="searchOpen = false"
   x-effect="searchOpen ? (document.documentElement.style.overflow = 'hidden',setTimeout(()=> $refs.searchInput.focus(), 100)) : document.documentElement.style.overflow = 'auto';">
   <button class="inline-flex items-center gap-1" x-show="searchReady" @click="searchOpen = true">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"

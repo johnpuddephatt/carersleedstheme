@@ -42,10 +42,10 @@
         <span class="-mt-0.5 mr-1 inline-block rounded-full bg-gold p-0.5 md:mr-2">
           <x-icon.marker class="h-6 w-6 text-white" />
         </span>
-        {{ tribe_get_venue($event->ID) }}
+        {!! tribe_get_venue($event->ID) !!}
 
         @if (tribe_get_address($event->ID))
-          {{ ', ' . tribe_get_address($event->ID) }}
+          {!! ', ' . tribe_get_address($event->ID) !!}
         @endif
     @endif
   </div>
