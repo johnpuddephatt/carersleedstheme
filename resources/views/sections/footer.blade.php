@@ -45,11 +45,11 @@
     class="container mt-8 flex max-w-none flex-col-reverse justify-between gap-8 text-sm font-semibold text-white text-opacity-80 md:mt-16 md:items-end lg:flex-row">
     <p><a href="https://letsdance.agency" target="_blank">Website by Let’s Dance</a></p>
     <div class="md:text-right">
-      <div class="flex gap-2">
+      <div class="flex gap-2 md:ml-auto">
         <x-translate />
 
-        <svg xmlns="http://www.w3.org/2000/svg" width="367.34" height="130.16"
-          class="mb-2 h-auto w-28 text-white md:ml-auto" viewBox="0 0 367.34 130.16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="367.34" height="130.16" class="mb-2 h-auto w-28 text-white"
+          viewBox="0 0 367.34 130.16">
           <defs>
             <style>
               .prefix__cls-2a4d {

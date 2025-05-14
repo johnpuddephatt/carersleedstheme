@@ -26,12 +26,12 @@
     font-size: 1rem;
     color: black;
     font-family: inherit;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.5rem;
     border-radius: 5px;
   }
 
   .goog-te-gadget-simple::before {
-    content: "Translate";
+    content: "Translate this site";
     font-weight: 600;
     color: inherit;
     font-family: inherit;
