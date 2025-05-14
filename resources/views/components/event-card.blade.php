@@ -40,7 +40,7 @@
     @if (tribe_get_venue($event->ID))
 
       <p class="flex items-start leading-tight">
-        <span class="-mt-0.5 mr-1 inline-block rounded-full bg-gold p-0.5 md:mr-2">
+        <span class="mr-1 inline-block rounded-full bg-gold p-0.5 md:-mt-0.5 md:mr-2">
           <x-icon.marker class="h-4 w-4 text-white md:h-6 md:w-6" />
         </span>
         {!! tribe_get_venue($event->ID) !!}
