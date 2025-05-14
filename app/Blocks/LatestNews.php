@@ -169,7 +169,6 @@ class LatestNews extends Block
             'title' => get_field('title'),
             'news' => get_posts([
                 'posts_per_page' => get_field('number'),
-                'featured' => get_field('featured'),
                 'post_type' => 'post',
             ]),
             'read_more_link' => get_field('read_more_link'),
@@ -201,7 +200,6 @@ class LatestNews extends Block
                 'min' => 1,
                 'max' => 10,
             ])
-            ->addTrueFalse('featured')
             ->addTrueFalse('show_excerpt')
             ->addTrueFalse('show_image', [
                 'default_value' => true,

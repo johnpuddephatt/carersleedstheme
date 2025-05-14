@@ -1,6 +1,6 @@
 @if ($news)
   <div
-    class="wp-block {{ $block->classes }} bg-{{ $background_colour ?? 'transparent' }} {{ $block->block->align ? 'container' : null }} not-prose relative z-10 mx-auto my-16 px-4 2xl:my-24"
+    class="wp-block {{ $block->classes }} bg-{{ $background_colour ?? 'transparent' }} {{ $block->block->align ? 'container' : null }} not-prose relative z-10 mx-auto my-16 px-4 md:px-0 2xl:my-24"
     style="{{ $block->inlineStyle }}">
 
     @if ($title)

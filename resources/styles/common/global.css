@@ -93,6 +93,11 @@ a.active {
   margin-right: auto;
 }
 
+.page-template-default .wp-block-latest-events,
+.page-template-default .wp-block-latest-news {
+  @apply !px-0;
+}
+
 .embedded-iframe iframe {
   position: absolute;
   top: 0;
