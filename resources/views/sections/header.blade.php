@@ -2,10 +2,10 @@
   <div class="border-green bg-blue pb-2 pt-3 text-white md:border-b md:bg-white md:text-blue-dark lg:pb-3 lg:pt-6">
     <div class="container flex max-w-none items-center justify-center md:justify-between">
       <div class="type-xs md:type-sm prose">
-        {!! get_field('header_text', 'option') !!}
+        {!! strip_tags(get_field('header_text', 'option'), '<a><strong><em><b><i>') !!}
       </div>
       <nav class="hidden lg:block">
-        <ul class="flex flex-row items-center gap-8">
+        <ul class="flex flex-row items-center gap-4 xl:gap-8">
           @foreach ($secondaryNavigation as $item)
             <li>
               <a class="{{ $item->classes ?? 'text-blue-dark' }} inline-block"
@@ -49,7 +49,7 @@
 
           <x-logo class="absolute left-1/2 top-0 -translate-x-1/2 py-3 lg:hidden" :invert="true" />
 
-          <ul class="flex flex-col gap-4 max-lg:container lg:flex-row lg:gap-12">
+          <ul class="flex flex-col gap-4 max-lg:container lg:flex-row lg:gap-8 xl:gap-12">
             @foreach ($primaryNavigation as $item)
               <li>
                 <a class="max-w-lg:text-white inline-block text-lg font-semibold text-white max-lg:text-2xl lg:py-2 lg:text-blue-dark"
@@ -74,7 +74,7 @@
 
       @include('partials.search')
       <button aria-label="Talk to us" title="Talk to us"
-        @click="window.LC_API.chat_window_maximized() ? window.LC_API.open_chat_window() : window.LC_API.close_chat_window();"
+        @click="window.LC_API.chat_window_maximized() ? window.LC_API.open_chat_window() : window.LC_API.close_chat();"
         class="rounded-full border-2 border-blue-light p-2 text-blue">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
           stroke="currentColor" class="size-6">
