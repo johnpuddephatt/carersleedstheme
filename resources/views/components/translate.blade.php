@@ -26,7 +26,7 @@
     font-size: 1rem;
     color: black;
     font-family: inherit;
-    padding: 0.5rem 1.5rem;
+    padding: 0.6rem 1.5rem;
     border-radius: 5px;
   }
 
