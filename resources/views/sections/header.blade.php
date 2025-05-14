@@ -62,7 +62,7 @@
       @include('partials.search')
       <button aria-label="Talk to us" title="Talk to us"
         @click="window.LC_API.chat_window_maximized() ? window.LC_API.open_chat_window() : window.LC_API.close_chat();"
-        class="rounded-full border-2 border-blue-light p-2 text-blue">
+        class="rounded-full border-2 border-blue-light p-2 text-blue transition hover:border-blue-dark">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
           stroke="currentColor" class="size-6">
           <path " stroke-linecap="round" stroke-linejoin="round"
