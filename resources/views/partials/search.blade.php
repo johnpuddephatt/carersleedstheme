@@ -1,13 +1,15 @@
 <div x-cloak x-data="search" class="flex items-center" @keyup.escape.window="searchOpen = false"
   x-effect="searchOpen ? (document.documentElement.style.overflow = 'hidden',setTimeout(()=> $refs.searchInput.focus(), 100)) : document.documentElement.style.overflow = 'auto';">
-  <button class="inline-flex items-center gap-1" x-show="searchReady" @click="searchOpen = true">
+  <button aria-label="Open search panel" title="Search"
+    class="inline-flex items-center gap-1 rounded-full border-2 border-blue-light p-2" x-show="searchReady"
+    @click="searchOpen = true">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-      class="size-6">
-      <path stroke-linecap="round" stroke-linejoin="round"
+      class="size-6 text-blue">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
         d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
     </svg>
 
-    Search</button>
+  </button>
 
   <div x-show="searchOpen" x-transition.opacity @click.self="searchOpen = false"
     class="fixed inset-0 z-40 bg-green-light bg-opacity-95">
