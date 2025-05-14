@@ -16,7 +16,7 @@
 
       {!! get_the_post_thumbnail($event->ID, 'square', [
           'sizes' => '25vw',
-          'class' => ' aspect-square h-full w-full object-cover transition duration-1000 group-hover:scale-105',
+          'class' => ' aspect-square  w-full object-cover transition duration-1000 group-hover:scale-105',
       ]) !!}
     </div>
   @endif
