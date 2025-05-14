@@ -4,6 +4,9 @@
 @import '_clips';
 @import '_forms';
 
+.button {
+  @apply border-blue-bright inline-block rounded-small border-2 px-4 lg:px-8 py-2 font-semibold no-underline transition duration-300;
+}
 img:not([src]) {
   display: none;
 }
