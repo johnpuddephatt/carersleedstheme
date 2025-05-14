@@ -7,7 +7,7 @@
           match ($variant) {
               'outlined' => 'border-2 border-gold',
               default
-                  => ' bg-gold-light after:absolute after:right-0 after:top-1 md:after:right-1 md:after:top-2 after:block after:size-6 md:after:size-8 after:rounded-full after:bg-gold',
+                  => ' bg-gold-light after:absolute after:size-0 after:right-1 after:top-2 after:block md:after:size-6 md:after:size-8 after:rounded-full after:bg-gold',
           },
   ]) }}>
 
