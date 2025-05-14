@@ -29,19 +29,6 @@
 
       </a>
 
-      <button @click="menuOpen = true" :class="{ 'hidden': menuOpen }"
-        class="inline-block rounded-small border-2 border-blue-bright px-6 py-2 font-semibold !no-underline transition duration-300 hover:bg-green hover:bg-opacity-20 lg:hidden"
-        aria-label="Open navigation menu" title="Open navigation menu">Menu
-      </button>
-
-      <button @click="menuOpen = false" :class="{ 'hidden': !menuOpen }" class="absolute -top-2 right-4 z-40 lg:hidden"
-        aria-label="Close navigation menu" title="Close navigation menu"><svg xmlns="http://www.w3.org/2000/svg"
-          fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="size-12 rounded-full bg-white bg-opacity-75 p-2 transition hover:bg-opacity-100 hover:text-black">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-
       @if ($primaryNavigation)
 
         <nav x-cloak :class="{ 'max-lg:translate-x-full': !menuOpen }"
@@ -49,7 +36,7 @@
 
           <x-logo class="absolute left-1/2 top-0 -translate-x-1/2 py-3 lg:hidden" :invert="true" />
 
-          <ul class="flex flex-col gap-4 max-lg:container lg:flex-row lg:gap-8 xl:gap-12">
+          <ul class="flex flex-col gap-4 max-lg:container lg:flex-row lg:gap-6 xl:gap-12">
             @foreach ($primaryNavigation as $item)
               <li>
                 <a class="max-w-lg:text-white inline-block text-lg font-semibold text-white max-lg:text-2xl lg:py-2 lg:text-blue-dark"
@@ -85,6 +72,19 @@
             2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0
             11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76
             3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+        </svg>
+      </button>
+
+      <button @click="menuOpen = true" :class="{ 'hidden': menuOpen }"
+        class="inline-block rounded-small border-2 border-blue-bright px-6 py-2 font-semibold !no-underline transition duration-300 hover:bg-green hover:bg-opacity-20 lg:hidden"
+        aria-label="Open navigation menu" title="Open navigation menu">Menu
+      </button>
+
+      <button @click="menuOpen = false" :class="{ 'hidden': !menuOpen }" class="absolute -top-2 right-4 z-40 lg:hidden"
+        aria-label="Close navigation menu" title="Close navigation menu"><svg xmlns="http://www.w3.org/2000/svg"
+          fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="size-12 rounded-full bg-white bg-opacity-75 p-2 transition hover:bg-opacity-100 hover:text-black">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
     </div>
