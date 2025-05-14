@@ -6,7 +6,10 @@
   <h1 class="type-2xl mb-2 text-blue-dark md:mb-4">{!! $series->post_title !!}</h1>
 </div>
 
-@foreach ($events as $event)
-  <x-event-card :event="$event" class="mb-4" />
-@endforeach
+<div class="grid gap-4">
+
+  @foreach ($events as $event)
+    <x-event-card :event="$event" class="mb-4" />
+  @endforeach
+</div>
 {{-- @endsection --}}
