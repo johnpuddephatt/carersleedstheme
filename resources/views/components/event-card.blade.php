@@ -12,12 +12,11 @@
   ]) }}>
 
   @if (has_post_thumbnail($event->ID, 'square'))
-    <div class="relative h-full w-32 max-w-[30%] flex-none overflow-hidden bg-gold md:w-48">
+    <div class="h-full w-32 max-w-[30%] flex-none overflow-hidden bg-gold md:w-48">
 
       {!! get_the_post_thumbnail($event->ID, 'square', [
           'sizes' => '25vw',
-          'class' =>
-              ' aspect-square h-full absolute inset-0 w-full object-cover transition duration-1000 group-hover:scale-105',
+          'class' => ' aspect-square min-h-full w-full object-cover transition duration-1000 group-hover:scale-105',
       ]) !!}
     </div>
   @endif
