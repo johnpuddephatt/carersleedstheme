@@ -1,4 +1,4 @@
-<div x-cloak x-data="search" class="ml-4 flex items-center" @keyup.escape.window="searchOpen = false"
+<div x-cloak x-data="search" class="ml-4 items-center lg:flex xl:ml-8" @keyup.escape.window="searchOpen = false"
   x-effect="searchOpen ? (document.documentElement.style.overflow = 'hidden',setTimeout(()=> $refs.searchInput.focus(), 100)) : document.documentElement.style.overflow = 'auto';">
   <button aria-label="Open search panel" title="Search"
     class="inline-flex items-center gap-1 rounded-full border-2 border-blue-light p-2" x-show="searchReady"
