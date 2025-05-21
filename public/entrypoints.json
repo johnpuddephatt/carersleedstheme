@@ -1,15 +1,21 @@
 {
   "app": {
     "js": [
-      "js/runtime.js",
-      "js/app.js"
+      "js/runtime.c039ed.js",
+      "js/app.7d1847.js"
+    ],
+    "css": [
+      "css/app.0510c3.css"
     ],
     "dependencies": []
   },
   "editor": {
     "js": [
-      "js/runtime.js",
-      "js/editor.js"
+      "js/runtime.c039ed.js",
+      "js/editor.eabed1.js"
+    ],
+    "css": [
+      "css/editor.48bd6a.css"
     ],
     "dependencies": [
       "wp-data",
