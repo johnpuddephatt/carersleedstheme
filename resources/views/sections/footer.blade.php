@@ -43,20 +43,22 @@
   </div>
   <div
     class="container mt-8 flex max-w-none flex-col-reverse justify-between gap-8 text-sm font-semibold text-white text-opacity-80 md:mt-16 md:items-end lg:flex-row">
-    <p><a href="https://letsdance.agency" target="_blank">Website by Let’s Dance</a></p>
-
-    <div class="md:text-right">
-      <p class="mb-4 flex items-center justify-end gap-1">
+    <div>
+      <p><a href="https://letsdance.agency" target="_blank">Website by Let’s Dance</a></p>
+      <p class="mt-1 flex items-center justify-end gap-1">
         Chat powered by:
         <a href="https://www.livechat.com/" target="_blank" class=""><img
-            class="h-auto w-[7rem] opacity-80 hover:opacity-100"
+            class="mt-0.5 h-auto w-[6rem] opacity-80 hover:opacity-100"
             src="https://cdn.livechatinc.com/website/media/img/resources/logos/livechat-white.svg" alt="LiveChat®"></a>
         <a href="https://www.chatbot.com/">
           <img src="https://cdn.livechatinc.com/website/media/img/resources/logos/chatbot-white-blue.svg"
-            class="h-auto w-[5.5rem] opacity-80 hover:opacity-100" alt="ChatBot"
+            class="mt-0.5 h-auto w-[4.75rem] opacity-80 hover:opacity-100" alt="ChatBot"
             style="filter: saturate(0%) brightness(10);">
         </a>
       </p>
+    </div>
+
+    <div class="md:text-right">
 
       <div class="flex justify-end gap-4 md:ml-auto">
         <x-translate />
