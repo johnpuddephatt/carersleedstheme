@@ -44,7 +44,13 @@
   <div
     class="container mt-8 flex max-w-none flex-col-reverse justify-between gap-8 text-sm font-semibold text-white text-opacity-80 md:mt-16 md:items-end lg:flex-row">
     <p><a href="https://letsdance.agency" target="_blank">Website by Let’s Dance</a></p>
+
     <div class="md:text-right">
+
+      <a href="https://www.livechat.com/" target="_blank" class="group mb-2 flex items-center justify-end">Web chat
+        by<img class="mt-0.5 h-auto w-28 opacity-80 group-hover:opacity-100"
+          src="https://cdn.livechatinc.com/website/media/img/resources/logos/livechat-white.svg" alt="LiveChat®"></a>
+
       <div class="flex gap-4 md:ml-auto">
         <x-translate />
 

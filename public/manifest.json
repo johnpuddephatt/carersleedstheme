@@ -1,13 +1,12 @@
 {
-  "app.css": "css/app.7c6ca1.css",
-  "app.js": "js/app.7d1847.js",
-  "editor.css": "css/editor.7822a0.css",
-  "editor.js": "js/editor.eabed1.js",
-  "runtime.js": "js/runtime.c039ed.js",
-  "fonts/Raleway-SemiBold.woff2": "fonts/Raleway-SemiBold.211d6f.woff2",
-  "fonts/Raleway-Bold.woff2": "fonts/Raleway-Bold.2804bc.woff2",
-  "fonts/Raleway-Medium.woff2": "fonts/Raleway-Medium.a0bf7e.woff2",
-  "fonts/Raleway-ExtraBold.woff2": "fonts/Raleway-ExtraBold.f58b33.woff2",
+  "app.js": "js/app.js",
+  "editor.js": "js/editor.js",
+  "runtime.js": "js/runtime.js",
+  "fonts/Raleway-SemiBold.woff2": "fonts/Raleway-SemiBold.woff2",
+  "fonts/Raleway-Bold.woff2": "fonts/Raleway-Bold.woff2",
+  "fonts/Raleway-Medium.woff2": "fonts/Raleway-Medium.woff2",
+  "fonts/Raleway-ExtraBold.woff2": "fonts/Raleway-ExtraBold.woff2",
   "../theme.json": "../theme.json",
+  "hmr.json": "hmr.json",
   "entrypoints.json": "entrypoints.json"
 }
