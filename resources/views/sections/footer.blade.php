@@ -51,7 +51,7 @@
         by<img class="mt-0.5 h-auto w-28 opacity-80 group-hover:opacity-100"
           src="https://cdn.livechatinc.com/website/media/img/resources/logos/livechat-white.svg" alt="LiveChat®"></a>
 
-      <div class="flex gap-4 md:ml-auto">
+      <div class="flex justify-end gap-4 md:ml-auto">
         <x-translate />
 
         <svg xmlns="http://www.w3.org/2000/svg" width="367.34" height="130.16" class="mb-2 h-auto w-28 text-white"
