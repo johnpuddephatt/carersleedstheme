@@ -45,7 +45,7 @@
     class="container mt-8 flex max-w-none flex-col-reverse justify-between gap-8 text-sm font-semibold text-white text-opacity-80 md:mt-16 md:items-end lg:flex-row">
     <div>
       <p><a href="https://letsdance.agency" target="_blank">Website by Let’s Dance</a></p>
-      <p class="mt-1 flex items-center justify-end gap-0.5">
+      <p class="mt-0.5 flex items-center justify-end gap-0.5">
         Chat powered by:
         <a href="https://www.livechat.com/" target="_blank" class=""><img
             class="mt-0.5 h-auto w-[6rem] opacity-80 hover:opacity-100"
