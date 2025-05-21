@@ -47,10 +47,6 @@
 
     <div class="md:text-right">
 
-      <a href="https://www.livechat.com/" target="_blank" class="group mb-2 flex items-center justify-end">Web chat
-        by<img class="mt-0.5 h-auto w-28 opacity-80 group-hover:opacity-100"
-          src="https://cdn.livechatinc.com/website/media/img/resources/logos/livechat-white.svg" alt="LiveChat®"></a>
-
       <div class="flex justify-end gap-4 md:ml-auto">
         <x-translate />
 
@@ -81,6 +77,18 @@
             class="prefix__cls-2a4d" transform="translate(0 .08)" />
         </svg>
       </div>
+
+      <p class="mb-4 flex items-center justify-end gap-1">
+        Chat powered by:
+        <a href="https://www.livechat.com/" target="_blank" class=""><img
+            class="h-auto w-[7rem] opacity-80 hover:opacity-100"
+            src="https://cdn.livechatinc.com/website/media/img/resources/logos/livechat-white.svg" alt="LiveChat®"></a>
+        <a href="https://www.chatbot.com/">
+          <img src="https://cdn.livechatinc.com/website/media/img/resources/logos/chatbot-white-blue.svg"
+            class="h-auto w-[5.5rem] opacity-80 hover:opacity-100" alt="ChatBot"
+            style="filter: saturate(0%) brightness(10);">
+        </a>
+      </p>
 
       @if ($footerNavigation)
         <div class="mt-4 text-sm text-opacity-90">
