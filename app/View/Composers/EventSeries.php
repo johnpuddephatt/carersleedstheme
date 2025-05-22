@@ -24,7 +24,7 @@ class EventSeries extends Composer
     public function override()
     {
         global $post;
-        $event_query = tribe_events()->where('series', $post->ID)->where('starts_after', 'now');
+        $events_query = tribe_events()->where('series', $post->ID)->where('starts_after', 'now');
         return [
             'series' => $post,
             'event_count' => $events_query->per_page(9999)->count(),
