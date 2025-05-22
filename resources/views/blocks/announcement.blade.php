@@ -18,7 +18,7 @@
       @elseif ($image)
         {!! wp_get_attachment_image($image, 'landscape', false, [
             'sizes' => '16rem',
-            'class' => ' h-auto group-hover:scale-105 ease-in-out  transition-transform duration-1000 w-96',
+            'class' => ' h-full group-hover:scale-105 ease-in-out  transition-transform duration-1000 w-96',
         ]) !!}
       @endif
     </div>
