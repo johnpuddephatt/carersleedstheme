@@ -1,15 +1,23 @@
 {{-- @extends('layouts.app') @section('content') --}}
-<div class="pb-16 pt-32">
+<div class="pt-32">
   <a class="type-md mb-4 inline-block text-blue" href="{{ get_permalink(get_option('page_for_events')) }}">Events
     &rsaquo;
   </a>
   <h1 class="type-2xl mb-2 text-blue-dark md:mb-4">{!! $series->post_title !!}</h1>
 </div>
 
-<div class="grid gap-4">
+<div id="events" class="grid gap-4 pt-16">
 
   @foreach ($events as $event)
     <x-event-card :event="$event" class="mb-4" />
   @endforeach
+</div>
+
+<div class="mt-12 text-right text-xl">
+  {!! paginate_links([
+      'prev_text' => '<',
+      'next_text' => '>',
+      'add_fragment' => '#events',
+  ]) !!}
 </div>
 {{-- @endsection --}}

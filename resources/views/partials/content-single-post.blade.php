@@ -1,4 +1,4 @@
-<div class="relative overflow-hidden border-t border-green pb-72">
+<div class="relative overflow-hidden pb-72">
 
   <div class="container flex flex-col-reverse gap-4 lg:flex-row lg:items-end">
     <div class="relative z-10 pb-8 lg:w-1/2 lg:pb-12">
