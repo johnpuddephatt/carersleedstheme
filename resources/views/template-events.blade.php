@@ -81,7 +81,7 @@
     {!! paginate_links([
         'prev_text' => '<',
         'next_text' => '>',
-        'total' => round($event_count / $per_page),
+        'total' => ceil($event_count / $per_page),
         'add_fragment' => '#events',
     ]) !!}
   </div>
