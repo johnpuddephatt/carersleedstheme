@@ -6,13 +6,13 @@
 
   {!! $block->preview || ($type == 'link' && !$link) ? '<div' : '<a' !!} href="{{ $type == 'page' ? get_the_permalink($page) : $link }}"
   class="bg-{{ $background_colour }} {{ $block->block->align == 'full' ? 'my-12 2xl:my-16' : 'mx-4  rounded-medium ' }} relative z-10 block cursor-pointer overflow-hidden !font-normal">
-  <div class="group relative flex items-center">
-    <div class="hidden w-64 max-w-[50%] overflow-hidden md:block">
+  <div class="group relative flex items-stretch">
+    <div class="relative hidden w-64 max-w-[50%] overflow-hidden md:block">
       @if ($type == 'page')
         {!! get_the_post_thumbnail($page, 'landscape', [
             'sizes' => '16rem',
             'class' =>
-                ' h-auto group-hover:scale-105 ease-in-out transition-transform duration-1000' .
+                ' h-full group-hover:scale-105 ease-in-out transition-transform duration-1000' .
                 ($block->block->align ? ' w-96' : ' w-64'),
         ]) !!}
       @elseif ($image)
