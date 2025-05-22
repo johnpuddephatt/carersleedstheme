@@ -30,6 +30,8 @@ class EventSeries extends Composer
             'event_count' => $events_query->per_page(9999)->count(),
             'per_page' => get_option('posts_per_page'),
             'events' => $events_query->page((int) get_query_var('paged'))
+                ->per_page(get_option('posts_per_page'))
+
                 ->all()
         ];
     }
