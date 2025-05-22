@@ -15,6 +15,8 @@
 
 <div class="mt-12 text-right text-xl">
   {!! paginate_links([
+      'base' => getCurrentUrl(),
+  
       'prev_text' => '<',
       'next_text' => '>',
       'total' => ceil($event_count / $per_page),
