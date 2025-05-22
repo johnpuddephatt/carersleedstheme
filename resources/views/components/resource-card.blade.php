@@ -16,7 +16,7 @@
 
         @foreach (get_the_terms($resource->ID, 'resource_type') as $term)
           <div
-            class="hidden rounded-full bg-white bg-opacity-60 px-2.5 py-0.5 text-sm !font-semibold lowercase antialiased lg:inline-block">
+            class="type-2xs hidden rounded-full bg-white bg-opacity-60 px-2.5 py-0.5 lowercase antialiased lg:inline-block">
             {{ $term->name }}
           </div>
         @endforeach

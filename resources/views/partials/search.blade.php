@@ -93,7 +93,7 @@
                     x-html="result.post_date_formatted"></div>
                   <h3 class="type-sm mb-2" x-html="result.post_title"></h3>
 
-                  <p class="inline-flex items-center gap-0.5 rounded bg-blue-light py-0.5 pl-2 pr-3 text-sm font-semibold text-blue-dark"
+                  <p class="type-2xs inline-flex items-center gap-0.5 rounded bg-blue-light py-0.5 pl-2 pr-3 text-blue-dark"
                     x-show="result.post_type == 'page'">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                       stroke="currentColor" class="size-3.5">
@@ -103,7 +103,7 @@
 
                     Page
                   </p>
-                  <p class="inline-flex items-center gap-0.5 rounded bg-green-light py-0.5 pl-2 pr-3 text-sm font-semibold text-green-dark"
+                  <p class="type-2xs inline-flex items-center gap-0.5 rounded bg-green-light py-0.5 pl-2 pr-3 text-green-dark"
                     x-show="result.post_type == 'post'">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                       stroke="currentColor" class="size-3.5">
@@ -113,7 +113,7 @@
 
                     News
                   </p>
-                  <p class="inline-flex items-center gap-0.5 rounded bg-gold-light py-0.5 pl-2 pr-3 text-sm font-semibold text-gold-dark"
+                  <p class="type-2xs inline-flex items-center gap-0.5 rounded bg-gold-light py-0.5 pl-2 pr-3 text-gold-dark"
                     x-show="['tribe_events', 'tribe_event_series'].includes(result.post_type)">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                       stroke="currentColor" class="size-3.5">

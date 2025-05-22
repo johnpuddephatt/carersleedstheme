@@ -27,7 +27,7 @@
     <h3 class="type-sm md:type-md text-balance">{{ $post->post_title }}
     </h3>
     @if ($show_excerpt)
-      <p class="mt-3 hidden max-w-3xl md:block">{!! wp_trim_words(get_the_excerpt($post->ID), 15) !!}</p>
+      <p class="mt-3 hidden max-w-3xl leading-snug md:block">{!! wp_trim_words(get_the_excerpt($post->ID), 20) !!}</p>
     @endif
 
   </div>

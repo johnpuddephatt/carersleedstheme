@@ -22,4 +22,8 @@
   .type-xs {
     @apply font-semibold leading-snug;
   }
+
+  .type-2xs {
+    @apply text-sm font-medium leading-snug;
+  }
 }

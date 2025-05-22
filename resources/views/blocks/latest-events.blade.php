@@ -1,13 +1,13 @@
 @if ($events)
   <div
-    class="wp-block not-prose {{ $block->classes }} bg-{{ $background_colour ?? 'transparent' }} {{ $block->block->align ? 'container' : null }} relative z-10 mx-auto my-16 px-4 md:px-0 2xl:my-24"
+    class="wp-block not-prose {{ $block->classes }} bg-{{ $background_colour ?? 'transparent' }} {{ $block->block->align ? 'container' : null }} relative z-10 mx-auto my-16 px-4 xl:px-0 2xl:my-24"
     style="{{ $block->inlineStyle }}">
 
     @if ($title)
       <h2 class="type-xl mb-12 text-center text-blue-dark md:text-left">{{ $title }}</h2>
     @endif
 
-    <div class="{{ $block->block->align ? 'md:grid-cols-2' : null }} mb-12 grid gap-4 md:gap-x-12 md:gap-y-8">
+    <div class="{{ $block->block->align ? 'md:grid-cols-2' : null }} mb-12 grid gap-4 xl:gap-x-12 xl:gap-y-8">
       @foreach ($events as $event)
         <x-event-card :event="$event" />
       @endforeach

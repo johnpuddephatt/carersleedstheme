@@ -1,4 +1,4 @@
-<footer class="bg-blue pb-4 pt-12 text-white antialiased md:pt-24 lg:pb-8">
+<footer class="bg-blue pb-4 pt-12 text-white md:pt-24 lg:pb-8">
   <div class="container flex max-w-none flex-col justify-between gap-8 md:gap-16 lg:flex-row">
     <div>
       <x-logo class="!w-40 md:!w-48" :invert="true" />
@@ -42,7 +42,7 @@
 
   </div>
   <div
-    class="container mt-8 flex max-w-none flex-col-reverse justify-between gap-8 text-sm font-semibold text-white text-opacity-80 md:mt-16 md:items-end lg:flex-row">
+    class="type-2xs container mt-8 flex max-w-none flex-col-reverse justify-between gap-8 text-white text-opacity-80 md:mt-16 md:items-end lg:flex-row">
     <div>
       <p><a href="https://letsdance.agency" target="_blank">Website by Let’s Dance</a></p>
       <p class="mt-0.5 flex items-center justify-end gap-0.5">
@@ -92,7 +92,7 @@
       </div>
 
       @if ($footerNavigation)
-        <div class="mt-4 text-sm text-opacity-90">
+        <div class="type-2xs mt-4 text-opacity-90">
           <nav>
             <ul class="flex flex-row gap-3 md:justify-end">
 

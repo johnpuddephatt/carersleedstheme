@@ -39,14 +39,14 @@
     <h3 class="type-sm md:type-md mb-3 mt-2 text-balance !text-black">{{ $event->post_title }}</h3>
     @if (tribe_get_venue($event->ID))
 
-      <p class="flex items-start leading-tight">
-        <span class="mr-1 inline-block rounded-full bg-gold p-0.5 md:-mt-0.5 md:mr-2">
-          <x-icon.marker class="h-4 w-4 text-white md:h-6 md:w-6" />
+      <p class="type-2xs flex items-start leading-tight">
+        <span class="mr-0.5 inline-block rounded-full bg-gold p-0.5 md:-mt-0.5 md:mr-1">
+          <x-icon.marker class="h-4 w-4 text-white md:h-5 md:w-5" />
         </span>
-        {!! tribe_get_venue($event->ID) !!}
-        @if (tribe_get_address($event->ID))
-          {!! ', ' . tribe_get_address($event->ID) !!}
-        @endif
+        <!-- prettier-ignore -->
+        {!! tribe_get_venue($event->ID) !!}@if (tribe_get_address($event->ID)){!! ', ' . tribe_get_address($event->ID) !!}
+        <!-- end-prettier-ignore -->
+    @endif
     @endif
   </div>
 </a>
