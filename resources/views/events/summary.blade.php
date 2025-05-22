@@ -15,9 +15,8 @@
 
 <div class="mt-12 text-right text-xl">
 
-  {{ get_permalink(get_queried_object_id()) }}
-
   {!! paginate_links([
+      'base' => get_permalink(get_queried_object_id()),
       'prev_text' => '<',
       'next_text' => '>',
       'total' => ceil($event_count / $per_page),
