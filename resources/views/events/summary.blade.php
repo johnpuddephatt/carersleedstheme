@@ -15,13 +15,11 @@
 
 <div class="mt-12 text-right text-xl">
 
-  {{ str_replace(9999, '%#%', esc_url(get_pagenum_link(9999))) }}
   {!! paginate_links([
       'base' => get_permalink(get_queried_object_id()) . 'page/%#%/',
-  
       'prev_text' => '<',
       'next_text' => '>',
-  
+      'add_fragment' => '#events',
       'total' => ceil($event_count / $per_page),
       'current' => max(1, get_query_var('paged')),
   ]) !!}
