@@ -19,6 +19,8 @@
       'base' => get_permalink(get_queried_object_id()),
       'prev_text' => '<',
       'next_text' => '>',
+      'format' => '?paged=%#%',
+  
       'total' => ceil($event_count / $per_page),
       'current' => max(1, get_query_var('paged')),
       'add_fragment' => '#events',
