@@ -24,10 +24,13 @@ class EventSeries extends Composer
     public function override()
     {
         global $post;
+        $event_query = tribe_events()->where('series', $post->ID)->where('starts_after', 'now');
         return [
             'series' => $post,
-            'events' => tribe_events()->where('series', $post->ID)->where('starts_after', 'now')->all()
-
+            'event_count' => $events_query->per_page(9999)->count(),
+            'per_page' => get_option('posts_per_page'),
+            'events' => $event_query->page((int) get_query_var('paged'))
+                ->all()
         ];
     }
 }
