@@ -1,4 +1,6 @@
-<!doctype html>
+Site offline
+
+{{-- <!doctype html>
 <html @php(language_attributes()) x-data="{ menuOpen: false }" :class="{ 'overflow-hidden': menuOpen }">
 
 <head>
@@ -62,7 +64,7 @@
         @yield('sidebar')
       </aside>
     @endif
-    {{-- @include('sections.footer') --}}
+    @include('sections.footer')
     @include('partials.cookies')
   </div>
 
@@ -71,4 +73,4 @@
 
 </body>
 
-</html>
+</html> --}}
