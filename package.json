@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@algolia/client-search": "^5.23.4",
-    "@shufo/prettier-plugin-blade": "^1.14.1",
+    "@shufo/prettier-plugin-blade": "^1.15.3",
     "@tailwindcss/typography": "^0.5.15",
     "algoliasearch": "^5.23.4",
     "alpinejs": "^3.14.3"
