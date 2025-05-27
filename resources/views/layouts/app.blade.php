@@ -62,7 +62,7 @@
         @yield('sidebar')
       </aside>
     @endif
-    @include('sections.footer')
+    {{-- @include('sections.footer') --}}
     @include('partials.cookies')
   </div>
 

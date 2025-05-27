@@ -9,7 +9,7 @@
     <div class="lg:ml-auto">
       <div class="flex flex-col gap-8 md:gap-16 lg:flex-row">
 
-        {{-- <div class="flex flex-row items-start gap-2 md:mt-2 lg:justify-end">
+        <div class="flex flex-row items-start gap-2 md:mt-2 lg:justify-end">
           @if (get_field('social_media', 'option'))
             @foreach (get_field('social_media', 'option') as $account)
               <a rel="noopener" class="inline-block rounded-full bg-white p-2 text-blue"
@@ -18,7 +18,7 @@
               </a>
             @endforeach
           @endif
-        </div> --}}
+        </div>
 
         @if ($footerNavigation2)
           <div class="">
