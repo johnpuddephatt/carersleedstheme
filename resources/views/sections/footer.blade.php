@@ -10,14 +10,7 @@
       <div class="flex flex-col gap-8 md:gap-16 lg:flex-row">
 
         <div class="flex flex-row items-start gap-2 md:mt-2 lg:justify-end">
-          @if (get_field('social_media', 'option'))
-            @foreach (get_field('social_media', 'option') as $account)
-              <a rel="noopener" class="inline-block rounded-full bg-white p-2 text-blue"
-                aria-label="{{ $account['Type'] }} link" href="{{ $account['link'] }}" target="_blank">
-                <x-dynamic-component :component="'icon.' . strtolower($account['Type'])" class="mt-4" />
-              </a>
-            @endforeach
-          @endif
+
         </div>
 
         @if ($footerNavigation2)
