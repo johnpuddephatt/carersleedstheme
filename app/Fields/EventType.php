@@ -21,7 +21,7 @@ class EventType extends Field
                     [
                         '' => 'Select an event type'
                     ],
-                    array_column(get_field('event_types', 'option'), 'title', 'slug'),
+                    array_column(get_field('event_types', 'option') ?? [], 'title', 'slug'),
                     [
                         'other' => 'Other'
                     ]
