@@ -17,7 +17,11 @@ class Volunteering extends Field
         $fields
             ->setLocation('post_type', '==', 'volunteering')
             ->addText('location')
-            ->addText('hours');
+            ->addText('hours')
+            ->addDateTimePicker('deadline', [
+                'return_format' => 'Y-m-d H:i:s',
+                'required' => true
+            ]);
 
         return $fields->build();
     }
