@@ -67,8 +67,10 @@ if (document.querySelector('.application-form-job-id input[type="hidden"]')) {
     alert(
       'A job application form was loaded but it is not clear what job it is for. The job ID should be specified in the page url with: \n\n ?job_id=123',
     );
+  window.location.href = window.location.host;
 } else if (window.jobApplicationID) {
   alert(
     "A job application ID was found, but a corresponding form element was not found. Please ensure the form contains a hidden element with a class of 'application-form-job-id",
   );
+  window.location.href = window.location.host;
 }

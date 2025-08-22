@@ -11,5 +11,4 @@
       </p>
     @endforelse
   </div>
-  {{ $type }}
 </div>
