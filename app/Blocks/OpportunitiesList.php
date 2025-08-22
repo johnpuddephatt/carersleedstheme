@@ -144,6 +144,7 @@ class OpportunitiesList extends Block
     {
         return [
             'title' => get_field('title'),
+            'type' => get_field('type'),
             'opportunities' => get_posts([
                 'post_type' => get_field('type') ?: 'opportunity',
                 'posts_per_page' => get_field('number') ?: 3,
