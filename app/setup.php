@@ -125,7 +125,7 @@ add_action('admin_menu', function () {
 });
 
 add_action('admin_init', function () {
-    $options_pages = ['page_for_events', 'page_for_applications', 'page_for_opportunities', 'page_for_404'];
+    $options_pages = ['page_for_events', 'page_for_applications', 'page_for_opportunities', 'page_for_404', 'page_for_volunteering_applications', 'page_for_volunteering'];
 
     foreach ($options_pages as $option) {
         add_settings_field($option, ucfirst(str_replace('_', ' ', $option)), function ($args) use ($option) {
