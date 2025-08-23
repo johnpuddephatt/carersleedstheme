@@ -72,5 +72,5 @@ if (document.querySelector('.application-form-job-id input[type="hidden"]')) {
   alert(
     "A job application ID was found, but a corresponding form element was not found. Please ensure the form contains a hidden element with a class of 'application-form-job-id",
   );
-  window.location.href = 'https://' + window.location.host;
+  // window.location.href = 'https://' + window.location.host;
 }
