@@ -4,7 +4,7 @@
 @section('title', 'foo')
 @extends('layouts.app') @section('content')
 
-  @if (!isset($_GET['job_id']) || get_post_type($_GET['job_id']) !== 'opportunity')
+  @if (!isset($_GET['opportunity_id']) || get_post_type($_GET['opportunity_id']) !== 'opportunity')
     <div class="container mb-24 space-y-8 lg:max-w-5xl">
 
       <x-alert type="warning">
@@ -22,7 +22,7 @@
           href="{{ get_permalink(get_option('page_for_opportunities')) }}">Opportunities
           &rsaquo;</a>
 
-        <h1 class="alignwide type-xl mb-4 text-blue-dark">Applying for {{ get_the_title($_GET['job_id']) }}</h1>
+        <h1 class="alignwide type-xl mb-4 text-blue-dark">Applying for {{ get_the_title($_GET['opportunity_id']) }}</h1>
         <div class="prose xl:prose-lg">
           {!! $content !!}
         </div>

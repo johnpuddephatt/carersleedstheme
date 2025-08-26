@@ -32,7 +32,7 @@
         </ul>
         @if (get_option('page_for_volunteering_applications'))
           <div class="mt-8 text-center">
-            <x-button class="bg-white !px-16" label="Apply here" :url="get_permalink(get_option('page_for_volunteering_applications')) . '?job_id=' . $post->ID" />
+            <x-button class="bg-white !px-16" label="Apply here" :url="get_permalink(get_option('page_for_volunteering_applications')) . '?opportunity_id=' . $post->ID" />
           </div>
         @endif
       </div>

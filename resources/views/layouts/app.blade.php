@@ -7,9 +7,9 @@
   @php(do_action('get_header'))
   @php(wp_head())
 
-  @if ($_GET['job_id'] ?? false)
+  @if ($_GET['opportunity_id'] ?? false)
     <script>
-      window.jobApplicationID = {{ $_GET['job_id'] }};
+      window.jobApplicationID = {{ $_GET['opportunity_id'] }};
     </script>
   @endif
 

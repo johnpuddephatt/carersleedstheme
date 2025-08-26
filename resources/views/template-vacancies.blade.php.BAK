@@ -6,7 +6,7 @@
 
   @include('partials.section-header', [
       'background_colour' => 'bg-gold',
-      'subtitle' => get_the_title($_GET['job_id'] ?? ''),
+      'subtitle' => get_the_title($_GET['opportunity_id'] ?? ''),
   ])
   <div class="container mb-24 space-y-8 lg:max-w-5xl">
 
