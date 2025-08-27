@@ -2,7 +2,7 @@
   "app": {
     "js": [
       "js/runtime.c039ed.js",
-      "js/app.8492d2.js"
+      "js/app.1d0bdb.js"
     ],
     "css": [
       "css/app.815808.css"
@@ -12,7 +12,7 @@
   "editor": {
     "js": [
       "js/runtime.c039ed.js",
-      "js/editor.eabed1.js"
+      "js/editor.a49c00.js"
     ],
     "css": [
       "css/editor.91d4c8.css"

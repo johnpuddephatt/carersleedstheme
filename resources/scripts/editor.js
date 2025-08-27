@@ -22,8 +22,9 @@ window.tribe_l10n_datatables = {};
 wp.domReady(function () {
   wp.data.subscribe(() => {
     if (
+      select('core/editor') &&
       currentTemplate !==
-      select('core/editor').getEditedPostAttribute('template')
+        select('core/editor').getEditedPostAttribute('template')
     ) {
       currentTemplate =
         select('core/editor').getEditedPostAttribute('template');
