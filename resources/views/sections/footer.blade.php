@@ -1,4 +1,4 @@
-<footer class="bg-blue pb-4 pt-12 text-white md:pt-24 lg:pb-8">
+<footer class="bg-blue pb-4 pt-12 text-white md:pt-24 lg:pb-16">
   <div class="container flex max-w-none flex-col justify-between gap-8 md:gap-16 lg:flex-row">
     <div>
       <x-logo class="!w-40 md:!w-48" :invert="true" />
@@ -58,7 +58,7 @@
       </p>
     </div>
 
-    <div class="md:text-right">
+    <div class="lg:text-right">
 
       <div class="flex justify-end gap-4 md:ml-auto">
         <x-translate />
@@ -94,7 +94,7 @@
       @if ($footerNavigation)
         <div class="type-2xs mt-4 text-opacity-90">
           <nav>
-            <ul class="flex flex-row gap-3 md:justify-end">
+            <ul class="flex flex-row gap-3">
 
               @foreach ($footerNavigation as $item)
                 <li>
