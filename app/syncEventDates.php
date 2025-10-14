@@ -20,7 +20,7 @@ function wds_algolia_custom_fields(array $attributes, WP_Post $post)
         }
     }
 
-    $attributes['tags'] = implode(',', wp_list_pluck(get_the_terms($post->ID, 'post_tag'), 'name'));
+    $attributes['_Tags'] = implode(',', wp_list_pluck(get_the_terms($post->ID, 'post_tag'), 'name'));
 
     return $attributes;
 }
