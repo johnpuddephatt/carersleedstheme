@@ -380,4 +380,9 @@ add_action('widgets_init', function () {
         'name' => __('Below news', 'sage'),
         'id' => 'sidebar-news',
     ] + $config);
+
+    register_sidebar([
+        'name' => __('Below events', 'sage'),
+        'id' => 'sidebar-events',
+    ] + $config);
 });
