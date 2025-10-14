@@ -20,6 +20,8 @@ function wds_algolia_custom_fields(array $attributes, WP_Post $post)
         }
     }
 
+    $attributes['tags'] = implode(',', wp_list_pluck(get_the_terms($post->ID, 'post_tag'), 'name'));
+
     return $attributes;
 }
 add_filter('algolia_post_shared_attributes', 'wds_algolia_custom_fields', 10, 2);
