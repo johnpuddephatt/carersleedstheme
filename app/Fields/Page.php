@@ -21,6 +21,11 @@ class Page extends Field
                 'default_value' => 0,
                 'ui' => 1,
             ])
+            ->addTrueFalse('exclude_from_search', [
+                'label' => 'Exclude from Algolia search results?',
+                'default_value' => 0,
+                'ui' => 1,
+            ])
             ->addTrueFalse('show_exit', [
                 'label' => 'Show "Exit this page" button when viewing this page?',
                 'default_value' => 0,
