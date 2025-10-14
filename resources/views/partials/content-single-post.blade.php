@@ -1,4 +1,4 @@
-<div class="relative overflow-hidden pb-72">
+<div class="relative overflow-hidden">
 
   <div class="container flex flex-col-reverse gap-4 lg:flex-row lg:items-end">
     <div class="relative z-10 pb-8 lg:w-1/2 lg:pb-12">
@@ -28,7 +28,7 @@
 
   <div class="container flex flex-col gap-8 lg:flex-row lg:gap-16">
 
-    <div class="post-content prose max-w-none xl:prose-lg lg:w-1/2">
+    <div class="post-content prose max-w-none pb-48 xl:prose-lg lg:w-1/2">
 
       {{ the_content() }}
 
@@ -39,7 +39,7 @@
     <?php dynamic_sidebar('sidebar-news'); ?>
   @endif
   <svg xmlns="http://www.w3.org/2000/svg" width="56.01" height="105.71"
-    class="absolute bottom-12 right-0 -z-10 h-auto w-[40vw] max-w-96 translate-y-1/4 lg:w-[20vw]"
+    class="pointer-events-none absolute bottom-12 right-0 z-10 h-auto w-[40vw] max-w-96 translate-y-1/4 lg:w-[20vw]"
     viewBox="0 0 56.01 105.71">
     <path fill="#ffd09d"
       d="M56.01,5.41c-2.54-.87-5.02-1.9-7.42-3.13C45.43.68,41.88-.16,38.34.03c-8.42.44-16.26,6.59-18.67,14.68-2.29,7.68.03,16.04-1.5,23.91C15.7,51.27,3.86,60.37.74,72.88c-2.66,10.61,2.06,22.66,11.21,28.65,9.15,5.99,22.08,5.49,30.75-1.19,5.56-4.29,9.35-10.67,13.32-16.69V5.41Z" />
