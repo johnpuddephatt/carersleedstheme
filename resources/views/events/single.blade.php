@@ -2,7 +2,7 @@
   <div class="relative pb-72">
 
     <div class="container flex flex-col-reverse overflow-hidden pb-4 md:gap-4 md:pb-8 lg:flex-row lg:items-end lg:pb-12">
-      <div class="relative z-10 pt-24 lg:w-1/2">
+      <div class="relative z-10 lg:w-1/2 lg:pt-24">
         <a class="type-md mb-4 inline-block text-blue" href="{{ get_permalink(get_option('page_for_events')) }}">Events
           &rsaquo;
         </a>
@@ -31,7 +31,7 @@
       </div>
       @if (has_post_thumbnail($event->ID))
         <div
-          class="w-3/3 relative ml-auto max-w-sm -translate-y-8 translate-x-12 pt-4 md:translate-x-0 md:translate-y-0 lg:w-1/2 lg:max-w-4xl">
+          class="relative ml-auto w-full max-w-sm -translate-y-8 translate-x-12 pt-4 md:translate-x-0 md:translate-y-0 lg:w-1/2 lg:max-w-4xl">
           <svg xmlns="http://www.w3.org/2000/svg" width="196.05" height="142.92"
             class="absolute right-2/3 top-0 h-auto w-full" viewBox="0 0 196.05 142.92">
             <path fill="#ebdbd1"

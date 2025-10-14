@@ -24,17 +24,18 @@
 
     <div class="leading-snug">
       {!! tribe_get_start_date($event->ID, false, get_option('date_format')) !!}
+      <span class="hidden md:inline">
+        @if (!tribe_event_is_all_day($event->ID))
+          &mdash;
+          {!! tribe_get_start_date($event->ID, false, get_option('time_format')) !!}
 
-      @if (!tribe_event_is_all_day($event->ID))
-        &nbsp; &mdash; &nbsp;
-        {!! tribe_get_start_date($event->ID, false, get_option('time_format')) !!}
-
-        @if (tribe_get_end_date($event->ID, false, get_option('time_format')) !==
-                tribe_get_start_date($event->ID, false, get_option('time_format')))
-          -
-          {{ tribe_get_end_date($event->ID, false, get_option('time_format')) }}
+          @if (tribe_get_end_date($event->ID, false, get_option('time_format')) !==
+                  tribe_get_start_date($event->ID, false, get_option('time_format')))
+            -
+            {{ tribe_get_end_date($event->ID, false, get_option('time_format')) }}
+          @endif
         @endif
-      @endif
+      </span>
     </div>
     <h3 class="type-sm md:type-md mb-3 mt-2 text-balance !text-black">{{ $event->post_title }}</h3>
     @if (tribe_get_venue($event->ID))
