@@ -33,11 +33,7 @@
       {{ the_content() }}
 
       @if (is_active_sidebar('sidebar-news'))
-        <aside class="container my-16 lg:my-24">
-
-          <?php dynamic_sidebar('sidebar-news'); ?>
-
-        </aside>
+        <?php dynamic_sidebar('sidebar-news'); ?>
       @endif
 
     </div>
