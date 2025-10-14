@@ -19,7 +19,7 @@
       </div>
     @endif
 
-    <div class="flex flex-row flex-wrap justify-center gap-4 md:gap-8 lg:gap-12">
+    <div class="relative z-10 flex flex-row flex-wrap justify-center gap-4 md:gap-8 lg:gap-12">
 
       @foreach ($blocks as $block_item)
         <div
