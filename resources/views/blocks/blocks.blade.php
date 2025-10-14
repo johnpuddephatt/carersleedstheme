@@ -39,7 +39,7 @@
 
             @if ($block_item['link'])
               <x-button class="mt-4 !px-6 !py-1 after:absolute after:inset-0 after:block" :label="$block_item['link']['title']"
-                {{ $block_item['link'] === 'https://direct.lc.chat/19064207/' ? (onclick = 'window.LC_API.open_chat_window();return false;') : '' }}
+                {{ $block_item['link'] === 'https://direct.lc.chat/19064207/' ? "onclick='window.LC_API.open_chat_window();return false;'" : '' }}
                 :url="$block_item['link']['url']" :target="$block_item['link']['target']" />
             @endif
           </div>
