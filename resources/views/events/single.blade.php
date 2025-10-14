@@ -1,6 +1,5 @@
 @extends('layouts.app') @section('content')
   <div class="relative pb-72">
-    {{ implode(',', wp_list_pluck(get_the_terms(null, 'post_tag'), 'name')) }}
     <div class="container flex flex-col-reverse overflow-hidden pb-4 md:gap-4 md:pb-8 lg:flex-row lg:items-end lg:pb-12">
       <div class="relative z-10 lg:w-1/2 lg:pt-24">
         <a class="type-md mb-4 inline-block text-blue" href="{{ get_permalink(get_option('page_for_events')) }}">Events
