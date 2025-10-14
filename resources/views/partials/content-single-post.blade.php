@@ -42,3 +42,11 @@
     </svg>
   </div>
 </div>
+
+@if (is_active_sidebar('sidebar-news'))
+  <aside class="container my-16 lg:my-24">
+    <div class="rounded-small bg-beige-light p-8">
+      <?php dynamic_sidebar('sidebar-news'); ?>
+    </div>
+  </aside>
+@endif
