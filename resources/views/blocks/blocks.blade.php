@@ -39,7 +39,9 @@
 
             @if ($block_item['link'])
               <x-button class="mt-4 !px-6 !py-1 after:absolute after:inset-0 after:block" :label="$block_item['link']['title']"
-                :click="$block_item['link']['url'] === 'https://direct.lc.chat/19064207/' ? 'event.preventDefault();window.LC_API.open_chat_window();return false;' : null" :url="$block_item['link']['url']" :target="$block_item['link']['target']" />
+                :click="str_contains($block_item['link']['url'], 'https://direct.lc.chat')
+                    ? 'event.preventDefault();window.LC_API.open_chat_window();return false;'
+                    : null" :url="$block_item['link']['url']" :target="$block_item['link']['target']" />
             @endif
           </div>
 
