@@ -74,8 +74,9 @@ a.active {
   @apply !bg-opacity-100;
 }
 
+.post-content,
 .page-content {
-  @apply max-w-none break-words min-h-[70vh];
+  @apply max-w-none break-words;
 }
 
 .prose :where(a):not([class~='not-prose']) {
