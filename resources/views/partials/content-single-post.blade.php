@@ -28,7 +28,7 @@
 
   <div class="container flex flex-col gap-8 lg:flex-row lg:gap-16">
 
-    <div class="post-content prose max-w-none pb-16 xl:prose-lg lg:w-1/2">
+    <div class="post-content prose max-w-none pb-12 xl:prose-lg md:pb-40 lg:w-1/2">
 
       {{ the_content() }}
 
