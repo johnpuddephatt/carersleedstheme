@@ -1,7 +1,7 @@
 <div class="relative overflow-hidden">
 
   <div class="container flex flex-col-reverse gap-4 lg:flex-row lg:items-end">
-    <div class="relative z-10 pb-8 lg:w-1/2 lg:pb-12">
+    <div class="relative z-10 pb-16 lg:w-1/2 lg:pb-24">
       <a class="type-md mb-4 inline-block text-blue" href="{{ get_permalink(get_option('page_for_posts')) }}">News
         &rsaquo;
       </a>
