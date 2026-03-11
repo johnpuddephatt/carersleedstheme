@@ -20,7 +20,7 @@
               @endforeach
             @endif
           </div>
-          <div class="mt-4">
+          <div class="mt-6">
             <a href="https://www.fundraisingregulator.org.uk/service/badge" target="_blank" rel="noopener"><img
                 class="h-auto w-44" src="@asset('images/logo-fundraising_regulator.svg')" /></a>
           </div>
