@@ -37,6 +37,8 @@
         @endif
 
       </div>
+      <a href="https://www.fundraisingregulator.org.uk/service/badge" target="_blank" rel="noopener"><img
+          class="mt-4 h-auto w-44" src="@asset('images/logo-fundraising_regulator.svg')" /></a>
 
     </div>
 
@@ -44,6 +46,7 @@
   <div
     class="type-2xs container mt-8 flex max-w-none flex-col-reverse justify-between gap-8 text-white text-opacity-80 md:mt-16 md:items-end lg:flex-row">
     <div>
+
       <p><a href="https://letsdance.agency" target="_blank">Website by Let’s Dance</a></p>
       <p class="mt-0.5 flex items-center justify-end gap-0.5">
         Chat powered by:
