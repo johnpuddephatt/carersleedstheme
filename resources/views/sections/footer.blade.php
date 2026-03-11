@@ -9,15 +9,21 @@
     <div class="lg:ml-auto">
       <div class="flex flex-col gap-8 md:gap-16 lg:flex-row">
 
-        <div class="flex flex-row items-start gap-2 md:mt-2 lg:justify-end">
-          @if (get_field('social_media', 'option'))
-            @foreach (get_field('social_media', 'option') as $account)
-              <a rel="noopener" class="inline-block rounded-full bg-white p-2 text-blue"
-                aria-label="{{ $account['Type'] }} link" href="{{ $account['link'] }}" target="_blank">
-                <x-dynamic-component :component="'icon.' . strtolower($account['Type'])" class="mt-4" />
-              </a>
-            @endforeach
-          @endif
+        <div>
+          <div class="flex flex-row items-start gap-2 md:mt-2 lg:justify-end">
+            @if (get_field('social_media', 'option'))
+              @foreach (get_field('social_media', 'option') as $account)
+                <a rel="noopener" class="inline-block rounded-full bg-white p-2 text-blue"
+                  aria-label="{{ $account['Type'] }} link" href="{{ $account['link'] }}" target="_blank">
+                  <x-dynamic-component :component="'icon.' . strtolower($account['Type'])" class="mt-4" />
+                </a>
+              @endforeach
+            @endif
+          </div>
+          <div class="mt-4">
+            <a href="https://www.fundraisingregulator.org.uk/service/badge" target="_blank" rel="noopener"><img
+                class="h-auto w-44" src="@asset('images/logo-fundraising_regulator.svg')" /></a>
+          </div>
         </div>
 
         @if ($footerNavigation2)
@@ -37,10 +43,7 @@
         @endif
 
       </div>
-      <div class="lg:text-right">
-        <a href="https://www.fundraisingregulator.org.uk/service/badge" target="_blank" rel="noopener"><img
-            class="mt-4 h-auto w-44" src="@asset('images/logo-fundraising_regulator.svg')" /></a>
-      </div>
+
     </div>
 
   </div>
