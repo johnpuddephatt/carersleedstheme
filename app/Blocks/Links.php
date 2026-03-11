@@ -179,11 +179,8 @@ class Links extends Block
         $fields = Builder::make('links');
 
         $fields
-
             ->addText('title')
-
             ->addLink('read_more_link')
-
             ->addFlexibleContent('links')
             ->addLayout('manual_link')
             ->addText('title')
@@ -194,7 +191,6 @@ class Links extends Block
                     'return_format' => 'id',
                 ]
             )
-
             ->addLayout('page_or_post')
             ->addPostObject('page', [
                 'post_type' => ['page', 'post'],
@@ -203,6 +199,43 @@ class Links extends Block
             ->addTrueFalse('include_child_links', [
                 'ui' => 1,
             ])
+            ->addTrueFalse('automatic_child_links', [
+                'ui' => 1,
+                'default_value' => 1,
+                'conditional_logic' => [
+                    [
+                        [
+                            'field' => 'include_child_links',
+                            'operator' => '==',
+                            'value' => '1',
+                        ],
+                    ],
+                ],
+            ])
+            ->addRepeater(
+                'manual_child_links',
+                [
+                    'layout' => 'block',
+                    'conditional_logic' => [
+                        [
+                            [
+                                'field' => 'include_child_links',
+                                'operator' => '==',
+                                'value' => '1',
+                            ],
+                            [
+                                'field' => 'automatic_child_links',
+                                'operator' => '==',
+                                'value' => '0',
+                            ],
+                        ],
+                    ],
+
+                ]
+            )
+            ->addText('title')
+            ->addUrl('link')
+            ->endRepeater()
             ->addTrueFalse('override_details', [
                 'ui' => 1,
             ])

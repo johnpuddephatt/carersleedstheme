@@ -22,7 +22,7 @@
           @php($image = $link['override_details'] && $link['image'] ? $link['image'] : get_post_thumbnail_id($link['page']))
 
           <!-- prettier-ignore-start -->
-          @if ($link['include_child_links'] ?? false)    
+          @if ($link['include_child_links'] && $link['automatic_child_links'])    
             @php($children = get_children([
               'post_parent' => $link['page'],
               'post_type' => 'any',
@@ -31,13 +31,17 @@
               'orderby' => 'menu_order',
               'order' => 'ASC',
           ]))
+         
           @endif
           <!-- prettier-ignore-end -->
         @endif
 
         @if ($block->style == 'default')
-          @if ($link['include_child_links'] ?? false)
+          @if ($link['include_child_links'] && $link['automatic_child_links'])
             <x-page-card-with-children :title="$title" :image="$image" :children="$children" />
+          @elseif($link['include_child_links'] && $link['manual_child_links'])
+            {{-- @dump($link['manual_child_links']) TODO: figure out how to get the title and link for manual children --}}
+            <x-page-card-with-manual-children :title="$title" :image="$image" :manual_children="$link['manual_child_links']" />
           @else
             <x-page-card :url="$url" :title="$title" :image="$image" />
           @endif
