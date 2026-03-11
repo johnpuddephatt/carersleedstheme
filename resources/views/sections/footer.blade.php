@@ -33,7 +33,7 @@
 
                 @foreach ($footerNavigation2 as $item)
                   <li>
-                    <a class="my-2 inline-block" href="{{ $item->url }}">{{ $item->label }}</a>
+                    <a class="my-1.5 inline-block" href="{{ $item->url }}">{{ $item->label }}</a>
                   </li>
                 @endforeach
 
