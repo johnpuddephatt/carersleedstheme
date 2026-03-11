@@ -37,9 +37,10 @@
         @endif
 
       </div>
-      <a href="https://www.fundraisingregulator.org.uk/service/badge" target="_blank" rel="noopener"><img
-          class="mt-4 h-auto w-44" src="@asset('images/logo-fundraising_regulator.svg')" /></a>
-
+      <div class="lg:text-right">
+        <a href="https://www.fundraisingregulator.org.uk/service/badge" target="_blank" rel="noopener"><img
+            class="mt-4 h-auto w-44" src="@asset('images/logo-fundraising_regulator.svg')" /></a>
+      </div>
     </div>
 
   </div>
